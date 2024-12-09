@@ -79,6 +79,30 @@ const Features = () => {
             </div>
           </div>
         </div>
+        <div className="sub-category">
+          <div className="card">
+            <h4>Agent IA pour l'apprentissage de l'anglais</h4>
+            <div className="card-image">
+                <img src={AgentImage} alt="Agent IA" className="feature-image" />
+            </div>
+            <p>Posez une question à l'agent pour améliorer votre anglais.</p>
+            <div className="card-content">
+              <form onSubmit={handleAgentSubmit}>
+                <input
+                  type="text"
+                  value={agentData}
+                  onChange={(e) => setAgentData(e.target.value)}
+                  placeholder="Posez une question à l'agent IA"
+                />
+                <button type="submit">Envoyer à l'agent IA</button>
+              </form>
+            </div>
+            <div className="response-box">
+              <h4>Réponse de l'Agent IA :</h4>
+              <p>{response || "L'agent répondra ici après votre question."}</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Bloc 2: Workflows IA */}

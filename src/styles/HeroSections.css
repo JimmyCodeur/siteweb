@@ -1,8 +1,9 @@
+/* Section Hero */
 .hero-section {
   height: 100vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: #1a1a2e;
   color: #fff;
@@ -24,7 +25,7 @@
   }
 }
 
-/* Animation lumineuse du fond */
+/* Animation lumineuse du fond avec dégradé dynamique */
 .hero-section::before {
   content: '';
   position: absolute;
@@ -32,8 +33,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(0, 255, 255, 0.2), rgba(50, 255, 255, 0.3), transparent);
-  animation: glowing-background 10s infinite alternate;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.3), transparent);
+  animation: glowing-background 8s infinite alternate;
   filter: blur(40px);
   z-index: -1;
 }
@@ -53,14 +54,29 @@
   }
 }
 
+
+@keyframes light-glow {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /* Animation de l'apparition du titre et du texte */
 .hero-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
   text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
   animation: slideInFromLeft 1.5s ease-out forwards;
+  line-height: 1.2;
+  margin-bottom: 1.5rem; /* Espacement entre le titre et la description */
 }
 
 @keyframes slideInFromLeft {
@@ -79,12 +95,13 @@
 }
 
 .hero-description {
-  margin: 1rem 0;
-  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 1.8rem;
   color: #ddd;
-  max-width: 600px;
   font-weight: 300;
-  animation: fadeInUp 1s ease-out forwards;
+  line-height: 1.6;
+  animation: fadeInUp 1.5s ease-out forwards;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.5);
 }
 
 @keyframes fadeInUp {
@@ -98,12 +115,32 @@
   }
 }
 
+/* Bien améliorer l'accueil */
+.hero-content {
+  display: flex;
+  flex-direction: column; /* Aligner les éléments (titre, description, etc.) verticalement */
+  justify-content: center; /* Centrer le contenu verticalement */
+  align-items: center; /* Centrer les éléments horizontalement */
+  text-align: center; /* Assurer que le texte est bien centré */
+  max-width: 800px; /* Limiter la largeur maximale du contenu */
+  margin: 0 auto; /* Centrer le contenu horizontalement */
+}
+
+.hero-welcome {
+  font-size: 2.5rem;
+  color: #00f6ff;
+  font-weight: 600;
+  text-align: center;
+  animation: fadeInUp 1.5s ease-out forwards;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Ombre lumineuse pour un effet futuriste */
+}
+
 /* Animation pour les fonctionnalités */
 .hero-features {
   list-style-type: none;
   margin-top: 1.5rem;
   padding-left: 0;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   animation: fadeInUp 1.5s ease-out forwards;
   animation-delay: 0.5s;
 }
@@ -168,4 +205,111 @@
 
 .hero-image:hover {
   transform: scale(1.05);
+}
+
+/* Effet de particules lumineuses dans le fond */
+@keyframes particles-glow {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(5px, 5px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-5px, -5px);
+  }
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.3), transparent);
+  animation: glowing-background 8s infinite alternate;
+  filter: blur(40px);
+  z-index: -1;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, rgb(230, 197, 126) 0%, rgba(0, 255, 255, 0.075) 50%, rgba(0, 255, 255, 0) 100%);
+  animation: light-glow 10s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Bulle d'écriture animée */
+.bubble {
+  position: absolute;
+  left: 68%; /* Placer la bulle près de l'image */
+  top: 60%;
+  padding: 15px 30px;
+  background-color: rgb(141, 255, 150); /* Légère transparence pour donner un effet futuriste */
+  border-radius: 50px;
+  color: #000000;
+  font-size: 1.4rem;
+  max-width: 450px;
+  min-width: 180px;
+  text-align: center; /* Centrer le texte dans la bulle */
+  animation: bubble-animation 10s ease-out infinite;
+  box-shadow: 0 0 25px rgba(20, 20, 20, 0.7);
+  opacity: 0;
+  z-index: 2; /* S'assurer que la bulle soit au-dessus des autres éléments */
+  transform-origin: center;
+}
+
+/* Animation pour la bulle d'écriture */
+@keyframes bubble-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(50px) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  80% {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100px) scale(0.8);
+  }
+}
+
+/* Animation de texte à l'intérieur de la bulle (effet de frappe) */
+.bubble-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #00f6ff; /* Ajout d'une bordure à droite pour l'effet de frappe */
+  width: 0;
+  animation: typing 5s steps(40) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }

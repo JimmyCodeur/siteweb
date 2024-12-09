@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/HeroSections.css";
 import BotImage from "../assets/images/bot_cute.webp"; 
 
@@ -6,23 +6,30 @@ const HeroSection = () => {
   return (
     <div className="hero-section futuristic-theme">
       <div className="hero-content">
-        <p className="hero-welcome">Bienvenue dans l'ère de l'IA</p>
+        <p className="hero-welcome">Entrez dans l'ère de l'IA</p>
         <h1 className="hero-title">
-          L'IA au service <br />
-          <span className="hero-highlight">de vos ambitions</span>
+          L'IA au service de <br />
+          <span className="hero-highlight">votre futur</span>
         </h1>
         <p className="hero-description">
-          Des solutions d'IA révolutionnaires pour transformer vos idées en résultats concrets. Accélérez votre productivité et libérez votre créativité.
+          Découvrez des solutions d'intelligence artificielle conçues pour propulser votre entreprise vers de nouveaux sommets. Transformez vos idées en actions, boostez votre productivité et libérez la créativité au service de vos objectifs.
         </p>
         <ul className="hero-features">
           <li>🤖 Création d'agents IA personnalisés</li>
-          <li>⚙️ Création de pipelines et workflows d'agents IA adaptés à vos besoins</li>
-          <li>🔍 Solutions RAG (Retrieval-Augmented Generation) avancées</li>
-          <li>🌐 Présentations immersives pour mieux comprendre et utiliser l'IA</li>
+          <li>⚙️ Conception de workflows IA sur mesure pour optimiser chaque processus</li>
+          <li>🔍 Solutions avancées RAG </li>
+          <li>🌐 Présentations de l'IA sur rendez-vous</li>
         </ul>
       </div>
       <div className="hero-image-container">
         <img src={BotImage} alt="Illustration IA" className="hero-image" />
+      </div>
+
+      {/* Bulle d'écriture animée */}
+      <div className="bubble">
+        <div className="bubble-text">
+          J'aimerais t'aider ! 
+        </div>
       </div>
     </div>
   );
