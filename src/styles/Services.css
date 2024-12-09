@@ -1,0 +1,32 @@
+.services {
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #0d0d0d;
+}
+
+.services-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background: linear-gradient(135deg, #6a00f4, #ff007b);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  width: 250px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.plan h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.plan p {
+  font-size: 16px;
+  margin: 0;
+}

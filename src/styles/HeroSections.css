@@ -1,0 +1,171 @@
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a2e;
+  color: #fff;
+  padding: 5rem;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+/* Animation d'apparition de la section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation lumineuse du fond */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.2), rgba(50, 255, 255, 0.3), transparent);
+  animation: glowing-background 10s infinite alternate;
+  filter: blur(40px);
+  z-index: -1;
+}
+
+@keyframes glowing-background {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+/* Animation de l'apparition du titre et du texte */
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+  animation: slideInFromLeft 1.5s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero-highlight {
+  color: #5ac8fa;
+}
+
+.hero-description {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  color: #ddd;
+  max-width: 600px;
+  font-weight: 300;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation pour les fonctionnalités */
+.hero-features {
+  list-style-type: none;
+  margin-top: 1.5rem;
+  padding-left: 0;
+  font-size: 1.2rem;
+  animation: fadeInUp 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-features li {
+  margin: 1rem 0;
+  color: #fff;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveIn 0.8s forwards;
+}
+
+.hero-features li:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.hero-features li:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.hero-features li:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.hero-features li:nth-child(4) {
+  animation-delay: 1.1s;
+}
+
+/* Mouvement d'animation pour les fonctionnalités */
+@keyframes moveIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Styles de l'image */
+.hero-image-container {
+  max-width: 500px;
+  max-height: 500px;
+  margin-left: 3rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  animation: fadeInUp 1.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-image:hover {
+  transform: scale(1.05);
+}
