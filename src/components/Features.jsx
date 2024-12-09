@@ -323,22 +323,24 @@ const Features = () => {
       {/* Bloc 4: Prendre un rendez-vous */}
       <div className="category-block">
         <h3>Prendre un Rendez-vous</h3>
-        <p className="category-description">Organisez une réunion avec nos experts pour discuter des solutions IA adaptées à votre entreprise.</p>
+        <p className="category-description">
+          Organisez une réunion avec nos experts pour discuter des solutions IA adaptées à votre entreprise.
+        </p>
 
-        {/* Rendez-vous */}
+        {/* Formulaire de réservation */}
         <div className="sub-category">
           <div className="card">
             <h4>Réservez un rendez-vous avec nos experts</h4>
             <div className="card-content">
-              <form onSubmit={(e) => handleAgentSubmit(e, "appointment")}>
-                <input
-                  type="text"
-                  value={appointmentData}
-                  onChange={(e) => setAppointmentData(e.target.value)}
-                  placeholder="Entrez votre demande de rendez-vous"
-                />
-                <button type="submit">Réserver un rendez-vous</button>
-              </form>
+              {/* Lien vers Calendly */}
+              <a
+                href="https://calendly.com/votre-lien"
+                target="_blank"  // Ouvrir dans un nouvel onglet
+                rel="noopener noreferrer"
+                className="calendly-button"
+              >
+                Réserver un rendez-vous via Calendly
+              </a>
             </div>
           </div>
         </div>

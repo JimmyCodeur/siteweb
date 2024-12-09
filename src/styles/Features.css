@@ -341,3 +341,31 @@ button:active {
   animation-delay: 3s;
 }
 
+/* Style du lien Calendly */
+.calendly-button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: #00f6ff;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.calendly-button:hover {
+  background-color: #3498db;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.4);
+}
+
+.calendly-button:active {
+  transform: translateY(2px);
+}
+
+
