@@ -6,43 +6,90 @@ import PresentationImage from '../assets/images/presentation_image.webp'; // Ass
 import AppointmentImage from '../assets/images/presentation_image.webp'; // Assurez-vous d'ajouter l'image
 
 const Features = () => {
-  const [agentData, setAgentData] = useState("");
+  const [conversation, setConversation] = useState([
+    { speaker: "IA", message: "Hello! You are in a taxi. How can I help you?" },
+    { speaker: "User", message: "Where should I go?" },
+    { speaker: "IA", message: "Great question! You could say: 'Where should I go, please?' Remember to add 'please' for politeness." },
+    { speaker: "User", message: "I want go to the airport." },
+    { speaker: "IA", message: "Almost perfect! The correct phrase is: 'I want to go to the airport.' Don't forget the 'to'!" },
+    { speaker: "User", message: "Ok, I want to go the airport." },
+    { speaker: "IA", message: "Good! But it's better to say: 'I want to go to the airport.' 'To' is important here." },
+    { speaker: "User", message: "Can I take the taxi?" },
+    { speaker: "IA", message: "Yes, that's correct! You can also say: 'Can I get a taxi?' Both are fine." },
+    { speaker: "User", message: "Thank you!" },
+    { speaker: "IA", message: "You're welcome! Keep practicing, and you'll get even better." }
+  ]);
+
+  const [customerSupportData, setCustomerSupportData] = useState("");
+  const [infoSearchData, setInfoSearchData] = useState("");
+  const [contentGenerationData, setContentGenerationData] = useState("");
+  const [recommendationAgentData, setRecommendationAgentData] = useState("");
+  const [securityAgentData, setSecurityAgentData] = useState("");
   const [workflowData, setWorkflowData] = useState("");
   const [presentationData, setPresentationData] = useState("");
   const [appointmentData, setAppointmentData] = useState("");
 
-  const [response, setResponse] = useState(""); // Etat pour la réponse de l'agent IA
+  // Réponses des agents
+  const [englishResponse, setEnglishResponse] = useState("");
+  const [supportResponse, setSupportResponse] = useState("");
+  const [infoSearchResponse, setInfoSearchResponse] = useState("");
+  const [contentGenerationResponse, setContentGenerationResponse] = useState("");
+  const [recommendationResponse, setRecommendationResponse] = useState("");
+  const [securityResponse, setSecurityResponse] = useState("");
 
-  // Simuler un appel API pour l'agent IA
+  // Réponse workflow, présentation et rendez-vous
+  const [workflowResponse, setWorkflowResponse] = useState("");
+  const [presentationResponse, setPresentationResponse] = useState("");
+  const [appointmentResponse, setAppointmentResponse] = useState("");
+
+  // Etat pour savoir si l'enregistrement vocal est en cours
+  const [listening, setListening] = useState(false);
+
   const handleAgentSubmit = async (e) => {
     e.preventDefault();
-    const mockResponse = await fakeApiCall(agentData);
-    setResponse(mockResponse);
+
+    // Ajouter le message de l'utilisateur à la conversation
+    setConversation([
+      ...conversation,
+      { speaker: "User", message: englishAgentData }
+    ]);
+
+    // Ajouter la réponse de l'IA à la conversation
+    setConversation((prevConversation) => [
+      ...prevConversation,
+      { speaker: "IA", message: mockResponse }
+    ]);
+
+    // Réinitialiser l'entrée utilisateur
+    setEnglishAgentData("");
   };
 
-  const fakeApiCall = async (input) => {
-    if (input.toLowerCase() === 'hello') {
-      return "Hi! How can I help you improve your English?";
-    } else if (input.toLowerCase() === 'how are you?') {
-      return "I'm doing great, thank you!";
+
+  // Fonction pour démarrer l'enregistrement vocal
+  const startListening = () => {
+    if (window.SpeechRecognition || window.webkitSpeechRecognition) {
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = 'en-US';
+      recognition.start();
+
+      recognition.onstart = () => {
+        setListening(true);
+      };
+
+      recognition.onresult = (event) => {
+        const spokenText = event.results[0][0].transcript;
+        setEnglishAgentData(spokenText);
+        setListening(false);
+        handleAgentSubmit(event, "english");
+      };
+
+      recognition.onerror = (event) => {
+        console.log('Speech recognition error: ', event.error);
+        setListening(false);
+      };
     } else {
-      return "I'm sorry, I don't understand that. Can you ask again?";
+      alert("Speech recognition is not supported in this browser.");
     }
-  };
-
-  const handleWorkflowSubmit = (e) => {
-    e.preventDefault();
-    console.log("Workflow Data:", workflowData);
-  };
-
-  const handlePresentationSubmit = (e) => {
-    e.preventDefault();
-    console.log("Presentation Data:", presentationData);
-  };
-
-  const handleAppointmentSubmit = (e) => {
-    e.preventDefault();
-    console.log("Appointment Data:", appointmentData);
   };
 
   return (
@@ -52,46 +99,56 @@ const Features = () => {
       {/* Bloc 1: Création d'agents IA */}
       <div className="category-block">
         <h3>Création d'agents IA</h3>
-        <p className="category-description">Automatisez vos tâches avec des agents intelligents.</p>
+        <p className="category-description">
+          Nos agents intelligents sont là pour simplifier votre quotidien et améliorer votre productivité. Ils agissent comme des assistants virtuels qui vous aident à accomplir rapidement des tâches répétitives ou complexes, tout en vous permettant de vous concentrer sur des activités à plus forte valeur ajoutée. Que ce soit pour répondre instantanément à des questions, organiser des informations, ou automatiser des processus, nos agents sont conçus pour vous rendre plus efficace et vous faire gagner un temps précieux. Grâce à l'intelligence artificielle, ils s'adaptent à vos besoins et évoluent en fonction de vos préférences, offrant ainsi une expérience personnalisée et performante.
+        </p>
 
-        {/* Exemples d'agents */}
+        {/* Agent éducatif */}
+        <h4>Agent éducatif / apprentissage</h4>
         <div className="sub-category">
           <div className="card">
-            <h4>Agent IA pour l'apprentissage de l'anglais</h4>
+            <h4>Apprendre l'anglais avec l'IA</h4>
             <div className="card-image">
-                <img src={AgentImage} alt="Agent IA" className="feature-image" />
+              <img src={AgentImage} alt="Agent IA enseignant" className="feature-image" />
             </div>
-            <p>Posez une question à l'agent pour améliorer votre anglais.</p>
-            <div className="card-content">
-              <form onSubmit={handleAgentSubmit}>
-                <input
-                  type="text"
-                  value={agentData}
-                  onChange={(e) => setAgentData(e.target.value)}
-                  placeholder="Posez une question à l'agent IA"
-                />
-                <button type="submit">Envoyer à l'agent IA</button>
-              </form>
-            </div>
-            <div className="response-box">
-              <h4>Réponse de l'Agent IA :</h4>
-              <p>{response || "L'agent répondra ici après votre question."}</p>
+            <p>Un agent IA qui vous aide à améliorer vos compétences linguistiques en posant des questions et en vous corrigeant en temps réel.</p>
+            
+            {/* Afficher la conversation */}
+            <div className="conversation-box">
+              {conversation.map((msg, index) => (
+                <div key={index} className={`message ${msg.speaker}`}>
+                  <strong>{msg.speaker}:</strong> {msg.message}
+                </div>
+              ))}
             </div>
           </div>
         </div>
+
+        {/* Autres agents */}
+        <h4>Agent support client</h4>
         <div className="sub-category">
           <div className="card">
-            <h4>Agent IA pour l'apprentissage de l'anglais</h4>
+            <h4>Agent IA pour le support client</h4>
             <div className="card-image">
-                <img src={AgentImage} alt="Agent IA" className="feature-image" />
+              <img src={AgentImage} alt="Agent IA support" className="feature-image" />
             </div>
-            <p>Posez une question à l'agent pour améliorer votre anglais.</p>
+            <p>Un agent IA qui fournit une assistance 24/7 aux clients en répondant à leurs questions, en les dirigeant vers les bonnes ressources, et en résolvant des problèmes courants.</p>
+            {/* Conteneur pour centrer le bouton */}
+            <div className="button-container">
+              <button
+                onClick={startListening}
+                disabled={listening}
+                className="record-btn"
+              >
+                {listening ? "Listening..." : "🎙️"}
+              </button>
+            </div>            
             <div className="card-content">
-              <form onSubmit={handleAgentSubmit}>
+              <form onSubmit={(e) => handleAgentSubmit(e, "support")}>
                 <input
                   type="text"
-                  value={agentData}
-                  onChange={(e) => setAgentData(e.target.value)}
+                  value={customerSupportData}
+                  onChange={(e) => setCustomerSupportData(e.target.value)}
                   placeholder="Posez une question à l'agent IA"
                 />
                 <button type="submit">Envoyer à l'agent IA</button>
@@ -99,7 +156,115 @@ const Features = () => {
             </div>
             <div className="response-box">
               <h4>Réponse de l'Agent IA :</h4>
-              <p>{response || "L'agent répondra ici après votre question."}</p>
+              <p>{supportResponse || "L'agent répondra ici après votre question."}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Autres agents */}
+        <h4>Agent Recherche & Collecte</h4>
+        <div className="sub-category">
+          <div className="card">
+            <h4>Agent IA pour la recherche et collecte d'informations</h4>
+            <div className="card-image">
+              <img src={AgentImage} alt="Agent IA recherche" className="feature-image" />
+            </div>
+            <p>Un agent IA qui explore le web pour rechercher des informations, des tendances ou des réponses à des questions spécifiques.</p>
+            <div className="card-content">
+              <form onSubmit={(e) => handleAgentSubmit(e, "infoSearch")}>
+                <input
+                  type="text"
+                  value={infoSearchData}
+                  onChange={(e) => setInfoSearchData(e.target.value)}
+                  placeholder="Posez une question à l'agent IA"
+                />
+                <button type="submit">Envoyer à l'agent IA</button>
+              </form>
+            </div>
+            <div className="response-box">
+              <h4>Réponse de l'Agent IA :</h4>
+              <p>{infoSearchResponse || "L'agent répondra ici après votre question."}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Autres agents */}
+        <h4>Agent création et génération de contenu</h4>
+        <div className="sub-category">
+          <div className="card">
+            <h4>Agent IA pour la création et la génération de contenu</h4>
+            <div className="card-image">
+              <img src={AgentImage} alt="Agent IA création" className="feature-image" />
+            </div>
+            <p>Un agent IA capable de générer des articles, des rapports, des emails ou des messages personnalisés basés sur des informations spécifiques.</p>
+            <div className="card-content">
+              <form onSubmit={(e) => handleAgentSubmit(e, "contentGeneration")}>
+                <input
+                  type="text"
+                  value={contentGenerationData}
+                  onChange={(e) => setContentGenerationData(e.target.value)}
+                  placeholder="Posez une question à l'agent IA"
+                />
+                <button type="submit">Envoyer à l'agent IA</button>
+              </form>
+            </div>
+            <div className="response-box">
+              <h4>Réponse de l'Agent IA :</h4>
+              <p>{contentGenerationResponse || "L'agent répondra ici après votre question."}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Autres agents */}
+        <h4>Agent personnalisation et recommandation</h4>
+        <div className="sub-category">
+          <div className="card">
+            <h4>Agent IA pour la personnalisation et la recommandation</h4>
+            <div className="card-image">
+              <img src={AgentImage} alt="Agent IA recommandation" className="feature-image" />
+            </div>
+            <p>Un agent IA qui analyse les préférences des utilisateurs et fournit des recommandations personnalisées (produits, services, etc.).</p>
+            <div className="card-content">
+              <form onSubmit={(e) => handleAgentSubmit(e, "recommendation")}>
+                <input
+                  type="text"
+                  value={recommendationAgentData}
+                  onChange={(e) => setRecommendationAgentData(e.target.value)}
+                  placeholder="Posez une question à l'agent IA"
+                />
+                <button type="submit">Envoyer à l'agent IA</button>
+              </form>
+            </div>
+            <div className="response-box">
+              <h4>Réponse de l'Agent IA :</h4>
+              <p>{recommendationResponse || "L'agent répondra ici après votre question."}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Autres agents */}
+        <h4>Agent surveillance et sécurité</h4>
+        <div className="sub-category">
+          <div className="card">
+            <h4>Agent IA pour la surveillance et la sécurité</h4>
+            <div className="card-image">
+              <img src={AgentImage} alt="Agent IA sécurité" className="feature-image" />
+            </div>
+            <p>Un agent IA qui surveille les systèmes et détecte les anomalies ou menaces en temps réel pour assurer la sécurité.</p>
+            <div className="card-content">
+              <form onSubmit={(e) => handleAgentSubmit(e, "security")}>
+                <input
+                  type="text"
+                  value={securityAgentData}
+                  onChange={(e) => setSecurityAgentData(e.target.value)}
+                  placeholder="Posez une question à l'agent IA"
+                />
+                <button type="submit">Envoyer à l'agent IA</button>
+              </form>
+            </div>
+            <div className="response-box">
+              <h4>Réponse de l'Agent IA :</h4>
+              <p>{securityResponse || "L'agent répondra ici après votre question."}</p>
             </div>
           </div>
         </div>
@@ -110,13 +275,13 @@ const Features = () => {
         <h3>Workflows IA</h3>
         <p className="category-description">Optimisez vos processus grâce à des pipelines personnalisés et des agents IA intégrés.</p>
 
-        {/* Exemples de workflows */}
+        {/* Workflow IA */}
         <div className="sub-category">
           <div className="card">
             <h4>Création de Workflow IA</h4>
             <p>Créez des workflows personnalisés pour automatiser les processus.</p>
             <div className="card-content">
-              <form onSubmit={handleWorkflowSubmit}>
+              <form onSubmit={(e) => handleAgentSubmit(e, "workflow")}>
                 <input
                   type="text"
                   value={workflowData}
@@ -125,9 +290,6 @@ const Features = () => {
                 />
                 <button type="submit">Créer le workflow IA</button>
               </form>
-              <div className="card-image">
-                <img src={PipelineImage} alt="Workflow IA" className="feature-image" />
-              </div>
             </div>
           </div>
         </div>
@@ -138,13 +300,13 @@ const Features = () => {
         <h3>Présentation IA pour entreprises</h3>
         <p className="category-description">Expliquez l'IA de manière simple et engageante aux entreprises.</p>
 
-        {/* Exemples de présentations IA */}
+        {/* Présentation IA */}
         <div className="sub-category">
           <div className="card">
             <h4>Présentation interactive IA</h4>
             <p>Exemple d'une présentation IA pour expliquer ses avantages.</p>
             <div className="card-content">
-              <form onSubmit={handlePresentationSubmit}>
+              <form onSubmit={(e) => handleAgentSubmit(e, "presentation")}>
                 <input
                   type="text"
                   value={presentationData}
@@ -153,9 +315,6 @@ const Features = () => {
                 />
                 <button type="submit">Générer la présentation IA</button>
               </form>
-              <div className="card-image">
-                <img src={PresentationImage} alt="Présentation IA" className="feature-image" />
-              </div>
             </div>
           </div>
         </div>
@@ -166,12 +325,12 @@ const Features = () => {
         <h3>Prendre un Rendez-vous</h3>
         <p className="category-description">Organisez une réunion avec nos experts pour discuter des solutions IA adaptées à votre entreprise.</p>
 
-        {/* Exemples de prise de rendez-vous */}
+        {/* Rendez-vous */}
         <div className="sub-category">
           <div className="card">
             <h4>Réservez un rendez-vous avec nos experts</h4>
             <div className="card-content">
-              <form onSubmit={handleAppointmentSubmit}>
+              <form onSubmit={(e) => handleAgentSubmit(e, "appointment")}>
                 <input
                   type="text"
                   value={appointmentData}
@@ -180,13 +339,11 @@ const Features = () => {
                 />
                 <button type="submit">Réserver un rendez-vous</button>
               </form>
-              <div className="card-image">
-                <img src={AppointmentImage} alt="Rendez-vous IA" className="feature-image" />
-              </div>
             </div>
           </div>
         </div>
       </div>
+
     </section>
   );
 };

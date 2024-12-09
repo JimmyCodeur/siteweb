@@ -38,34 +38,38 @@ h2 {
   }
 }
 
+/* Catégorie principale */
 .category-block {
-  width: 70%;
-  max-width: 1200px; /* Limite la taille maximale du bloc */
+  width: 100%;
+  max-width: 1500px; /* Limite la taille maximale du bloc */
   padding: 3rem;
-  background-color: #111; /* Couleur sombre pour un aspect plus futuriste */
+  background-color: #111;
   border-radius: 20px; /* Coins arrondis plus marqués */
   box-shadow: 0 0 30px rgb(255, 255, 255), 0 0 40px rgba(0, 255, 255, 0.4); /* Ombre lumineuse */
   position: relative;
   overflow: hidden;
-  animation: fade-in 1.5s ease-in-out, pulse 2s infinite alternate; /* Animation d'entrée et animation pulsante */
-  transition: all 0.4s ease-in-out;
-  margin: 0 auto; /* Centrer le bloc */
-  backdrop-filter: blur(10px); /* Effet flou de l'arrière-plan pour un look plus moderne */
+  animation: fade-in 1.5s ease-in-out, pulse 2s infinite alternate;
+  margin: center;
+  backdrop-filter: blur(10px);
+  margin-bottom: 3rem; /* Espacement entre les catégories */
+  border-top: 4px solid #00f6ff; /* Ligne de séparation en haut */
 }
 
+/* Titre de catégorie */
 .category-block h3 {
-  font-size: 2.5rem; /* Taille du titre plus grande */
-  color: #00f6ff; /* Couleur futuriste pour le texte */
+  font-size: 2.5rem;
+  color: #00f6ff;
   text-align: center;
   margin-bottom: 1.5rem;
   font-weight: 700;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5); /* Lueur futuriste autour du texte */
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5);
   letter-spacing: 2px;
 }
 
+/* Description des catégories */
 .category-description {
   font-size: 1.2rem;
-  color: #ccc; /* Texte légèrement plus clair */
+  color: #ccc;
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 300;
@@ -73,60 +77,58 @@ h2 {
   letter-spacing: 1px;
 }
 
-
+/* Conteneur des sous-catégories */
 .sub-category {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-/* Cartes individuelles d'agents, workflows et autres */
+/* Cartes individuelles d'agents */
 .card {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)); /* Dégradé sombre et futuriste */
-  padding: 30px;
-  border-radius: 15px; /* Coins arrondis plus marqués */
-  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3); /* Ombre lumineuse cyan */
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)); 
+  padding: 20px;
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3); 
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 700px; /* Limite la taille maximale de la carte */
+  gap: 15px;
+  max-width: 350px; /* Réduire la taille des cartes */
   width: 100%;
   text-align: center;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: rgba(34, 34, 34, 0.9); /* Fond sombre pour plus de contraste */
-  border: 2px solid rgba(0, 255, 255, 0.7); /* Bordure cyan lumineuse */
-  backdrop-filter: blur(8px); /* Flou d'arrière-plan pour un effet moderne */
+  background-color: rgba(34, 34, 34, 0.9); 
+  border: 2px solid rgba(0, 255, 255, 0.7); 
+  backdrop-filter: blur(8px); 
 }
-
 
 .card:hover {
-  transform: translateY(-10px); /* Déplacement au survol */
-  box-shadow: 0 10px 50px rgba(0, 255, 255, 0.5), 0 10px 70px rgba(0, 255, 255, 0.6); /* Ombre plus marquée */
+  transform: translateY(-10px);
+  box-shadow: 0 10px 50px rgba(0, 255, 255, 0.5), 0 10px 70px rgba(0, 255, 255, 0.6);
 }
 
-
 .card h4 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #fff;
   margin-bottom: 1rem;
   font-weight: 700;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5); /* Lueur futuriste autour du titre */
-  letter-spacing: 1px; /* Espacement des lettres pour plus de style */
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+  letter-spacing: 1px;
 }
 
 .card p {
   font-size: 1.1rem;
-  color: #ccc; /* Texte clair pour un bon contraste */
+  color: #ccc;
   margin-bottom: 1.5rem;
   font-weight: 300;
   line-height: 1.5;
-  letter-spacing: 1px; /* Espacement léger du texte */
+  letter-spacing: 1px;
 }
 
-/* Formulaires pour interagir avec les agents */
+/* Formulaire pour interagir avec les agents */
 form {
   display: flex;
   flex-direction: column;
@@ -157,7 +159,7 @@ input {
 input:focus {
   background-color: #34495e;
   outline: none;
-  transform: scale(1.05); /* Effet de mise en avant au focus */
+  transform: scale(1.05);
 }
 
 button {
@@ -175,7 +177,7 @@ button {
 button:hover {
   background-color: #3498db;
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.4); /* Ombre lumineuse au survol */
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.4);
 }
 
 button:active {
@@ -195,7 +197,7 @@ button:active {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.938); /* Lueur autour de l'image */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.938);
 }
 
 @keyframes moveImage {
@@ -229,3 +231,113 @@ button:active {
   margin-top: 0.5rem;
   font-weight: 300;
 }
+/* Boîte de conversation */
+.conversation-box {
+  margin-top: 20px;
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #222;
+  border-radius: 10px;
+  border: 1px solid #444;
+  height: 300px; /* Limiter la hauteur pour créer l'effet de défilement */
+}
+
+/* Style des messages */
+.message {
+  padding: 10px 15px;
+  margin-bottom: 12px;
+  max-width: 80%;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: message-appear 0.6s ease-out forwards;
+}
+
+.message.IA {
+  background-color: #00f6ff;
+  color: #fff;
+  text-align: left;
+  margin-left: 20px;
+  border-radius: 20px 20px 0 20px;
+}
+
+.message.User {
+  background-color: #27ae60;
+  color: #fff;
+  text-align: right;
+  margin-right: 20px;
+  border-radius: 20px 20px 20px 0;
+}
+
+/* Animation pour l'apparition des messages */
+@keyframes message-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style pour l'input et bouton */
+input {
+  padding: 15px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+input:focus {
+  background-color: #34495e;
+  outline: none;
+  transform: scale(1.02);
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: #00f6ff;
+  color: white;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #3498db;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.4);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+/* Chat Box */
+.chat-box {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Ajout d'une animation de défilement */
+.message + .message {
+  animation-delay: 3s;
+}
+
