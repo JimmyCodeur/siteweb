@@ -21,20 +21,20 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #00f6ff;
-  text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7), 0px 0px 20px rgba(0, 255, 255, 0.5), 0px 0px 30px rgba(0, 255, 255, 0.3);
-  animation: neon-glow 1.5s ease-in-out infinite alternate;
+  text-shadow: 0px 0px 5px rgba(44, 219, 219, 0.7), 0px 0px 10px rgba(0, 255, 255, 0.5), 0px 0px 10px rgba(0, 255, 255, 0.3);
+  animation: neon-glow 5s ease-in-out infinite alternate;
 }
 
 /* Effet de néon sur le titre */
 @keyframes neon-glow {
   0% {
-    text-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 25px rgba(0, 255, 255, 0.5), 0 0 35px rgba(0, 255, 255, 0.3);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 25px rgba(0, 255, 255, 0.5), 0 0 35px rgba(0, 255, 255, 0.3);
   }
   50% {
-    text-shadow: 0 0 25px rgba(0, 255, 255, 1), 0 0 45px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.6);
+    text-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 45px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.6);
   }
   100% {
-    text-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 25px rgba(0, 255, 255, 0.5), 0 0 35px rgba(0, 255, 255, 0.3);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 25px rgba(0, 255, 255, 0.5), 0 0 35px rgba(0, 255, 255, 0.3);
   }
 }
 
@@ -44,29 +44,13 @@ h2 {
   padding: 3rem;
   background-color: #111; /* Couleur sombre pour un aspect plus futuriste */
   border-radius: 20px; /* Coins arrondis plus marqués */
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.4); /* Ombre lumineuse */
+  box-shadow: 0 0 30px rgb(255, 255, 255), 0 0 40px rgba(0, 255, 255, 0.4); /* Ombre lumineuse */
   position: relative;
   overflow: hidden;
   animation: fade-in 1.5s ease-in-out, pulse 2s infinite alternate; /* Animation d'entrée et animation pulsante */
   transition: all 0.4s ease-in-out;
   margin: 0 auto; /* Centrer le bloc */
   backdrop-filter: blur(10px); /* Effet flou de l'arrière-plan pour un look plus moderne */
-}
-
-.category-block:hover {
-  transform: translateY(-5px); /* Léger effet de mouvement au survol */
-  box-shadow: 0 0 50px rgba(0, 255, 255, 0.7), 0 0 70px rgba(0, 255, 255, 0.6); /* Ombre plus marquée */
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .category-block h3 {
@@ -168,14 +152,12 @@ input {
   color: #ecf0f1;
   transition: background-color 0.3s ease, transform 0.3s ease;
   width: 100%;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Légère lueur autour de l'input */
 }
 
 input:focus {
   background-color: #34495e;
   outline: none;
   transform: scale(1.05); /* Effet de mise en avant au focus */
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
 }
 
 button {
@@ -213,7 +195,7 @@ button:active {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); /* Lueur autour de l'image */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.938); /* Lueur autour de l'image */
 }
 
 @keyframes moveImage {
@@ -233,11 +215,6 @@ button:active {
   margin-top: 1.5rem;
   border: 2px solid #555;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.response-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3); /* Ombre qui réagit au survol */
 }
 
 .response-box h4 {
