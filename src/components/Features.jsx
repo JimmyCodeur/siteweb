@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Features.css';
-import AgentImage from '../assets/images/bot_1.webp'; // Assurez-vous d'ajouter l'image
+import AgentImage from '../assets/images/bot_1.webp';
+import AgentImageDev from '../assets/images/agent_dev.webp';
 import PipelineImage from '../assets/images/workflow_agents.webp'; // Assurez-vous d'ajouter l'image
 import PresentationImage from '../assets/images/presentation_image.webp'; // Assurez-vous d'ajouter l'image
 import AppointmentImage from '../assets/images/presentation_image.webp'; // Assurez-vous d'ajouter l'image
@@ -64,7 +65,6 @@ const Features = () => {
     setEnglishAgentData("");
   };
 
-
   // Fonction pour démarrer l'enregistrement vocal
   const startListening = () => {
     if (window.SpeechRecognition || window.webkitSpeechRecognition) {
@@ -102,32 +102,120 @@ const Features = () => {
         <p className="category-description">
           Nos agents intelligents sont là pour simplifier votre quotidien et améliorer votre productivité. Ils agissent comme des assistants virtuels qui vous aident à accomplir rapidement des tâches répétitives ou complexes, tout en vous permettant de vous concentrer sur des activités à plus forte valeur ajoutée. Que ce soit pour répondre instantanément à des questions, organiser des informations, ou automatiser des processus, nos agents sont conçus pour vous rendre plus efficace et vous faire gagner un temps précieux. Grâce à l'intelligence artificielle, ils s'adaptent à vos besoins et évoluent en fonction de vos préférences, offrant ainsi une expérience personnalisée et performante.
         </p>
-
-        {/* Agent éducatif */}
-        <h4>Agent éducatif / apprentissage</h4>
+        <div class="section-title">
+          <h4>Agent éducatif & d'Apprentissage</h4>
+        </div>
+        {/* Agent 1 : Création d'agents IA */}
         <div className="sub-category">
-          <div className="card">
-            <h4>Apprendre l'anglais avec l'IA</h4>
-            <div className="card-image">
-              <img src={AgentImage} alt="Agent IA enseignant" className="feature-image" />
-            </div>
-            <p>Un agent IA qui vous aide à améliorer vos compétences linguistiques en posant des questions et en vous corrigeant en temps réel.</p>
+          <div className="card improved-card">
+            <h4 className="card-title">Apprendre l'anglais</h4>
             
-            {/* Afficher la conversation */}
-            <div className="conversation-box">
-              {conversation.map((msg, index) => (
-                <div key={index} className={`message ${msg.speaker}`}>
-                  <strong>{msg.speaker}:</strong> {msg.message}
-                </div>
-              ))}
+            <div className="card-header">
+              <div className="card-image">
+                <img src={AgentImage} alt="Agent IA enseignant" className="feature-image" />
+              </div>
+              <p className="card-description">
+                Un agent IA interactif qui vous aide à améliorer vos compétences linguistiques en pratiquant des conversations, en vous corrigeant et en suivant vos progrès.
+              </p>
+            </div>
+
+            {/* Barre de progression */}
+            <div className="progress-container">
+              <p className="progress-text">Votre progression : <strong>45%</strong></p>
+              <div className="progress-bar">
+                <div className="progress" style={{ width: '45%' }}></div>
+              </div>
+            </div>
+
+            {/* Feedback & Conversation */}
+            <div className="conversation-section">
+              <h5 className="conversation-title">Conversation</h5>
+              <div className="conversation-box">
+                {conversation.map((msg, index) => (
+                  <div key={index} className={`message ${msg.speaker}`}>
+                    <strong>{msg.speaker}:</strong> {msg.message}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Feedback stylisé */}
+            <div className="response-box">
+              <h5 className="response-title">Feedback de l'IA :</h5>
+              <p className="response-message">
+                {supportResponse || "Très bonne progression aujourd'hui, bravo ! Je te suggère de changer de mode d'entrainement !"}
+              </p>
+            </div>
+
+            {/* Boutons interactifs */}
+            <div className="button-group">
+              <button className="quiz-btn">
+                🚀 Mode Quiz
+              </button>
+              <button className="resources-btn">
+                📚 Révision
+              </button>
             </div>
           </div>
+          {/* Carte 1 : Apprendre à coder */}
+          <div className="card improved-card">
+            <h4 className="card-title">Apprendre à coder</h4>
+            <div className="card-header">
+              <div className="card-image">
+                <img src={AgentImageDev} alt="Agent IA enseignant à coder" className="feature-image" />
+              </div>
+              <p className="card-description">
+                Cet agent IA vous guide dans l'apprentissage de la programmation, avec des exercices interactifs, des défis de codage et des corrections en temps réel.
+              </p>
+            </div>
+
+            {/* Barre de progression */}
+            <div className="progress-container">
+              <p className="progress-text">Votre progression : <strong>25%</strong></p>
+              <div className="progress-bar">
+                <div className="progress" style={{ width: '25%' }}></div>
+              </div>
+            </div>
+
+            {/* Section d'exercice interactif */}
+            <div className="interaction-section">
+              <h5 className="interaction-title">Exercice Interactif</h5>
+              <div className="exercise-box">
+                <p>Écrivez une fonction en Python qui additionne deux nombres :</p>
+                <code>
+                  def add_numbers(a, b): <br />
+                  &nbsp;&nbsp;return a + b
+                </code>
+              </div>
+            </div>
+
+            {/* Feedback stylisé */}
+            <div className="response-box">
+              <h5 className="response-title">Feedback de l'IA :</h5>
+              <p className="response-message">
+                {supportResponse || "Bonne tentative, mais pensez à vérifier votre syntaxe ! Essayez à nouveau avant de passer à la suite !"}
+              </p>
+            </div>
+
+            {/* Boutons interactifs */}
+            <div className="button-group">
+              <button className="next-btn">
+                ⏭️ Suivant
+              </button>
+            </div>
+          </div>
+          
+
         </div>
+        
+
 
         {/* Autres agents */}
-        <h4>Agent support client</h4>
+        <div class="section-title">
+          <h4>Agent d'assistance</h4>
+        </div>
         <div className="sub-category">
-          <div className="card">
+          <div className="card improved-card">
             <h4>Agent IA pour le support client</h4>
             <div className="card-image">
               <img src={AgentImage} alt="Agent IA support" className="feature-image" />
@@ -183,7 +271,7 @@ const Features = () => {
             </div>
             <div className="response-box">
               <h4>Réponse de l'Agent IA :</h4>
-              <p>{infoSearchResponse || "L'agent répondra ici après votre question."}</p>
+              <p>{infoSearchResponse || "Très bonne progression aujourd'hui"}</p>
             </div>
           </div>
         </div>

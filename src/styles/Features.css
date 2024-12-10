@@ -1,4 +1,8 @@
-/* Styles principaux de la section Features */
+
+/* ==========================================================
+   SECTION PRINCIPALE : FEATURES
+========================================================== */
+
 .features {
   width: 100%;
   padding: 4rem 2rem;
@@ -12,7 +16,6 @@
   position: relative;
 }
 
-/* Titre principal de la section */
 h2 {
   text-align: center;
   font-size: 3rem;
@@ -25,7 +28,6 @@ h2 {
   animation: neon-glow 5s ease-in-out infinite alternate;
 }
 
-/* Effet de néon sur le titre */
 @keyframes neon-glow {
   0% {
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 25px rgba(0, 255, 255, 0.5), 0 0 35px rgba(0, 255, 255, 0.3);
@@ -38,7 +40,10 @@ h2 {
   }
 }
 
-/* Catégorie principale */
+/* ==========================================================
+   BLOCS PRINCIPAUX : CATEGORY BLOCKS
+========================================================== */
+
 .category-block {
   width: 100%;
   max-width: 1500px; /* Limite la taille maximale du bloc */
@@ -55,7 +60,6 @@ h2 {
   border-top: 4px solid #00f6ff; /* Ligne de séparation en haut */
 }
 
-/* Titre de catégorie */
 .category-block h3 {
   font-size: 2.5rem;
   color: #00f6ff;
@@ -66,7 +70,6 @@ h2 {
   letter-spacing: 2px;
 }
 
-/* Description des catégories */
 .category-description {
   font-size: 1.2rem;
   color: #ccc;
@@ -77,7 +80,6 @@ h2 {
   letter-spacing: 1px;
 }
 
-/* Conteneur des sous-catégories */
 .sub-category {
   display: flex;
   flex-wrap: wrap;
@@ -86,28 +88,66 @@ h2 {
   margin-top: 20px;
 }
 
-/* Cartes individuelles d'agents */
-.card {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)); 
-  padding: 20px;
-  border-radius: 10px; /* Coins arrondis */
-  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3); 
+/* Style du titre principal avec ligne */
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  margin-top: 40px; /* Augmentez la valeur pour plus d'espace */
+}
+
+.section-title h4 {
+  font-size: 2.5rem; /* Taille plus grande pour le titre */
+  font-weight: 700;
+  color: #ff7733; /* Couleur similaire à celle de l'image */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.section-title:before {
+  content: "";
+  display: block;
+  width: 80px; /* Longueur de la ligne */
+  height: 2px;
+  background: linear-gradient(to right, #ff7733, transparent); /* Ligne dégradée */
+  border-radius: 5px;
+  transform: translateY(3px); /* Aligne la ligne avec le texte */
+}
+
+.section-title:after {
+  content: "";
+  display: block;
+  width: 80px; /* Longueur de la ligne */
+  height: 2px;
+  background: linear-gradient(to right, #ff7733, transparent); /* Ligne dégradée */
+  border-radius: 5px;
+  transform: translateY(3px); /* Aligne la ligne avec le texte */
+}
+
+
+/* ==========================================================
+   CARTES : INDIVIDUAL CARDS
+========================================================== */
+
+.improved-card {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  max-width: 350px; /* Réduire la taille des cartes */
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+  max-width: 500px;
   width: 100%;
-  text-align: center;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: rgba(34, 34, 34, 0.9); 
-  border: 2px solid rgba(0, 255, 255, 0.7); 
-  backdrop-filter: blur(8px); 
+  gap: 30px;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 50px rgba(0, 255, 255, 0.5), 0 10px 70px rgba(0, 255, 255, 0.6);
+  box-shadow: 0 10px 50px rgba(160, 160, 160, 0.5), 0 10px 70px rgba(130, 133, 133, 0.6);
 }
 
 .card h4 {
@@ -128,76 +168,11 @@ h2 {
   letter-spacing: 1px;
 }
 
-/* Formulaire pour interagir avec les agents */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-}
-
-.card-content {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-input {
-  padding: 12px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 10px;
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  width: 100%;
-}
-
-input:focus {
-  background-color: #34495e;
-  outline: none;
-  transform: scale(1.05);
-}
-
-button {
-  padding: 12px 25px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  background-color: #00f6ff;
-  color: white;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-  background-color: #3498db;
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.4);
-}
-
-button:active {
-  transform: translateY(2px);
-}
-
-/* Image de la carte */
 .card-image {
   width: 150px;
   height: 150px;
   animation: moveImage 2s infinite alternate;
   align-self: center;
-}
-
-.feature-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.938);
 }
 
 @keyframes moveImage {
@@ -209,84 +184,84 @@ button:active {
   }
 }
 
-/* Effet de réponse de l'agent IA */
-.response-box {
-  background-color: #1c1c1c;
-  padding: 1.5rem;
-  border-radius: 10px;
-  margin-top: 1.5rem;
-  border: 2px solid #555;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.response-box h4 {
-  font-size: 1.3rem;
-  color: #3498db;
-  margin-bottom: 1rem;
-}
-
-.response-box p {
-  font-size: 1.1rem;
-  color: #fff;
-  margin-top: 0.5rem;
-  font-weight: 300;
-}
-/* Boîte de conversation */
-.conversation-box {
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
-  padding: 10px;
-  max-height: 300px;
-  overflow-y: auto;
-  background-color: #222;
-  border-radius: 10px;
-  border: 1px solid #444;
-  height: 300px; /* Limiter la hauteur pour créer l'effet de défilement */
 }
 
-/* Style des messages */
-.message {
-  padding: 10px 15px;
-  margin-bottom: 12px;
-  max-width: 80%;
-  border-radius: 20px;
-  font-size: 1.1rem;
+.card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00f6ff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.card-description {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #ccc;
   line-height: 1.5;
-  font-weight: 400;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  animation: message-appear 0.6s ease-out forwards;
 }
 
-.message.IA {
-  background-color: #00f6ff;
+.feature-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.938);
+}
+
+code {
+  background-color: #333;
+  color: #00f6ff;
+  padding: 5px;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.exercise-box {
+  background-color: #222;
   color: #fff;
-  text-align: left;
-  margin-left: 20px;
-  border-radius: 20px 20px 0 20px;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-.message.User {
-  background-color: #27ae60;
-  color: #fff;
-  text-align: right;
-  margin-right: 20px;
-  border-radius: 20px 20px 20px 0;
+.interaction-title {
+  font-size: 1.2rem;
+  color: #00f6ff;
+  margin-bottom: 10px;
 }
 
-/* Animation pour l'apparition des messages */
-@keyframes message-appear {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ==========================================================
+   FORMULAIRES ET BOUTONS
+========================================================== */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
 }
 
-/* Style pour l'input et bouton */
 input {
   padding: 15px 20px;
   font-size: 1rem;
@@ -317,17 +292,95 @@ button {
   margin-top: 15px;
 }
 
-button:hover {
-  background-color: #3498db;
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.4);
-}
-
 button:active {
   transform: translateY(2px);
 }
 
-/* Chat Box */
+.next-btn {
+  background-color: #ff9900;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.next-btn:hover {
+  background-color: #ffb84d;
+  transform: translateY(-2px);
+}
+
+.next-btn:active {
+  transform: translateY(1px);
+}
+
+/* ==========================================================
+   CONVERSATION : CHAT BOX
+========================================================== */
+
+.conversation-box {
+  margin-top: 20px;
+  padding: 10px;
+  max-height: 400px; /* Ajustez la hauteur selon vos besoins */
+  overflow-y: auto;
+  background-color: #222;
+  border-radius: 10px;
+  border: 1px solid #444;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  scroll-behavior: smooth; /* Ajout de défilement doux */
+  animation: scroll-down 0.5s ease-in-out forwards;
+}
+
+.message {
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  max-width: 80%;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: message-appear 0.6s ease-out forwards;
+  transform: translateY(10px); /* Ajout de la translation pour l'animation */
+}
+
+.message.IA {
+  background-color: #00f6ff;
+  color: #fff;
+  text-align: left;
+  margin-left: 20px;
+  border-radius: 20px 20px 0 20px;
+}
+
+.message.User {
+  background-color: #27ae60;
+  color: #fff;
+  text-align: right;
+  margin-right: 20px;
+  border-radius: 20px 20px 20px 0;
+}
+
+@keyframes message-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .chat-box {
   max-width: 600px;
   margin: 0 auto;
@@ -336,12 +389,97 @@ button:active {
   gap: 10px;
 }
 
-/* Ajout d'une animation de défilement */
 .message + .message {
-  animation-delay: 3s;
+  animation-delay: 0.5s;
 }
 
-/* Style du lien Calendly */
+@keyframes scroll-down {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 10px;
+}
+
+.quiz-btn, .resources-btn {
+  flex: 1;
+  padding: 10px 15px;
+  background-color: #ff9900;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quiz-btn:hover, .resources-btn:hover {
+  background: #818181;
+  transform: translateY(-2px);
+}
+
+.response-box {
+  width: 100%;
+  background: #2c3e50;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  margin-top: 10px;
+}
+
+.response-title {
+  font-size: 1.1rem;
+  color: #00f6ff;
+}
+
+.response-message {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.progress-container {
+  width: 100%;
+  text-align: center;
+}
+
+.progress-text {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #2c3e50;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.progress {
+  height: 100%;
+  background: #00f6ff;
+  transition: width 0.5s ease;
+}
+
+.conversation-title {
+  font-size: 1.2rem;
+  color: #00f6ff;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================
+   CALENDRIER
+========================================================== */
+
 .calendly-button {
   padding: 12px 25px;
   font-size: 1.1rem;
@@ -367,5 +505,4 @@ button:active {
 .calendly-button:active {
   transform: translateY(2px);
 }
-
 

@@ -58,7 +58,7 @@
 }
 
 .navbar .btn.get-started {
-  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  background: #ff9900;
   color: white;
   box-shadow: 0 0 10px rgba(255, 117, 140, 0.6);
 }
