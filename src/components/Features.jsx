@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import '../styles/Features.css';
 import AgentImage from '../assets/images/bot_1.webp';
 import AgentImageDev from '../assets/images/agent_dev.webp';
+import AgentImageAssistance from '../assets/images/agent_assistance.webp';
+import AgentImageChatbot from '../assets/images/agent_chatbot.webp';
 import PipelineImage from '../assets/images/workflow_agents.webp'; // Assurez-vous d'ajouter l'image
 import PresentationImage from '../assets/images/presentation_image.webp'; // Assurez-vous d'ajouter l'image
 import AppointmentImage from '../assets/images/presentation_image.webp'; // Assurez-vous d'ajouter l'image
@@ -20,6 +22,38 @@ const Features = () => {
     { speaker: "User", message: "Thank you!" },
     { speaker: "IA", message: "You're welcome! Keep practicing, and you'll get even better." }
   ]);
+
+  const [conversation_assistance, setConversationAssistance] = useState([
+    { speaker: "IA", message: "Bonjour ! Je suis votre assistant virtuel. Avez-vous un problème ?" },
+    { speaker: "User", message: "Je cherche un document important dans mes fichiers." },
+    { speaker: "IA", message: "Je peux vous aider avec ça. Pouvez-vous me donner un mot-clé ou une description du document ?" },
+    { speaker: "User", message: "C'est un rapport sur les ventes de janvier." },
+    { speaker: "IA", message: "Merci ! Je vais rechercher les fichiers contenant le mot-clé 'ventes' ou 'janvier'. Un instant..." },
+    { speaker: "IA", message: "J'ai trouvé deux fichiers correspondants : 'Rapport_Ventes_Janvier.pdf' et 'Analyse_Janvier.xlsx'. Souhaitez-vous les ouvrir ?" },
+    { speaker: "User", message: "Oui, ouvrez le premier fichier, s'il vous plaît." },
+    { speaker: "IA", message: "Très bien ! Je vais ouvrir 'Rapport_Ventes_Janvier.pdf' pour vous. Un instant..." },
+    { speaker: "IA", message: "Le fichier est maintenant ouvert. Y a-t-il autre chose avec laquelle je peux vous aider ?" },
+    { speaker: "User", message: "Non, merci beaucoup !" },
+    { speaker: "IA", message: "Avec plaisir ! N'hésitez pas à me recontacter si vous avez besoin d'aide. Bonne journée !" }
+  ]);
+
+  const [conversation_chatbot, setConversationChatbot] = useState([
+    { speaker: "IA", message: "Bonjour ! Je suis votre assistant virtuel. Comment puis-je vous aider aujourd'hui ?" },
+    { speaker: "User", message: "J'ai besoin d'aide pour changer mon adresse email." },
+    { speaker: "IA", message: "Pas de problème. Pouvez-vous confirmer votre identité en vous connectant à votre compte ou en répondant à une question de sécurité ?" },
+    { speaker: "User", message: "Je vais répondre à une question de sécurité." },
+    { speaker: "IA", message: "Très bien. Quelle est votre couleur préférée ?" },
+    { speaker: "User", message: "Bleu." },
+    { speaker: "IA", message: "Merci ! Votre identité a été confirmée. Veuillez entrer votre nouvelle adresse email." },
+    { speaker: "User", message: "Mon nouvel email est 'utilisateur@example.com'." },
+    { speaker: "IA", message: "Parfait ! Votre adresse email a été mise à jour avec succès. Vous recevrez un email de confirmation à votre nouvelle adresse. Y a-t-il autre chose avec laquelle je peux vous aider ?" },
+    { speaker: "User", message: "Non, merci beaucoup !" },
+    { speaker: "IA", message: "Avec plaisir ! N'hésitez pas à me recontacter si vous avez besoin d'aide. Bonne journée !" }
+  ]);
+  
+  
+  
+
 
   const [customerSupportData, setCustomerSupportData] = useState("");
   const [infoSearchData, setInfoSearchData] = useState("");
@@ -43,54 +77,6 @@ const Features = () => {
   const [presentationResponse, setPresentationResponse] = useState("");
   const [appointmentResponse, setAppointmentResponse] = useState("");
 
-  // Etat pour savoir si l'enregistrement vocal est en cours
-  const [listening, setListening] = useState(false);
-
-  const handleAgentSubmit = async (e) => {
-    e.preventDefault();
-
-    // Ajouter le message de l'utilisateur à la conversation
-    setConversation([
-      ...conversation,
-      { speaker: "User", message: englishAgentData }
-    ]);
-
-    // Ajouter la réponse de l'IA à la conversation
-    setConversation((prevConversation) => [
-      ...prevConversation,
-      { speaker: "IA", message: mockResponse }
-    ]);
-
-    // Réinitialiser l'entrée utilisateur
-    setEnglishAgentData("");
-  };
-
-  // Fonction pour démarrer l'enregistrement vocal
-  const startListening = () => {
-    if (window.SpeechRecognition || window.webkitSpeechRecognition) {
-      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-      recognition.lang = 'en-US';
-      recognition.start();
-
-      recognition.onstart = () => {
-        setListening(true);
-      };
-
-      recognition.onresult = (event) => {
-        const spokenText = event.results[0][0].transcript;
-        setEnglishAgentData(spokenText);
-        setListening(false);
-        handleAgentSubmit(event, "english");
-      };
-
-      recognition.onerror = (event) => {
-        console.log('Speech recognition error: ', event.error);
-        setListening(false);
-      };
-    } else {
-      alert("Speech recognition is not supported in this browser.");
-    }
-  };
 
   return (
     <section id="features" className="features">
@@ -215,44 +201,63 @@ const Features = () => {
           <h4>Agent d'assistance</h4>
         </div>
         <div className="sub-category">
-          <div className="card improved-card">
-            <h4>Agent IA pour le support client</h4>
+        <div className="card improved-card">
+            <h4>Agent IA Chatbot</h4>
             <div className="card-image">
-              <img src={AgentImage} alt="Agent IA support" className="feature-image" />
+              <img src={AgentImageChatbot} alt="Agent IA pour le support client" className="feature-image" />
             </div>
-            <p>Un agent IA qui fournit une assistance 24/7 aux clients en répondant à leurs questions, en les dirigeant vers les bonnes ressources, et en résolvant des problèmes courants.</p>
-            {/* Conteneur pour centrer le bouton */}
-            <div className="button-container">
-              <button
-                onClick={startListening}
-                disabled={listening}
-                className="record-btn"
-              >
-                {listening ? "Listening..." : "🎙️"}
-              </button>
-            </div>            
-            <div className="card-content">
-              <form onSubmit={(e) => handleAgentSubmit(e, "support")}>
-                <input
-                  type="text"
-                  value={customerSupportData}
-                  onChange={(e) => setCustomerSupportData(e.target.value)}
-                  placeholder="Posez une question à l'agent IA"
-                />
-                <button type="submit">Envoyer à l'agent IA</button>
-              </form>
+            <p>
+              Un chatbot IA interactif conçu pour assister vos clients, répondre à leurs questions et fournir les informations nécessaires de manière rapide et efficace.
+            </p>
+
+            {/* Section Conversation */}
+            <div className="conversation-section">
+              <h5 className="conversation-title">Conversation</h5>
+              <div className="conversation-box">
+                {conversation_chatbot.map((msg, index) => (
+                  <div key={index} className={`message ${msg.speaker}`}>
+                    <strong>{msg.speaker}:</strong> {msg.message}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Zone de feedback */}
+            <div className="response-box">
+              <h4>Conseil de l'Agent IA :</h4>
+              <p>{supportResponse || "Je suis à votre disposition pour rechercher des documents, résoudre des problèmes ou répondre à vos questions."}</p>
+            </div>
+          </div>
+          <div className="card improved-card">
+            <h4>Agent IA d'assistance interne</h4>
+            <div className="card-image">
+              <img src={AgentImageAssistance} alt="Agent IA support" className="feature-image" />
+            </div>
+            <p>Un agent IA qui fournit une assistance 24/7 aux salariés en répondant à leurs questions, en les dirigeant vers les bonnes ressources, et en résolvant des problèmes courants.</p>
+            {/* Feedback & Conversation */}
+            <div className="conversation-section">
+              <h5 className="conversation-title">Conversation</h5>
+              <div className="conversation-box">
+                {conversation_assistance.map((msg, index) => (
+                  <div key={index} className={`message ${msg.speaker}`}>
+                    <strong>{msg.speaker}:</strong> {msg.message}
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="response-box">
-              <h4>Réponse de l'Agent IA :</h4>
-              <p>{supportResponse || "L'agent répondra ici après votre question."}</p>
+              <h4>Conseil de l'Agent IA :</h4>
+              <p>{supportResponse || "Je peux vous aider à améliorer votre fichier si vous le voulez."}</p>
             </div>
           </div>
         </div>
 
         {/* Autres agents */}
-        <h4>Agent Recherche & Collecte</h4>
+        <div class="section-title">
+          <h4>Agent Recherche & Collection</h4>
+        </div>
         <div className="sub-category">
-          <div className="card">
+          <div className="card improved-card">
             <h4>Agent IA pour la recherche et collecte d'informations</h4>
             <div className="card-image">
               <img src={AgentImage} alt="Agent IA recherche" className="feature-image" />
@@ -277,9 +282,11 @@ const Features = () => {
         </div>
 
         {/* Autres agents */}
-        <h4>Agent création et génération de contenu</h4>
+        <div class="section-title">
+          <h4>Agent Création & Génération</h4>
+        </div>
         <div className="sub-category">
-          <div className="card">
+          <div className="card improved-card">
             <h4>Agent IA pour la création et la génération de contenu</h4>
             <div className="card-image">
               <img src={AgentImage} alt="Agent IA création" className="feature-image" />
@@ -304,9 +311,11 @@ const Features = () => {
         </div>
 
         {/* Autres agents */}
-        <h4>Agent personnalisation et recommandation</h4>
+        <div class="section-title">
+          <h4>Agent Recommandation</h4>
+        </div>
         <div className="sub-category">
-          <div className="card">
+          <div className="card improved-card">
             <h4>Agent IA pour la personnalisation et la recommandation</h4>
             <div className="card-image">
               <img src={AgentImage} alt="Agent IA recommandation" className="feature-image" />
@@ -326,33 +335,6 @@ const Features = () => {
             <div className="response-box">
               <h4>Réponse de l'Agent IA :</h4>
               <p>{recommendationResponse || "L'agent répondra ici après votre question."}</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Autres agents */}
-        <h4>Agent surveillance et sécurité</h4>
-        <div className="sub-category">
-          <div className="card">
-            <h4>Agent IA pour la surveillance et la sécurité</h4>
-            <div className="card-image">
-              <img src={AgentImage} alt="Agent IA sécurité" className="feature-image" />
-            </div>
-            <p>Un agent IA qui surveille les systèmes et détecte les anomalies ou menaces en temps réel pour assurer la sécurité.</p>
-            <div className="card-content">
-              <form onSubmit={(e) => handleAgentSubmit(e, "security")}>
-                <input
-                  type="text"
-                  value={securityAgentData}
-                  onChange={(e) => setSecurityAgentData(e.target.value)}
-                  placeholder="Posez une question à l'agent IA"
-                />
-                <button type="submit">Envoyer à l'agent IA</button>
-              </form>
-            </div>
-            <div className="response-box">
-              <h4>Réponse de l'Agent IA :</h4>
-              <p>{securityResponse || "L'agent répondra ici après votre question."}</p>
             </div>
           </div>
         </div>

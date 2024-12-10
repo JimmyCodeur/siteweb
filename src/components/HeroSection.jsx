@@ -28,7 +28,7 @@ const HeroSection = () => {
       {/* Bulle d'écriture animée */}
       <div className="bubble">
         <div className="bubble-text">
-          J'aimerais t'aider ! 
+          J'aimerais t'aider ! 💪 
         </div>
       </div>
     </div>

@@ -356,7 +356,7 @@ button:active {
 .message.IA {
   background-color: #00f6ff;
   color: #fff;
-  text-align: left;
+  text-align: right;
   margin-left: 20px;
   border-radius: 20px 20px 0 20px;
 }
@@ -364,7 +364,7 @@ button:active {
 .message.User {
   background-color: #27ae60;
   color: #fff;
-  text-align: right;
+  text-align: left;
   margin-right: 20px;
   border-radius: 20px 20px 20px 0;
 }
