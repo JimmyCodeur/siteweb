@@ -20,7 +20,6 @@
   height: 300%;
   background: radial-gradient(circle, rgba(0, 255, 255, 0.3), rgba(255, 0, 255, 0.2), transparent);
   animation: pulse-glow 10s infinite alternate;
-  z-index: -1;
   filter: blur(50px);
   opacity: 0.8;
 }
@@ -34,7 +33,6 @@
   height: 200%;
   background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.05), transparent);
   animation: diagonal-glow 5s infinite linear;
-  z-index: -1;
   filter: blur(80px);
   opacity: 0.5;
 }

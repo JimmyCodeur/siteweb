@@ -7,6 +7,9 @@ import AgentImageChatbot from '../assets/images/agent_chatbot.webp';
 
 const Features = () => {
   const [selectedAgent, setSelectedAgent] = useState(null);
+  const [translationInput, setTranslationInput] = useState('');
+  const [translatedText, setTranslatedText] = useState('');
+  const [progress, setProgress] = useState(75); // Exemple de progression
 
   // Disable scroll when modal is open
   useEffect(() => {
@@ -16,6 +19,12 @@ const Features = () => {
       document.body.classList.remove('no-scroll');
     }
   }, [selectedAgent]);
+
+  const handleTranslation = (e) => {
+    setTranslationInput(e.target.value);
+    // Simuler une traduction pour cet exemple
+    setTranslatedText(`Traduction simulée : ${e.target.value}`);
+  };
 
   const agentCategories = [
     {
@@ -27,62 +36,31 @@ const Features = () => {
           image: AgentImage,
           progress: 75,
           conversation: [
-            { speaker: "IA", message: "Hello! You are in a taxi. How can I help you?" },
-            { speaker: "User", message: "Where should I go?" },
-            { speaker: "IA", message: "Great question! You could say: 'Where should I go, please?' Remember to add 'please' for politeness." },
-          ],
-        },
-        {
-          title: "Apprendre à coder",
-          description: "Cet agent IA vous guide dans l'apprentissage de la programmation, avec des exercices interactifs, des défis de codage et des corrections en temps réel.",
-          image: AgentImageDev,
-          progress: 50,
-          conversation: [
-            { speaker: "IA", message: "Bienvenue dans le monde du code. Quel langage souhaitez-vous apprendre ?" },
-            { speaker: "User", message: "Je veux apprendre le JavaScript." },
-            { speaker: "IA", message: "Super choix ! Commençons par les bases : les variables et les fonctions." },
+            { speaker: "IA", message: "Hello! Welcome to your English practice session. Let's start with a simple conversation. How are you today?" },
+            { speaker: "User", message: "I am good, thank you. How are you?" },
+            { speaker: "IA", message: "Great! I'm here to help you practice English. Let's talk about your daily routine. Can you tell me what you do in the morning?" },
           ],
         },
       ],
     },
-    {
-      category: "Agents d'Assistance",
-      agents: [
-        {
-          title: "Agent IA Chatbot",
-          description: "Un chatbot IA interactif conçu pour assister vos clients, répondre à leurs questions et fournir les informations nécessaires de manière rapide et efficace.",
-          image: AgentImageChatbot,
-          progress: 85,
-          conversation: [
-            { speaker: "IA", message: "Bonjour ! Je suis votre assistant virtuel. Comment puis-je vous aider aujourd'hui ?" },
-            { speaker: "User", message: "J'ai besoin d'aide pour changer mon adresse email." },
-            { speaker: "IA", message: "Pas de problème. Veuillez fournir votre nouvelle adresse email." },
-          ],
-        },
-        {
-          title: "Agent IA d'assistance interne",
-          description: "Un agent IA qui fournit une assistance 24/7 aux salariés en répondant à leurs questions, en les dirigeant vers les bonnes ressources, et en résolvant des problèmes courants.",
-          image: AgentImageAssistance,
-          progress: 65,
-          conversation: [
-            { speaker: "IA", message: "Bonjour ! Comment puis-je vous aider aujourd'hui ?" },
-            { speaker: "User", message: "Je cherche des ressources sur le marketing digital." },
-            { speaker: "IA", message: "Voici quelques ressources utiles : 'Marketing Digital pour Débutants', 'SEO en 2023', et 'Publicité sur les Réseaux Sociaux'." },
-          ],
-        },
-      ],
-    },
+    // Ajout d'autres catégories d'agent si nécessaire
   ];
 
   return (
     <section id="agents" className="features">
+      {/* Effet de fond lumineux */}
+      <div className="bg">
+        <div></div>
+        <div></div>
+      </div>
+
       <h2>Nos Solutions IA</h2>
       {agentCategories.map((category, catIndex) => (
         <div key={catIndex} className="category-block">
           <h3>{category.category}</h3>
           <div className="sub-category">
             {category.agents.map((agent, index) => (
-              <div key={index} className="card improved-card">
+              <div key={index} className="card improved-card glow-filter" data-text={agent.title}>
                 <h4 className="card-title">{agent.title}</h4>
                 <div className="card-header">
                   <div className="card-image">
@@ -105,28 +83,51 @@ const Features = () => {
       {selectedAgent && (
         <div className="modal-overlay" onClick={() => setSelectedAgent(null)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <h3>{selectedAgent.title}</h3>
-
-            <div className="progress-container">
-              <p className="progress-text">Progression : {selectedAgent.progress}%</p>
-              <div className="progress-bar">
-                <div
-                  className="progress"
-                  style={{ width: `${selectedAgent.progress}%` }}
-                ></div>
-              </div>
+            {/* En-tête du modal */}
+            <div className="modal-header">
+              <h3>{selectedAgent.title}</h3>
+              <button className="close-btn" onClick={() => setSelectedAgent(null)}>✖</button>
             </div>
 
+            {/* Boîte de conversation */}
             <div className="conversation-box">
               {selectedAgent.conversation.map((msg, index) => (
                 <div key={index} className={`message ${msg.speaker}`}>
-                  <strong>{msg.speaker}:</strong> {msg.message}
+                  <span className="avatar">{msg.speaker === "IA" ? "🤖" : "👤"}</span>
+                  <div className="message-content">
+                    <p>{msg.message}</p>
+                  </div>
                 </div>
               ))}
             </div>
-            <button className="close-btn" onClick={() => setSelectedAgent(null)}>
-              Fermer
-            </button>
+
+            {/* Fonctionnalités supplémentaires */}
+            <div className="modal-features">
+
+              {/* Barre de progression */}
+              <div className="progress-container">
+                <h4>Progression d'apprentissage</h4>
+                <div className="progress-bar">
+                  <div className="progress" style={{ width: `${progress}%` }}></div>
+                </div>
+                <p className="progress-text">Progression : {progress}%</p>
+              </div>
+
+              {/* Liste des fonctionnalités */}
+              <div className="features-overview">
+                <h4>Fonctionnalités clés</h4>
+                <ul>
+                  <li><i className="fas fa-language"></i> Traduction en temps réel</li>
+                  <li><i className="fas fa-pen"></i> Vérification grammaticale</li>
+                  <li><i className="fas fa-robot"></i> Pratique conversationnelle</li>
+                  <li><i className="fas fa-headphones"></i> Prise en charge vocale</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Pied du modal */}
+            <div className="modal-footer">
+            </div>
           </div>
         </div>
       )}
