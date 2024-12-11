@@ -15,7 +15,7 @@ const Meeting = () => {
           />
         </div>
         <div className="meeting-content">
-          <h2>Vous avez des idées innovantes ? </h2>
+          <h2>Prendre RDV</h2>
           <p>
           Discutons ensemble pour : <br></br> 🤝 Rencontrez nous pour vous aider à concrétiser vos projets.
             <br></br>🗣️ Planifiez un rendez-vous à votre convenance.

@@ -6,6 +6,9 @@ import Features from './components/Features';
 import Meeting from './components/Meeting';
 import ContactForm from './components/ContactForm';
 import FAQSection from './components/FAQSection';
+import Footer from './components/Footer';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
   return (
@@ -16,6 +19,7 @@ function App() {
       <Meeting />
       <ContactForm />
       <FAQSection />
+      <Footer />
     </div>
   );
 }

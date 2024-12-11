@@ -74,6 +74,15 @@ const FAQSection = () => {
   return (
     <section className="faq-section">
       <div className="faq-container" id="faq">
+        {/* Particules animées */}
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        {/* Lignes animées */}
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+
         {/* Volet gauche */}
         <aside className="faq-sidebar">
           <h2>FAQ</h2>
