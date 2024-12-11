@@ -34,15 +34,26 @@ const Features = () => {
           title: "Apprendre l'anglais",
           description: "Un agent IA interactif qui vous aide à améliorer vos compétences linguistiques en pratiquant des conversations, en vous corrigeant et en suivant vos progrès.",
           image: AgentImage,
-          progress: 75,
+          progress: 85,
           conversation: [
-            { speaker: "IA", message: "Hello! Welcome to your English practice session. Let's start with a simple conversation. How are you today?" },
-            { speaker: "User", message: "I am good, thank you. How are you?" },
-            { speaker: "IA", message: "Great! I'm here to help you practice English. Let's talk about your daily routine. Can you tell me what you do in the morning?" },
+            { speaker: "IA", message: "Bonjour ! Je suis ton assistant d'apprentissage en anglais. Prêt à commencer ?" },
+            { speaker: "User", message: "Oui, je suis prêt." },
+            { speaker: "IA", message: "Parfait ! Essayons une phrase simple. Comment dirais-tu 'Bonjour, comment ça va ?' en anglais ?" },
+            { speaker: "User", message: "Hello, how are you?" },
+            { speaker: "IA", message: "Très bien ! C'est correct. Pour être plus naturel, tu peux dire : 'Hi, how are you doing?'." },
+            { speaker: "IA", message: "Maintenant, essayons une autre question. Comment demander : 'Quelle heure est-il ?' ?" },
+            { speaker: "User", message: "What time is it?" },
+            { speaker: "IA", message: "Exactement ! Excellent travail. Tu peux aussi dire : 'Do you have the time?' dans une conversation informelle." },
+            { speaker: "IA", message: "Maintenant, raconte-moi ce que tu fais pendant le week-end. Tu peux commencer par : 'During the weekend, I...'" },
+            { speaker: "User", message: "During the weekend, I go to the park and play with my kids." },
+            { speaker: "IA", message: "Bravo ! Tu as bien formulé ta phrase. Pour enrichir, tu peux dire : 'During the weekend, I usually go to the park with my kids and we play games together.' Cela montre plus d'interaction." },
+            { speaker: "IA", message: "Continuons. Comment dirais-tu : 'Je vais au cinéma avec mes amis' ?" },
+            { speaker: "User", message: "I go to the cinema with my friends." },
+            { speaker: "IA", message: "Très bien ! C'est correct. En anglais américain, 'cinema' est souvent remplacé par 'movie theater'. Cela donnerait : 'I go to the movie theater with my friends.'." }
           ],
         },
       ],
-    },
+    }
     // Ajout d'autres catégories d'agent si nécessaire
   ];
 

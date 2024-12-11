@@ -20,6 +20,7 @@
   height: 300%;
   background: radial-gradient(circle, rgba(0, 255, 255, 0.3), rgba(255, 0, 255, 0.2), transparent);
   animation: pulse-glow 10s infinite alternate;
+  z-index: -2;
   filter: blur(50px);
   opacity: 0.8;
 }
@@ -35,6 +36,7 @@
   animation: diagonal-glow 5s infinite linear;
   filter: blur(80px);
   opacity: 0.5;
+  z-index: -3;
 }
 
 .navbar ul li a {
