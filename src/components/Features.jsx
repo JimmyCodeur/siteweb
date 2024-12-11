@@ -6,7 +6,8 @@ import AgentImageAssistance from '../assets/images/agent_assistance.webp';
 import AgentImageChatbot from '../assets/images/agent_chatbot.webp';
 import PipelineImage from '../assets/images/workflow_agents.webp'; // Assurez-vous d'ajouter l'image
 import PresentationImage from '../assets/images/presentation_image.webp'; // Assurez-vous d'ajouter l'image
-import AppointmentImage from '../assets/images/presentation_image.webp'; // Assurez-vous d'ajouter l'image
+import { scrollToSection } from '../utils/utils.js';
+
 
 const Features = () => {
   const [conversation, setConversation] = useState([
@@ -51,10 +52,6 @@ const Features = () => {
     { speaker: "IA", message: "Avec plaisir ! N'hésitez pas à me recontacter si vous avez besoin d'aide. Bonne journée !" }
   ]);
   
-  
-  
-
-
   const [customerSupportData, setCustomerSupportData] = useState("");
   const [infoSearchData, setInfoSearchData] = useState("");
   const [contentGenerationData, setContentGenerationData] = useState("");
@@ -76,14 +73,13 @@ const Features = () => {
   const [workflowResponse, setWorkflowResponse] = useState("");
   const [presentationResponse, setPresentationResponse] = useState("");
   const [appointmentResponse, setAppointmentResponse] = useState("");
-
-
-  return (
-    <section id="features" className="features">
+  
+  return (    
+    <section id="agents" className="features" onClick={() => scrollToSection()}>
       <h2>Nos Solutions IA</h2>
-
+      
       {/* Bloc 1: Création d'agents IA */}
-      <div className="category-block">
+      <div className="category-block" >
         <h3>Création d'agents IA</h3>
         <p className="category-description">
           Nos agents intelligents sont là pour simplifier votre quotidien et améliorer votre productivité. Ils agissent comme des assistants virtuels qui vous aident à accomplir rapidement des tâches répétitives ou complexes, tout en vous permettant de vous concentrer sur des activités à plus forte valeur ajoutée. Que ce soit pour répondre instantanément à des questions, organiser des informations, ou automatiser des processus, nos agents sont conçus pour vous rendre plus efficace et vous faire gagner un temps précieux. Grâce à l'intelligence artificielle, ils s'adaptent à vos besoins et évoluent en fonction de vos préférences, offrant ainsi une expérience personnalisée et performante.
@@ -334,87 +330,63 @@ const Features = () => {
             </div>
             <div className="response-box">
               <h4>Réponse de l'Agent IA :</h4>
-              <p>{recommendationResponse || "L'agent répondra ici après votre question."}</p>
+              <p id="workflows" onClick={() => scrollToSection()}>{recommendationResponse || "L'agent répondra ici après votre question."}</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Bloc 2: Workflows IA */}
-      <div className="category-block">
-        <h3>Workflows IA</h3>
-        <p className="category-description">Optimisez vos processus grâce à des pipelines personnalisés et des agents IA intégrés.</p>
-
-        {/* Workflow IA */}
-        <div className="sub-category">
-          <div className="card">
-            <h4>Création de Workflow IA</h4>
-            <p>Créez des workflows personnalisés pour automatiser les processus.</p>
-            <div className="card-content">
-              <form onSubmit={(e) => handleAgentSubmit(e, "workflow")}>
-                <input
-                  type="text"
-                  value={workflowData}
-                  onChange={(e) => setWorkflowData(e.target.value)}
-                  placeholder="Entrez les étapes du workflow"
-                />
-                <button type="submit">Créer le workflow IA</button>
-              </form>
-            </div>
-          </div>
+      <div className="category-block workflow-section">
+        <div className="workflow-content">
+          <h3>Workflows IA</h3>
+          <p>
+            Automatisez vos processus complexes grâce à des workflows optimisés et des agents IA collaborant efficacement pour atteindre vos objectifs.
+            Avec notre technologie, un pipeline d'agents peut travailler ensemble pour gérer des tâches de bout en bout, de manière fluide et rapide.
+          </p>
+          <ul className="feature-list">
+            <li>🔄 Coordination entre plusieurs agents IA</li>
+            <li>⚙️ Exécution automatisée des étapes clés</li>
+            <li>📈 Résultats mesurables et gain de temps</li>
+          </ul>
+        </div>
+        <div className="workflow-image">
+          <img src={PipelineImage} alt="Pipeline d'agents IA exécutant un processus" />
         </div>
       </div>
 
-      {/* Bloc 3: Présentation IA */}
-      <div className="category-block">
-        <h3>Présentation IA pour entreprises</h3>
-        <p className="category-description">Expliquez l'IA de manière simple et engageante aux entreprises.</p>
 
-        {/* Présentation IA */}
-        <div className="sub-category">
-          <div className="card">
-            <h4>Présentation interactive IA</h4>
-            <p>Exemple d'une présentation IA pour expliquer ses avantages.</p>
-            <div className="card-content">
-              <form onSubmit={(e) => handleAgentSubmit(e, "presentation")}>
-                <input
-                  type="text"
-                  value={presentationData}
-                  onChange={(e) => setPresentationData(e.target.value)}
-                  placeholder="Entrez les informations pour la présentation"
-                />
-                <button type="submit">Générer la présentation IA</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bloc 4: Prendre un rendez-vous */}
-      <div className="category-block">
-        <h3>Prendre un Rendez-vous</h3>
+      {/* Bloc 3: RAG */}
+      <div className="category-block" id="rag" onClick={() => scrollToSection()}>
+        <h3>Recherche Augmentée (RAG)</h3>
         <p className="category-description">
-          Organisez une réunion avec nos experts pour discuter des solutions IA adaptées à votre entreprise.
+          Une approche révolutionnaire combinant l'intelligence artificielle et la recherche d'informations
+          pour fournir des réponses précises, rapides et fiables à vos questions.
         </p>
 
-        {/* Formulaire de réservation */}
-        <div className="sub-category">
-          <div className="card">
-            <h4>Réservez un rendez-vous avec nos experts</h4>
-            <div className="card-content">
-              {/* Lien vers Calendly */}
-              <a
-                href="https://calendly.com/votre-lien"
-                target="_blank"  // Ouvrir dans un nouvel onglet
-                rel="noopener noreferrer"
-                className="calendly-button"
-              >
-                Réserver un rendez-vous via Calendly
-              </a>
-            </div>
+        <div className="rag-container">
+          <div className="rag-content">
+            <h4>Comment fonctionne RAG ?</h4>
+            <p>
+              La Recherche Augmentée (RAG) combine l’intelligence artificielle et l’analyse de données pour fournir des informations
+              rapides, pertinentes et vérifiables. Elle s’appuie sur des modèles IA et des bases de connaissances pour répondre précisément à vos besoins.
+            </p>
+            <p>
+              <strong>Sécurité avant tout :</strong> RAG travaille exclusivement avec vos données en local, garantissant ainsi leur confidentialité et leur protection optimale.
+            </p>
+            <ul className="feature-list">
+              <li>🔍 Recherche d'informations ciblées et contextuelles</li>
+              <li>⚡ Réponses rapides et fiables basées sur des données en temps réel</li>
+              <li>🧠 Combinaison de modèles IA et de bases de connaissances</li>
+              <li id="meeting" onClick={() => scrollToSection()}>🔒 Données traitées localement pour une sécurité maximale</li>
+            </ul>
+          </div>
+          <div className="rag-image">
+            <img src={PresentationImage} alt="Recherche Augmentée" />
           </div>
         </div>
       </div>
+     
 
     </section>
   );

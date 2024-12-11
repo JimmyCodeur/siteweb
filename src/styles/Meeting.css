@@ -1,0 +1,93 @@
+/* Section principale */
+.meeting-section {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.2);
+  margin: 4rem auto;
+  max-width: 1400px;
+  overflow: hidden;
+}
+
+/* Conteneur interne */
+.meeting-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+  gap: 50px;
+  align-items: center;
+}
+
+.meeting-content {
+  color: #fff;
+  text-align: center; /* Centre le texte et le bouton */
+  animation: fade-in 1.5s ease-in-out;
+}
+
+.meeting-content h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #00f6ff;
+  text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.6);
+  margin-bottom: 1.5rem;
+}
+
+.meeting-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.meeting-button {
+  margin: 0 auto; /* Centre le bouton dans son conteneur */
+  display: inline-block; /* Nécessaire pour le centrage avec margin */
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border-radius: 30px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meeting-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.6);
+}
+
+.meeting-button:active {
+  transform: translateY(2px);
+}
+
+/* Section visuelle */
+.meeting-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.neon-circle {
+  width: 350px;
+  height: 350px;
+  border: 10px solid rgba(0, 255, 255, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  animation: pulse 2s infinite alternate;
+  filter: blur(15px);
+  z-index: 0;
+}
+
+.meeting-image {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
+  z-index: 1;
+}
