@@ -166,3 +166,73 @@
 .btn.get-started:hover:before {
   opacity: 1;
 }
+
+/* Style du menu déroulant */
+.nav-links .dropdown {
+  position: relative;
+}
+
+.nav-links .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(15, 23, 42, 0.95); /* Fond semi-transparent */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.nav-links .dropdown:hover .dropdown-menu,
+.nav-links .dropdown-menu.open {
+  display: block;
+}
+
+.nav-links .dropdown-menu li {
+  list-style: none;
+  margin: 0.5rem 0;
+}
+
+.nav-links .dropdown-menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.nav-links .dropdown-menu li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+/* Style des liens du sous-menu */
+.nav-links .dropdown-menu li a {
+  display: flex; /* Active le flexbox */
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  gap: 0.5rem; /* Espace entre l'emoji et le texte */
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease;
+}
+
+.nav-links .dropdown-menu li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+/* Centrer les items dans les onglets du menu principal */
+.nav-links li {
+  display: flex; /* Active le flexbox */
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  height: 100%; /* Assure un centrage parfait */
+}
+

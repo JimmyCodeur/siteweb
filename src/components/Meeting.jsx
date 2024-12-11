@@ -15,10 +15,10 @@ const Meeting = () => {
           />
         </div>
         <div className="meeting-content">
-          <h2>Donnez Vie à Vos Idées</h2>
+          <h2>Vous avez des idées innovantes ? </h2>
           <p>
-            Vous avez des idées innovantes ? Discutons ensemble ! <br></br> Rencontrez nous pour vous aider à concrétiser vos projets.
-            <br></br>Planifiez un rendez-vous à votre convenance.
+          Discutons ensemble pour : <br></br> 🤝 Rencontrez nous pour vous aider à concrétiser vos projets.
+            <br></br>🗣️ Planifiez un rendez-vous à votre convenance.
           </p>
           <a
             href="https://calendly.com/votre-lien"
