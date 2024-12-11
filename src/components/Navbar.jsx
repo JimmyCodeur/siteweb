@@ -23,6 +23,7 @@ const Navbar = () => {
         <li><a href="#Workflows" onClick={() => scrollToSection("workflows")}>Workflows IA</a></li>
         <li><a href="#Rag" onClick={() => scrollToSection("rag")}>RAG</a></li>
         <li><a href="#Meeting" onClick={() => scrollToSection("meeting")}>Prendre Rendez Vous</a></li>
+        <li><a href="#Faq" onClick={() => scrollToSection("faq")}>FAQ</a></li>
       </ul>
       <div className="buttons">
         <button

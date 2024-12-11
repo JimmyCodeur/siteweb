@@ -1,50 +1,116 @@
 import React, { useState } from 'react';
-import '../styles/FAQSection.css'; // N'oubliez pas de créer le fichier CSS correspondant
+import '../styles/FAQSection.css';
 
 const FAQSection = () => {
+  const [selectedCategory, setSelectedCategory] = useState(0);
   const [activeIndex, setActiveIndex] = useState(null);
 
-  // Fonction pour basculer l'élément actif
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const faqData = [
+  const faqCategories = [
+    "Général",
+    "Technologie",
+    "Coûts et délais",
+    "Assistance et support"
+  ];
+
+  const faqQuestions = [
     {
-      question: "Comment fonctionne l'application AI de Type Tone / Par où commencer ?",
-      answer: "Pour commencer à utiliser l'application AI, il vous suffit de vous inscrire, de choisir le ton et le type de texte dont vous avez besoin. L'AI vous guidera tout au long du processus étape par étape."
+      category: "Général",
+      questions: [
+        {
+          question: "Comment nos solutions sont-elles réalisées ?",
+          answer: "Nous commençons par une prise de contact pour discuter de vos besoins spécifiques. Ensuite, nous établissons un devis détaillé."
+        },
+        {
+          question: "Quels secteurs bénéficient le plus des agents IA ?",
+          answer: "Nos solutions IA sont adaptées à divers secteurs, notamment la santé, l'éducation, la finance, et bien d'autres."
+        }
+      ]
     },
     {
-      question: "Avez-vous des langues autres que l'anglais et le néerlandais ?",
-      answer: "Oui, notre IA prend en charge un large éventail de langues, y compris l'espagnol, le français, l'allemand et plus encore."
+      category: "Technologie",
+      questions: [
+        {
+          question: "Les agents IA nécessitent-ils une connexion Internet pour fonctionner ?",
+          answer: "Cela dépend de vos besoins. Nos agents peuvent être conçus pour fonctionner hors ligne pour une sécurité optimale."
+        },
+        {
+          question: "Les agents IA peuvent-ils travailler avec mes données en local ?",
+          answer: "Oui, vos données sont traitées localement sur vos serveurs, garantissant la confidentialité totale."
+        }
+      ]
     },
     {
-      question: "Quelle souscription payante me recommandez-vous ?",
-      answer: "Nous recommandons l'abonnement Premium pour accéder à toutes les fonctionnalités, un usage illimité et des options de personnalisation avancées."
+      category: "Coûts et délais",
+      questions: [
+        {
+          question: "Quels sont les coûts associés à la création d'agents IA ?",
+          answer: "Les coûts varient selon la complexité du projet et les fonctionnalités nécessaires."
+        },
+        {
+          question: "Quel est le délai de réalisation pour un projet IA ?",
+          answer: "Les projets simples prennent généralement 2 à 4 semaines. Les solutions plus complexes peuvent nécessiter 6 à 8 semaines."
+        }
+      ]
     },
     {
-      question: "Comment fonctionne exactement cette IA et comment peut-elle écrire des textes aussi bien ?",
-      answer: "Notre IA utilise des algorithmes avancés de traitement du langage naturel (NLP) pour comprendre le contexte, le ton et le style, ce qui lui permet d'écrire des textes de haute qualité, semblables à ceux rédigés par des humains, en fonction des informations que vous fournissez."
+      category: "Assistance et support",
+      questions: [
+        {
+          question: "Offrez-vous une assistance après la mise en œuvre ?",
+          answer: "Oui, nous proposons une assistance complète après le déploiement, incluant formations et mises à jour."
+        },
+        {
+          question: "Puis-je modifier ou mettre à jour un agent IA après son déploiement ?",
+          answer: "Absolument ! Nos solutions sont conçues pour être évolutives et facilement modifiables."
+        }
+      ]
     }
   ];
 
   return (
     <section className="faq-section">
-      <h2>Questions ? Nous avons les réponses.</h2>
-      <div className="faq-list">
-        {faqData.map((item, index) => (
-          <div key={index} className="faq-item">
-            <div className="faq-question" onClick={() => toggleAccordion(index)}>
-              <h3>{item.question}</h3>
-              <span>{activeIndex === index ? '-' : '+'}</span>
-            </div>
-            {activeIndex === index && (
-              <div className="faq-answer">
-                <p>{item.answer}</p>
+      <div className="faq-container" id="faq">
+        {/* Volet gauche */}
+        <aside className="faq-sidebar">
+          <h2>FAQ</h2>
+          <ul>
+            {faqCategories.map((category, index) => (
+              <li
+                key={index}
+                className={selectedCategory === index ? "active" : ""}
+                onClick={() => {
+                  setSelectedCategory(index);
+                  setActiveIndex(null); // Réinitialise les accordéons quand on change de catégorie
+                }}
+              >
+                <span className={selectedCategory === index ? "active-indicator" : ""}></span>
+                {category}
+              </li>
+            ))}
+          </ul>
+        </aside>
+
+        {/* Questions de la catégorie */}
+        <main className="faq-content">
+          <h3>{faqQuestions[selectedCategory].category}</h3>
+          {faqQuestions[selectedCategory].questions.map((item, index) => (
+            <div key={index} className="faq-item">
+              <div className="faq-question" onClick={() => toggleAccordion(index)}>
+                <h4>{item.question}</h4>
+                <span>{activeIndex === index ? '-' : '+'}</span>
               </div>
-            )}
-          </div>
-        ))}
+              {activeIndex === index && (
+                <div className="faq-answer">
+                  <p>{item.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </main>
       </div>
     </section>
   );
