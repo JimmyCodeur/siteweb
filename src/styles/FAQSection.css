@@ -32,7 +32,6 @@
   height: 100%;
   background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1), transparent);
   animation: pulse-bg 6s infinite;
-  z-index: 0;
 }
 
 /* Animation des lignes en mouvement */
@@ -74,7 +73,7 @@
 
 .faq-container {
   position: relative;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   width: 100%;
   max-width: 1400px;
