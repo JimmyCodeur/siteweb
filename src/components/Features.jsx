@@ -84,7 +84,7 @@ const Features = () => {
         <p className="category-description">
           Nos agents intelligents sont là pour simplifier votre quotidien et améliorer votre productivité. Ils agissent comme des assistants virtuels qui vous aident à accomplir rapidement des tâches répétitives ou complexes, tout en vous permettant de vous concentrer sur des activités à plus forte valeur ajoutée. Que ce soit pour répondre instantanément à des questions, organiser des informations, ou automatiser des processus, nos agents sont conçus pour vous rendre plus efficace et vous faire gagner un temps précieux. Grâce à l'intelligence artificielle, ils s'adaptent à vos besoins et évoluent en fonction de vos préférences, offrant ainsi une expérience personnalisée et performante.
         </p>
-        <div class="section-title">
+        <div className="section-title">
           <h4>Agent éducatif & d'Apprentissage</h4>
         </div>
         {/* Agent 1 : Création d'agents IA */}
@@ -193,7 +193,7 @@ const Features = () => {
 
 
         {/* Autres agents */}
-        <div class="section-title">
+        <div className="section-title">
           <h4>Agent d'assistance</h4>
         </div>
         <div className="sub-category">
@@ -249,7 +249,7 @@ const Features = () => {
         </div>
 
         {/* Autres agents */}
-        <div class="section-title">
+        <div className="section-title">
           <h4>Agent Recherche & Collection</h4>
         </div>
         <div className="sub-category">
@@ -278,7 +278,7 @@ const Features = () => {
         </div>
 
         {/* Autres agents */}
-        <div class="section-title">
+        <div className="section-title">
           <h4>Agent Création & Génération</h4>
         </div>
         <div className="sub-category">
@@ -307,7 +307,7 @@ const Features = () => {
         </div>
 
         {/* Autres agents */}
-        <div class="section-title">
+        <div className="section-title">
           <h4>Agent Recommandation</h4>
         </div>
         <div className="sub-category">

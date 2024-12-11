@@ -40,6 +40,10 @@
   line-height: 1.8;
 }
 
+.meeting-content a:hover {
+  color: #ffffff;
+}
+
 .meeting-button {
   margin: 0 auto; /* Centre le bouton dans son conteneur */
   display: inline-block; /* Nécessaire pour le centrage avec margin */
@@ -57,7 +61,6 @@
 
 .meeting-button:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.6);
 }
 
 .meeting-button:active {

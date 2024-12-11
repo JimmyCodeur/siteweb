@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../styles/Navbar.css";
 import { scrollToSection } from '../utils/utils.js';
 
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -26,7 +25,12 @@ const Navbar = () => {
         <li><a href="#Meeting" onClick={() => scrollToSection("meeting")}>Prendre Rendez Vous</a></li>
       </ul>
       <div className="buttons">
-        <button className="btn get-started">Nous contacter</button>
+        <button
+          className="btn get-started"
+          onClick={() => scrollToSection("contactform")}
+        >
+          Nous contacter
+        </button>
       </div>
     </nav>
   );

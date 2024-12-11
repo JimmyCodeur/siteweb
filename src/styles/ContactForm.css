@@ -1,29 +1,89 @@
-.contact {
-  padding: 20px;
-  background-color: #1a1a1a;
-  color: #fff;
+/* Section principale */
+.contact-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.2);
   text-align: center;
-  border-radius: 10px;
+  color: #fff;
+  max-width: 800px;
+  margin: 4rem auto;
 }
 
-.contact input,
-.contact textarea,
-.contact button {
-  margin: 10px 0;
-  padding: 10px;
+/* Conteneur interne */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Titre */
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #00f6ff;
+  margin-bottom: 1rem;
+  text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.6);
+}
+
+/* Description */
+.contact-section p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Formulaire */
+.contact-form {
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Champs de saisie */
+.contact-form input,
+.contact-form textarea {
+  padding: 15px 20px;
+  width: 100%;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 10px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  transition: box-shadow 0.3s ease;
+  resize: none; /* Empêche le redimensionnement de la zone de texte */
 }
 
-.contact button {
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+/* Bouton */
+.contact-form button {
+  padding: 15px;
   background: linear-gradient(90deg, #6a00f4, #ff007b);
-  color: white;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
   cursor: pointer;
+  box-shadow: 0 5px 20px rgba(255, 0, 123, 0.4);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.contact button:hover {
-  opacity: 0.8;
+.contact-form button:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+.contact-form button:active {
+  transform: translateY(2px);
 }
