@@ -10,3 +10,12 @@ export const scrollToSection = (id) => {
     });
   }
 };
+
+export function scrollCarousel(button, direction) {
+  const carousel = button.closest(".category-block").querySelector(".sub-category");
+  const cardWidth = carousel.querySelector(".card").offsetWidth;
+  carousel.scrollBy({
+    left: cardWidth * 2 * direction, // Défilez de deux cartes à la fois
+    behavior: "smooth"
+  });
+}
