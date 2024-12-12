@@ -9,9 +9,8 @@ const Features = () => {
   const [selectedAgent, setSelectedAgent] = useState(null);
   const [translationInput, setTranslationInput] = useState('');
   const [translatedText, setTranslatedText] = useState('');
-  const [progress, setProgress] = useState(75); // Exemple de progression
+  const [progress, setProgress] = useState(75); 
 
-  // Disable scroll when modal is open
   useEffect(() => {
     if (selectedAgent) {
       document.body.classList.add('no-scroll');
@@ -19,12 +18,6 @@ const Features = () => {
       document.body.classList.remove('no-scroll');
     }
   }, [selectedAgent]);
-
-  const handleTranslation = (e) => {
-    setTranslationInput(e.target.value);
-    // Simuler une traduction pour cet exemple
-    setTranslatedText(`Traduction simulée : ${e.target.value}`);
-  };
 
   const agentCategories = [
     {
@@ -35,6 +28,12 @@ const Features = () => {
           description: "Un agent IA interactif qui vous aide à améliorer vos compétences linguistiques en pratiquant des conversations, en vous corrigeant et en suivant vos progrès.",
           image: AgentImage,
           progress: 85,
+          features: [
+            "Prise en charge vocale",
+            "Pratique conversationnelle",
+            "Vérification grammaticale",
+            "Traduction en temps réel",
+          ],
           conversation: [
             { speaker: "IA", message: "Bonjour ! Je suis ton assistant d'apprentissage en anglais. Prêt à commencer ?" },
             { speaker: "User", message: "Oui, je suis prêt." },
@@ -52,6 +51,42 @@ const Features = () => {
             { speaker: "IA", message: "Très bien ! C'est correct. En anglais américain, 'cinema' est souvent remplacé par 'movie theater'. Cela donnerait : 'I go to the movie theater with my friends.'." }
           ],
         },
+        {
+          title: "Apprendre à programmer",
+          description: "Un agent IA conçu pour enseigner les bases de la programmation, vous guider à travers des exemples interactifs et des défis de codage adaptés à votre niveau.",
+          image: AgentImageDev,
+          progress: 25,
+          features: [
+            "Exercices interactifs",
+            "Adaptées au niveau",
+            "Corrections automatiques des erreurs",
+            "Simulations de projets réels",
+          ],
+          conversation: [
+            // Niveau débutant
+            { speaker: "IA", message: "Bonjour ! Je suis ici pour t'aider à apprendre la programmation. Prêt à commencer ?" },
+            { speaker: "User", message: "Oui, absolument !" },
+            { speaker: "IA", message: "Commençons par une question simple. Que signifie 'variable' en programmation ?" },
+            { speaker: "User", message: "C'est une sorte de conteneur pour stocker des données." },
+            { speaker: "IA", message: "Exactement ! Une variable est un espace de stockage nommé qui peut contenir différentes valeurs. Essayons de créer une variable en JavaScript : `let x = 10;`." },
+            
+            // Progression vers un niveau intermédiaire
+            { speaker: "IA", message: "Super ! Maintenant, essayons quelque chose d'un peu plus complexe. Comment créer une fonction en JavaScript qui additionne deux nombres ?" },
+            { speaker: "User", message: "Je ne sais pas trop." },
+            { speaker: "IA", message: "Pas de souci ! Voici comment faire : `function add(a, b) { return a + b; }`. Cette fonction prend deux arguments et retourne leur somme." },
+            { speaker: "IA", message: "Essaye maintenant d'appeler cette fonction avec les arguments 5 et 7. Que devrait-elle retourner ?" },
+            { speaker: "User", message: "12." },
+            { speaker: "IA", message: "Exact ! Bien joué. Tu es prêt à passer au niveau suivant ?" },
+        
+            // Niveau avancé
+            { speaker: "IA", message: "Pour le niveau avancé, essayons de manipuler des tableaux. Comment ajouter un élément à la fin d'un tableau en JavaScript ?" },
+            { speaker: "User", message: "Je pense que c'est avec `.push()`." },
+            { speaker: "IA", message: "Exactement ! Si tu as un tableau `let fruits = ['pomme', 'banane'];`, tu peux ajouter un élément comme ceci : `fruits.push('orange');`. Le tableau devient `['pomme', 'banane', 'orange']`." },
+            { speaker: "IA", message: "Maintenant, peux-tu écrire une boucle qui parcourt ce tableau et affiche chaque fruit dans la console ?" },
+            { speaker: "User", message: "Oui, quelque chose comme : `for (let i = 0; i < fruits.length; i++) { console.log(fruits[i]); }`." },
+            { speaker: "IA", message: "Parfait ! Tu progresses vraiment bien." }
+          ],
+        },
       ],
     }
     // Ajout d'autres catégories d'agent si nécessaire
@@ -66,6 +101,77 @@ const Features = () => {
       </div>
 
       <h2>Nos Solutions IA</h2>
+      <div className="why-agent">
+        <h3>Pourquoi avoir un agent IA ?</h3>
+        <p>
+        Les agents IA sont des solutions révolutionnaires, conçues sur mesure pour répondre à vos besoins, qu'ils soient professionnels ou personnels.<br></br> Disponibles sous différentes formes et modes, elles s'adaptent parfaitement à chaque situation et apportent une aide précieuse au quotidien.
+        </p>
+        <div class="modes-container">
+        <div class="modes-grid">
+          <div class="mode-card">
+            <i class="fas fa-comments"></i>
+            <h4>Mode Conversation</h4>
+            <p>Une interaction fluide et naturelle pour répondre aux questions et guider l'utilisateur, comme si vous discutiez avec un humain.</p>
+          </div>
+          <div class="mode-card">
+            <i class="fas fa-keyboard"></i>
+            <h4>Mode Écrit</h4>
+            <p>Idéal pour fournir des réponses détaillées, des explications techniques ou des solutions adaptées, par texte.</p>
+          </div>
+          <div class="mode-card">
+            <i class="fas fa-microphone-alt"></i>
+            <h4>Mode Vocal en Temps Réel</h4>
+            <p>Discutez directement avec votre agent IA grâce à la reconnaissance vocale et une réponse instantanée. Parfait pour les expériences immersives.</p>
+          </div>
+          <div class="mode-card">
+            <i class="fas fa-robot"></i>
+            <h4>Mode Interactif</h4>
+            <p>Proposez des jeux éducatifs, des exercices pratiques ou des simulations pour engager davantage les utilisateurs.</p>
+          </div>
+          <div class="mode-card">
+            <i class="fas fa-video"></i>
+            <h4>Mode Visuel</h4>
+            <p>Intégrez des présentations vidéo, des graphiques ou des visualisations pour enrichir les explications et rendre l'expérience captivante.</p>
+          </div>
+          <div class="mode-card">
+            <i class="fas fa-cogs"></i>
+            <h4>Modes Personnalisés</h4>
+            <p>Créez des agents adaptés à des contextes spécifiques : avec l'IA, les possibilités sont infinies.</p>
+          </div>
+          <div class="mode-card">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <h4>Déploiement Flexible</h4>
+            <p>Intégrez vos agents sur des plateformes web, applications mobiles ou dans vos systèmes internes pour une accessibilité maximale.</p>
+          </div>
+          <div class="mode-card">
+            <i class="fas fa-shield-alt"></i>
+            <h4>Sécurité Renforcée</h4>
+            <p>Protégez vos données et interactions grâce à des protocoles de sécurité avancés, garantissant la confidentialité et la fiabilité de vos agents IA.</p>
+          </div>
+          <div class="mode-card">
+            <i class="fas fa-hand-holding"></i>
+            <h4>Facilité d'Utilisation</h4>
+            <p>Profitez d'une interface intuitive et accessible, conçue pour simplifier l’interaction avec vos agents IA, même pour les débutants.</p>
+          </div>
+          <div class="mode-card">
+            <i class="fas fa-user-secret"></i>
+            <h4>Confidentialité des Données</h4>
+            <p>Garantissez la sécurité et la confidentialité de vos informations grâce à des protocoles de protection rigoureux et conformes aux normes.</p>
+          </div>
+          <div class="mode-card">
+            <i class="fas fa-expand-arrows-alt"></i>
+            <h4>Évolutivité</h4>
+            <p>Augmentez les capacités de vos agents IA au fil du temps, en ajoutant de nouvelles fonctionnalités pour répondre à vos besoins croissants.</p>
+          </div>
+          <div class="mode-card">
+            <i class="fas fa-clock"></i>
+            <h4>Assistance 24/7</h4>
+            <p>Offrez une disponibilité continue avec des agents IA qui restent opérationnels jour et nuit, pour répondre à vos utilisateurs à tout moment.</p>
+          </div>
+        </div>
+      </div>
+
+      </div>
       {agentCategories.map((category, catIndex) => (
         <div key={catIndex} className="category-block">
           <h3>{category.category}</h3>
@@ -128,10 +234,9 @@ const Features = () => {
               <div className="features-overview">
                 <h4>Fonctionnalités clés</h4>
                 <ul>
-                  <li><i className="fas fa-language"></i> Traduction en temps réel</li>
-                  <li><i className="fas fa-pen"></i> Vérification grammaticale</li>
-                  <li><i className="fas fa-robot"></i> Pratique conversationnelle</li>
-                  <li><i className="fas fa-headphones"></i> Prise en charge vocale</li>
+                {selectedAgent.features.map((feature, index) => (
+                    <li key={index}><i className="fas fa-check-circle"></i> {feature}</li>
+                  ))}
                 </ul>
               </div>
             </div>
