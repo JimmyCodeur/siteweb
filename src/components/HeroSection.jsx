@@ -25,7 +25,6 @@ const HeroSection = () => {
         <img src={BotImage} alt="Illustration IA" className="hero-image" />
       </div>
 
-      {/* Bulle d'écriture animée */}
       <div className="bubble">
         <div className="bubble-text">
           J'aimerais t'aider ! 💪 

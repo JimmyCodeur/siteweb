@@ -74,16 +74,13 @@ const FAQSection = () => {
   return (
     <section className="faq-section">
       <div className="faq-container" id="faq">
-        {/* Particules animées */}
         <div className="particle"></div>
         <div className="particle"></div>
         <div className="particle"></div>
-        {/* Lignes animées */}
         <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>
 
-        {/* Volet gauche */}
         <aside className="faq-sidebar">
           <h2>FAQ</h2>
           <ul>
@@ -93,7 +90,7 @@ const FAQSection = () => {
                 className={selectedCategory === index ? "active" : ""}
                 onClick={() => {
                   setSelectedCategory(index);
-                  setActiveIndex(null); // Réinitialise les accordéons quand on change de catégorie
+                  setActiveIndex(null);
                 }}
               >
                 <span className={selectedCategory === index ? "active-indicator" : ""}></span>
@@ -103,7 +100,6 @@ const FAQSection = () => {
           </ul>
         </aside>
 
-        {/* Questions de la catégorie */}
         <main className="faq-content">
           <h3>{faqQuestions[selectedCategory].category}</h3>
           {faqQuestions[selectedCategory].questions.map((item, index) => (

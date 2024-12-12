@@ -1,4 +1,3 @@
-/* Section principale */
 .faq-section {
   position: relative;
   display: flex;
@@ -10,7 +9,6 @@
   overflow: hidden;
 }
 
-/* Arrière-plan animé pour une ambiance futuriste */
 .faq-section::before {
   content: '';
   position: absolute;
@@ -34,7 +32,6 @@
   animation: pulse-bg 6s infinite;
 }
 
-/* Animation des lignes en mouvement */
 .faq-section .line {
   position: absolute;
   width: 2px;
@@ -70,7 +67,6 @@
   }
 }
 
-
 .faq-container {
   position: relative;
   z-index: 10;
@@ -83,7 +79,6 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
 }
 
-/* Volet gauche */
 .faq-sidebar {
   flex: 1;
   background: linear-gradient(120deg, #1b1b1b, #2c2c2c);
@@ -103,7 +98,6 @@
   animation: gradient-flow 3s infinite;
 }
 
-/* Animation de dégradé */
 @keyframes gradient-flow {
   0% {
     background-position: 0% 0%;
@@ -146,7 +140,6 @@
   margin-right: 10px;
 }
 
-/* Section droite */
 .faq-content {
   flex: 3;
   padding: 2rem;

@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/ContactForm.css';
-import { scrollToSection } from '../utils/utils.js';
 
 const ContactForm = () => {
   return (

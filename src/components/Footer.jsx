@@ -5,13 +5,11 @@ const Footer = () => {
   return (
     <footer className="footer-section">
       <div className="footer-container">
-        {/* Logo et Slogan */}
         <div className="footer-logo">
           <h1>@IA</h1>
           <p>Transformez vos idées en réalité grâce à l'Intelligence Artificielle</p>
         </div>
 
-        {/* Réseaux sociaux */}
         <div className="footer-social">
           <h3>Suivez-nous</h3>
           <div className="social-icons">
@@ -31,7 +29,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright */}
       <div className="footer-bottom">
         <p>&copy; 2024 Jimmy Fernandez. Tous droits réservés.</p>
       </div>

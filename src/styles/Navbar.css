@@ -1,9 +1,9 @@
 .navbar {
   display: flex;
-  justify-content: space-between; /* Espace entre le logo et le contenu */
+  justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 2rem; /* Ajuste les marges internes */
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)); /* Dégradé avec transparence */
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8));
   color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -43,7 +43,7 @@
   text-decoration: none;
   font-weight: bold;
   color: #fff;
-  font-size: 1rem; /* Taille de police réduite */
+  font-size: 1rem;
   transition: color 0.3s ease-in-out;
 }
 
@@ -51,11 +51,10 @@
   color: rgb(131, 83, 185);
 }
 
-/* Boutons plus fins */
 .navbar .buttons .btn {
-  padding: 0.4rem 0.8rem; /* Réduction des dimensions des boutons */
-  font-size: 0.9rem; /* Taille de police réduite */
-  border-radius: 3px; /* Coins légèrement arrondis */
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem; 
+  border-radius: 3px; 
 }
 
 .navbar .btn.get-started {
@@ -117,7 +116,7 @@
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem; /* Augmente l'espacement entre les liens */
+  gap: 2rem; 
 }
 
 .buttons {
@@ -128,12 +127,12 @@
 }
 
 .btn.get-started {
-  padding: 0.4rem 1rem; /* Réduction des dimensions du bouton */
-  font-size: 0.9rem; /* Taille de police ajustée */
+  padding: 0.4rem 1rem; 
+  font-size: 0.9rem; 
   font-weight: bold;
   color: #fff;
   border: none;
-  border-radius: 5px; /* Coins arrondis plus subtils */
+  border-radius: 5px; 
   background: linear-gradient(90deg, #ff758c, #ff7eb3, #ff8c69);
   box-shadow: 0 0 8px rgba(255, 117, 140, 0.6);
   cursor: pointer;
@@ -143,11 +142,10 @@
 }
 
 .btn.get-started:hover {
-  transform: scale(1.05); /* Augmente légèrement au survol */
+  transform: scale(1.05); 
   box-shadow: 0 0 15px rgba(255, 117, 140, 0.8);
 }
 
-/* Effet lumineux autour du bouton */
 .btn.get-started:before {
   content: "";
   position: absolute;
@@ -155,7 +153,7 @@
   left: -3px;
   right: -3px;
   bottom: -3px;
-  border-radius: 8px; /* Suivre le design du bouton */
+  border-radius: 8px; 
   background: linear-gradient(90deg, rgba(255, 117, 140, 0.5), rgba(255, 126, 179, 0.5), rgba(255, 140, 105, 0.5));
   z-index: -1;
   filter: blur(8px);
@@ -167,7 +165,6 @@
   opacity: 1;
 }
 
-/* Style du menu déroulant */
 .nav-links .dropdown {
   position: relative;
 }
@@ -177,7 +174,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: rgba(15, 23, 42, 0.95); /* Fond semi-transparent */
+  background: rgba(15, 23, 42, 0.95); 
   padding: 0.5rem 1rem;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -209,12 +206,11 @@
   border-radius: 5px;
 }
 
-/* Style des liens du sous-menu */
 .nav-links .dropdown-menu li a {
-  display: flex; /* Active le flexbox */
-  align-items: center; /* Centre verticalement */
-  justify-content: center; /* Centre horizontalement */
-  gap: 0.5rem; /* Espace entre l'emoji et le texte */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 0.5rem; 
   text-decoration: none;
   color: #fff;
   font-size: 0.9rem;
@@ -228,11 +224,10 @@
   border-radius: 5px;
 }
 
-/* Centrer les items dans les onglets du menu principal */
 .nav-links li {
-  display: flex; /* Active le flexbox */
-  align-items: center; /* Centre verticalement */
-  justify-content: center; /* Centre horizontalement */
-  height: 100%; /* Assure un centrage parfait */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  height: 100%; 
 }
 

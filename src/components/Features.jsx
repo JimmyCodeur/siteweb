@@ -40,7 +40,6 @@ const Features = () => {
 
   return (
     <section id="agents" className="features">
-      {/* Effet de fond lumineux */}
       <div className="bg">
         <div></div>
         <div></div>
@@ -68,7 +67,6 @@ const Features = () => {
       {agentCategories.map((category, catIndex) => (
       <div key={catIndex} className="category-block">
         <h3>{category.category}</h3>
-        {/* Boutons de navigation pour le carrousel */}
         <div className="carousel-controls">
           <button
             className="carousel-control prev"
@@ -124,13 +122,11 @@ const Features = () => {
       {selectedAgent && (
         <div className="modal-overlay" onClick={() => setSelectedAgent(null)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
-            {/* En-tête du modal */}
             <div className="modal-header">
               <h3>{selectedAgent.title}</h3>
               <button className="close-btn" onClick={() => setSelectedAgent(null)}>✖</button>
             </div>
 
-            {/* Boîte de conversation */}
             <div className="conversation-box">
               {selectedAgent.conversation.map((msg, index) => (
                 <div key={index} className={`message ${msg.speaker}`}>
@@ -142,7 +138,6 @@ const Features = () => {
               ))}
             </div>
 
-            {/* Fonctionnalités supplémentaires */}
             <div className="modal-features">
 
             <div className="progress-container">
@@ -156,7 +151,6 @@ const Features = () => {
               <p className="progress-text">Progression : {selectedAgent ? selectedAgent.progress : 0}%</p>
             </div>
 
-              {/* Liste des fonctionnalités */}
               <div className="features-overview">
                 <h4>Fonctionnalités clés</h4>
                 <ul>
@@ -167,7 +161,6 @@ const Features = () => {
               </div>
             </div>
 
-            {/* Pied du modal */}
             <div className="modal-footer">
             </div>
           </div>
