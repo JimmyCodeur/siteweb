@@ -29,7 +29,7 @@ const Features = () => {
     if (!carousel.isDown) return;
     event.preventDefault();
     const x = event.pageX - carousel.offsetLeft;
-    const walk = (x - carousel.startX) * 1.5; // La vitesse de défilement
+    const walk = (x - carousel.startX) * 1.5;
     carousel.scrollLeft = carousel.scrollLeft - walk;
   };
   
