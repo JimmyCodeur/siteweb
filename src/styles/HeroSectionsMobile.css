@@ -1,0 +1,30 @@
+:root {
+  --hero-title-font-size: 2rem;
+  --hero-description-font-size: 1.2rem;
+  --hero-welcome-font-size: 1.8rem;
+  --hero-features-font-size: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-section {
+    height: auto;
+  }
+  .hero-image-container {
+    display: none;
+  }
+  .bubble {
+    display: none;
+  }
+  .hero-title {
+    font-size: var(--hero-title-font-size);
+  }
+  .hero-description {
+    font-size: var(--hero-description-font-size);
+  }
+  .hero-welcome {
+    font-size: var(--hero-welcome-font-size);
+  }
+  .hero-features {
+    font-size: var(--hero-features-font-size);
+  }
+}

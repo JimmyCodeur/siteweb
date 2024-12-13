@@ -1,0 +1,29 @@
+:root {
+  --footer-spacing: 20px;
+  --footer-text-alignment: center;
+  --footer-layout-direction: column;
+  --footer-item-alignment: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: var(--footer-layout-direction);
+    align-items: var(--footer-item-alignment);
+    text-align: var(--footer-text-alignment);
+  }
+
+  .footer-logo, .footer-social {
+    margin-bottom: var(--footer-spacing);
+  }
+
+  .footer-logo {
+    display: flex;
+    flex-direction: var(--footer-layout-direction);
+    align-items: var(--footer-item-alignment);
+  }
+
+  .footer-bottom {
+    text-align: var(--footer-text-alignment);
+  }
+}

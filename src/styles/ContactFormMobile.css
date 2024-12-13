@@ -1,0 +1,71 @@
+:root {
+  --padding-large: 2rem 1rem;
+  --padding-small: 1rem 0.5rem;
+  --font-size-large: 2rem;
+  --font-size-medium: 1.5rem;
+  --font-size-small: 1rem;
+  --font-size-xsmall: 0.9rem;
+  --font-size-xxsmall: 0.8rem;
+  --input-padding-large: 10px 15px;
+  --input-padding-small: 8px 10px;
+  --button-padding-large: 10px;
+  --button-padding-small: 8px;
+  --margin-bottom-small: 1rem;
+  --margin-auto: 1rem auto;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: var(--padding-large);
+  }
+
+  .contact-section h2 {
+    font-size: var(--font-size-large);
+  }
+
+  .contact-section p {
+    font-size: var(--font-size-small);
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: var(--input-padding-large);
+    font-size: var(--font-size-xsmall);
+  }
+
+  .contact-form button {
+    font-size: var(--font-size-small);
+    padding: var(--button-padding-large);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: var(--padding-small);
+    margin: var(--margin-auto);
+  }
+
+  .contact-section h2 {
+    font-size: var(--font-size-medium);
+  }
+
+  .contact-section p {
+    font-size: var(--font-size-xsmall);
+    margin-bottom: var(--margin-bottom-small);
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: var(--input-padding-small);
+    font-size: var(--font-size-xxsmall);
+  }
+
+  .contact-form button {
+    font-size: var(--font-size-xsmall);
+    padding: var(--button-padding-small);
+  }
+}

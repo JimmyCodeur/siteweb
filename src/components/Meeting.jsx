@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Meeting.css';
+import '../styles/MeetingMobile.css';
 import Calendrier from '../assets/images/calendrier.webp';
 
 const Meeting = () => {

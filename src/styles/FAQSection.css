@@ -1,10 +1,32 @@
+:root {
+  --primary-bg: #0f0f0f;
+  --secondary-bg: #1a1a1a;
+  --tertiary-bg: #0d0d0d;
+  --quaternary-bg: #1c1c1c;
+  --highlight-color: #00f6ff;
+  --text-color: #fff;
+  --sidebar-bg: #1b1b1b;
+  --sidebar-border: #444;
+  --sidebar-hover-bg: #222;
+  --sidebar-hover-border: #00f6ff;
+  --content-bg: #1a1a1a;
+  --content-bg-secondary: #2a2a2a;
+  --content-shadow: rgba(0, 0, 0, 0.7);
+  --question-bg: #222;
+  --question-bg-hover: #333;
+  --question-shadow: rgba(0, 0, 0, 0.3);
+  --question-text: #ff9028;
+  --answer-border: #00f6ff;
+  --answer-text: #ddd;
+}
+
 .faq-section {
   position: relative;
   display: flex;
   justify-content: center;
   padding: 6rem 2rem;
-  background: linear-gradient(120deg, #0f0f0f, #1a1a1a 70%);
-  color: #fff;
+  background: linear-gradient(120deg, var(--primary-bg), var(--secondary-bg) 70%);
+  color: var(--text-color);
   scroll-margin-top: 80px;
   overflow: hidden;
 }
@@ -16,7 +38,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(120deg, #0d0d0d, #1c1c1c);
+  background: linear-gradient(120deg, var(--tertiary-bg), var(--quaternary-bg));
   z-index: 0;
   overflow: hidden;
 }
@@ -36,7 +58,7 @@
   position: absolute;
   width: 2px;
   height: 100%;
-  background: linear-gradient(to bottom, #00f6ff, transparent);
+  background: linear-gradient(to bottom, var(--highlight-color), transparent);
   animation: move-lines 4s linear infinite;
   z-index: 1;
 }
@@ -75,15 +97,15 @@
   max-width: 1400px;
   border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(145deg, var(--content-bg), var(--content-bg-secondary));
+  box-shadow: 0 8px 30px var(--content-shadow);
 }
 
 .faq-sidebar {
   flex: 1;
-  background: linear-gradient(120deg, #1b1b1b, #2c2c2c);
+  background: linear-gradient(120deg, var(--sidebar-bg), var(--secondary-bg));
   padding: 2rem;
-  border-right: 2px solid #444;
+  border-right: 2px solid var(--sidebar-border);
   position: relative;
 }
 
@@ -94,7 +116,7 @@
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(to bottom, #ff9900, #00f6ff);
+  background: linear-gradient(to bottom, #ff9900, var(--highlight-color));
   animation: gradient-flow 3s infinite;
 }
 
@@ -121,14 +143,14 @@
 }
 
 .faq-sidebar li:hover {
-  color: #fff;
+  color: var(--text-color);
   transform: scale(1.05);
 }
 
 .faq-sidebar li.active {
-  color: #fff;
-  background: linear-gradient(to right, #222, #333);
-  border-left: 4px solid #00f6ff;
+  color: var(--text-color);
+  background: linear-gradient(to right, var(--sidebar-hover-bg), #333);
+  border-left: 4px solid var(--sidebar-hover-border);
 }
 
 .active-indicator {
@@ -150,7 +172,7 @@
   margin-bottom: 2rem;
   color: #f8f8f8;
   text-transform: uppercase;
-  text-shadow: 0px 0px 8px #ff9028;
+  text-shadow: 0px 0px 8px var(--question-text);
 }
 
 .faq-item {
@@ -163,27 +185,27 @@
   align-items: center;
   cursor: pointer;
   padding: 1.2rem;
-  background: linear-gradient(145deg, #222, #2a2a2a);
+  background: linear-gradient(145deg, var(--question-bg), var(--content-bg-secondary));
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 15px var(--question-shadow);
   transition: background 0.3s ease, transform 0.2s;
 }
 
 .faq-question:hover {
-  background: linear-gradient(145deg, #333, #444);
+  background: linear-gradient(145deg, var(--question-bg-hover), #444);
   transform: translateY(-2px);
 }
 
 .faq-question h4 {
   font-size: 1.5rem;
   margin: 0;
-  color: #ff9028;
-  text-shadow: 0px 0px 2px #ff9028;
+  color: var(--question-text);
+  text-shadow: 0px 0px 2px var(--question-text);
 }
 
 .faq-question span {
   font-size: 1.8rem;
-  color: #00f6ff;
+  color: var(--highlight-color);
   transition: transform 0.3s ease;
 }
 
@@ -194,10 +216,9 @@
 .faq-answer {
   margin-top: 1rem;
   font-size: 1.2rem;
-  color: #ddd;
+  color: var(--answer-text);
   line-height: 1.8;
   padding-left: 1.5rem;
-  border-left: 2px solid #00f6ff;
+  border-left: 2px solid var(--answer-border);
   transition: all 0.4s ease;
 }
-

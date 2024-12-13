@@ -1,6 +1,20 @@
+:root {
+    --primary-color: #00f6ff;
+    --secondary-color: #ff9028;
+    --background-gradient-start: #0d0d0d;
+    --background-gradient-end: #1c1c1c;
+    --text-color: #fff;
+    --text-shadow-color: rgba(255, 255, 255, 0.2);
+    --box-shadow-color: rgba(0, 246, 255, 0.4);
+    --box-shadow-inset-color: rgba(0, 246, 255, 0.2);
+    --hover-box-shadow-color: #ff9028;
+    --border-color: #444;
+    --footer-bottom-color: #777;
+}
+
 .footer-section {
-    background: linear-gradient(145deg, #0d0d0d, #1c1c1c);
-    color: #fff;
+    background: linear-gradient(145deg, var(--background-gradient-start), var(--background-gradient-end));
+    color: var(--text-color);
     padding: 4rem 2rem 2rem;
     font-family: 'Arial', sans-serif;
     position: relative;
@@ -30,8 +44,8 @@
 .footer-logo h1 {
     text-align: left;
     font-size: 2.5rem;
-    color: #00f6ff;
-    text-shadow: 0 0 15px #00f6ff, 0 0 30px #00f6ff;
+    color: var(--primary-color);
+    text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
     transition: transform 0.3s ease;
 }
 
@@ -40,15 +54,15 @@
     font-size: 1rem;
     color: #ccc;
     line-height: 1.5;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 5px var(--text-shadow-color);
 }
 
 .footer-social h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #ff9028;
+    color: var(--secondary-color);
     text-transform: uppercase;
-    text-shadow: 0 0 8px #ff9028, 0 0 16px #ff9028;
+    text-shadow: 0 0 8px var(--secondary-color), 0 0 16px var(--secondary-color);
 }
 
 .footer-social .social-icons {
@@ -62,34 +76,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #00f6ff;
+    color: var(--primary-color);
     font-size: 1.8rem;
     text-decoration: none;
     width: 50px;
     height: 50px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 246, 255, 0.4), inset 0 0 15px rgba(0, 246, 255, 0.2);
+    box-shadow: 0 0 10px var(--box-shadow-color), inset 0 0 15px var(--box-shadow-inset-color);
     transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
 }
 
 .social-icon:hover {
     transform: scale(1.3);
-    color: #ff9028;
-    box-shadow: 0 0 15px #ff9028, inset 0 0 25px #ff9028;
+    color: var(--secondary-color);
+    box-shadow: 0 0 15px var(--hover-box-shadow-color), inset 0 0 25px var(--hover-box-shadow-color);
 }
 
 .social-icon.linkedin span {
     margin-left: 0.5rem;
     font-size: 1rem;
-    color: #00f6ff;
+    color: var(--primary-color);
     font-weight: bold;
     display: none;
 }
 
 .social-icon.linkedin:hover span {
     display: inline-block;
-    color: #ff9028;
+    color: var(--secondary-color);
     transition: color 0.4s ease;
 }
 
@@ -97,14 +111,14 @@
     text-align: center;
     margin-top: 2rem;
     font-size: 0.9rem;
-    color: #777;
-    border-top: 1px solid #444;
+    color: var(--footer-bottom-color);
+    border-top: 1px solid var(--border-color);
     padding-top: 1rem;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 5px var(--text-shadow-color);
 }
 
 .footer-bottom p:hover {
-    color: #00f6ff;
-    text-shadow: 0 0 10px #00f6ff, 0 0 20px #00f6ff;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }

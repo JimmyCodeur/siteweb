@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/FAQSection.css';
+import '../styles/FAQSectionMobile.css';
 
 const FAQSection = () => {
   const [selectedCategory, setSelectedCategory] = useState(0);

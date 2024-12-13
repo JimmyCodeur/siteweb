@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/HeroSections.css";
+import "../styles/HeroSectionsMobile.css";
 import BotImage from "../assets/images/bot_cute.webp"; 
 
 const HeroSection = () => {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Features.css';
+import '../styles/FeaturesMobile.css';
 import { agentModes, agentCategories } from '../data/AgentsData';
 import { scrollCarousel } from '../utils/utils.js';
 
