@@ -2,7 +2,14 @@ import AgentImage from '../assets/images/bot_1.webp';
 import AgentImageDev from '../assets/images/agent_dev.webp';
 import AgentImageAssistance from '../assets/images/agent_assistance.webp';
 import AgentImageChatbot from '../assets/images/agent_chatbot.webp';
-
+import AgentGestion from '../assets/images/ia_gestion.webp';
+import AgentGMuscle from '../assets/images/ia_muscle.webp';
+import AgentCuisine from '../assets/images/ia_cuisine.webp';
+import AgentFinance from '../assets/images/ia_finance.webp';
+import AgentVeille from '../assets/images/ia_veille.webp';
+import AgentCollecte from '../assets/images/ia_collecte.webp';
+import AgentDonnee from '../assets/images/ia_donnee.webp';
+import AgentMedia from '../assets/images/ia_media.webp';
 
 export const agentModes = [
     {
@@ -142,6 +149,40 @@ export const agentModes = [
             { speaker: "IA", message: "Parfait ! Tu progresses vraiment bien." }
           ],
         },
+        {
+          title: "Formation à la Gestion du Temps",
+          description: "Un agent IA interactif conçu pour enseigner et améliorer les compétences en gestion du temps et en organisation, idéal pour les étudiants et les professionnels.",
+          image: AgentGestion,
+          progress: 10,
+          features: [
+            "Création de plannings personnalisés",
+            "Suivi des objectifs",
+            "Conseils sur les techniques de gestion du temps",
+            "Rappels intelligents pour les échéances",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Je suis ton assistant en gestion du temps. Prêt à mieux organiser tes journées ?" },
+            { speaker: "User", message: "Oui, j’ai du mal à respecter mes échéances." },
+            { speaker: "IA", message: "Pas de souci ! Commençons par identifier tes priorités. Quelles sont les trois tâches les plus importantes que tu dois accomplir cette semaine ?" },
+            { speaker: "User", message: "Je dois finir un rapport, préparer une présentation, et répondre à des emails." },
+            { speaker: "IA", message: "Bien. Pour le rapport, combien de temps penses-tu avoir besoin ? Je te recommande de bloquer des plages horaires spécifiques pour te concentrer uniquement sur cette tâche." },
+            { speaker: "User", message: "Peut-être 3 heures." },
+            { speaker: "IA", message: "Parfait ! Je vais planifier une session de 1h30 aujourd’hui et une autre demain. Pense aussi à éliminer les distractions pendant ces périodes. Veux-tu des astuces pour cela ?" },
+            { speaker: "User", message: "Oui, je veux bien." },
+            { speaker: "IA", message: "Utilise la technique Pomodoro : travaille pendant 25 minutes sans interruption, puis prends une pause de 5 minutes. Cela t’aide à rester concentré. Veux-tu que je programme un timer pour toi ?" },
+            { speaker: "User", message: "Oui, merci." },
+            { speaker: "IA", message: "Génial ! Pour tes emails, programme une session quotidienne de 30 minutes uniquement dédiée à cela. Cela évitera qu’ils te perturbent pendant d'autres tâches. Est-ce que cela te convient ?" },
+            { speaker: "User", message: "Oui, c’est une bonne idée." },
+            { speaker: "IA", message: "Super ! Enfin, pour ta présentation, je te propose de diviser le travail en trois étapes : collecte des informations, création des diapositives, et répétition. À quelle échéance veux-tu terminer ?" },
+            { speaker: "User", message: "D’ici vendredi." },
+            { speaker: "IA", message: "Excellent. Je vais répartir ces étapes sur les trois prochains jours. Tu recevras des rappels pour chaque étape. Tu veux aussi des conseils sur comment faire une bonne présentation ?" },
+            { speaker: "User", message: "Oui, je veux bien." },
+            { speaker: "IA", message: "Pour captiver ton audience, commence avec une introduction percutante, utilise des visuels clairs, et termine avec un appel à l’action. Je peux aussi analyser ton script si tu veux." },
+            { speaker: "IA", message: "Pour résumer, ton planning est prêt et tes rappels sont programmés. Ensemble, nous allons t’aider à respecter toutes tes échéances et à devenir un expert en gestion du temps !" },
+          ],
+        }
+        
+        
       ],
     },
     {
@@ -250,12 +291,197 @@ export const agentModes = [
               { speaker: "User", message: "D'accord, merci pour le conseil." },
               { speaker: "IA", message: "Avec plaisir ! Continue de t'entraîner, et tu deviendras un excellent négociateur. Besoin d'autres scénarios ?" },
             ]
-          }
-          
-          
-          
+          }           
+      ],
+    },
+    {
+      category: "Agents Action & Interaction",
+      agents: [
+        {
+          title: "Agent de Planification d'Événements",
+          description: "Un agent IA conçu pour organiser des événements, gérer les invitations, et coordonner les tâches, parfait pour les entreprises ou les particuliers.",
+          image: AgentImageAssistance,
+          progress: 65,
+          features: [
+            "Création de planning détaillé",
+            "Suivi des tâches",
+            "Gestion des invitations",
+            "Rappels automatiques",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Je suis ton assistant pour planifier ton événement. De quel type d'événement s'agit-il ?" },
+            { speaker: "User", message: "Une conférence d'entreprise." },
+            { speaker: "IA", message: "Super ! Combien de participants attends-tu ?" },
+            { speaker: "User", message: "Environ 50 personnes." },
+            { speaker: "IA", message: "Très bien. Je vais créer un planning détaillé, envoyer des invitations et t'aider à suivre les confirmations. As-tu une date en tête ?" },
+            { speaker: "User", message: "Oui, le 15 janvier." },
+            { speaker: "IA", message: "Parfait. J’ai programmé des rappels pour les intervenants et un suivi pour les inscriptions. Besoin d’aide pour organiser les sessions ?" },
+            { speaker: "User", message: "Oui, ce serait utile." },
+            { speaker: "IA", message: "D'accord, je vais te proposer une structure avec des pauses intégrées et une liste d'équipements nécessaires pour chaque session." },
+          ],
+        },
+        {
+          title: "Agent d’Exercices Physiques",
+          description: "Un coach IA interactif pour créer des routines d'entraînement personnalisées, suivre les progrès, et motiver les utilisateurs.",
+          image: AgentGMuscle,
+          progress: 50,
+          features: [
+            "Plans d'entraînement personnalisés",
+            "Rappels pour les séances",
+            "Suivi des performances",
+            "Motivation et conseils",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Je suis ton coach personnel. Quel est ton objectif ? Perte de poids, gain de muscle, ou rester en forme ?" },
+            { speaker: "User", message: "Je veux perdre du poids." },
+            { speaker: "IA", message: "Parfait. Combien de séances par semaine peux-tu consacrer à ton entraînement ?" },
+            { speaker: "User", message: "3 séances par semaine." },
+            { speaker: "IA", message: "Très bien. Je vais te préparer un programme basé sur tes préférences. Préfères-tu des exercices cardio, des entraînements en salle, ou un mélange des deux ?" },
+            { speaker: "User", message: "Un mélange des deux." },
+            { speaker: "IA", message: "Super choix ! Ta première séance sera prête. N’oublie pas : une alimentation équilibrée est essentielle pour atteindre tes objectifs." },
+            { speaker: "User", message: "Merci, j’ai hâte de commencer." },
+          ],
+        },
+        {
+          title: "Agent Assistant en Cuisine",
+          description: "Un agent IA interactif pour aider à préparer des repas, trouver des recettes, et gérer la liste des courses.",
+          image: AgentCuisine,
+          progress: 80,
+          features: [
+            "Suggestions de recettes",
+            "Adaptation aux préférences alimentaires",
+            "Création de listes de courses",
+            "Guidage étape par étape en cuisine",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Je suis ton assistant culinaire. Que veux-tu préparer aujourd'hui ?" },
+            { speaker: "User", message: "Un dîner rapide et sain." },
+            { speaker: "IA", message: "D’accord. Combien de personnes dois-tu servir ?" },
+            { speaker: "User", message: "Deux personnes." },
+            { speaker: "IA", message: "Super ! Voici une suggestion : saumon grillé avec légumes vapeur. Veux-tu une autre option ?" },
+            { speaker: "User", message: "Non, c’est parfait." },
+            { speaker: "IA", message: "Je vais te guider étape par étape. Tout d'abord, rassemble ces ingrédients : saumon, courgettes, carottes, et huile d’olive. Prêt à commencer ?" },
+            { speaker: "User", message: "Oui, allons-y." },
+          ],
+        },
+        {
+          title: "Agent de Simulation Financière",
+          description: "Un agent IA pour simuler des scénarios financiers, gérer un budget, et planifier des objectifs à long terme.",
+          image: AgentFinance,
+          progress: 45,
+          features: [
+            "Gestion budgétaire",
+            "Suivi des dépenses",
+            "Simulations d'investissement",
+            "Recommandations personnalisées",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Je suis ton assistant financier. Souhaites-tu gérer ton budget ou planifier un objectif financier ?" },
+            { speaker: "User", message: "Je veux planifier un objectif." },
+            { speaker: "IA", message: "D'accord. Quel est ton objectif ?" },
+            { speaker: "User", message: "Économiser pour des vacances." },
+            { speaker: "IA", message: "Super ! Combien souhaites-tu économiser et dans quel délai ?" },
+            { speaker: "User", message: "2000 euros en six mois." },
+            { speaker: "IA", message: "Parfait. Tu devras mettre de côté environ 333 euros par mois. Je vais analyser tes dépenses et te proposer des ajustements. Veux-tu commencer ?" },
+            { speaker: "User", message: "Oui, merci." },
+          ],
+        },
+      ],
+    },
+    {
+      category: "Agents Recherche & Collecte d'Information",
+      agents: [
+        {
+          title: "Agent de Recherche Documentaire",
+          description: "Un agent IA conçu pour effectuer des recherches rapides et approfondies sur un sujet spécifique, parfait pour les étudiants, chercheurs et professionnels.",
+          image: AgentCollecte,
+          progress: 75,
+          features: [
+            "Recherche en temps réel",
+            "Synthèse des informations",
+            "Suggestions de sources fiables",
+            "Exportation des résultats",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Quel sujet souhaitez-vous explorer aujourd'hui ?" },
+            { speaker: "User", message: "Je veux en savoir plus sur le réchauffement climatique." },
+            { speaker: "IA", message: "D'accord. Je vais collecter des informations sur les causes, les impacts et les solutions. Voulez-vous que je me concentre sur un aspect particulier ?" },
+            { speaker: "User", message: "Oui, les impacts économiques." },
+            { speaker: "IA", message: "Très bien. Voici un résumé : le réchauffement climatique peut entraîner des pertes agricoles, des dommages aux infrastructures, et une augmentation des coûts de santé. Voulez-vous plus de détails ou des exemples concrets ?" },
+            { speaker: "User", message: "Oui, des exemples concrets seraient utiles." },
+            { speaker: "IA", message: "Par exemple, en 2020, les pertes dues aux catastrophes climatiques ont été estimées à 210 milliards de dollars dans le monde. Souhaitez-vous un rapport complet sur ce sujet ?" },
+            { speaker: "User", message: "Oui, merci." },
+          ],
+        },
+        {
+          title: "Agent Veille Concurrentielle",
+          description: "Un agent IA interactif pour surveiller les tendances du marché, analyser les concurrents et fournir des rapports clairs et détaillés.",
+          image: AgentVeille,
+          progress: 60,
+          features: [
+            "Analyse de la concurrence",
+            "Surveillance des tendances",
+            "Rapports personnalisés",
+            "Alertes en temps réel",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Je suis votre assistant de veille concurrentielle. Quel secteur ou entreprise souhaitez-vous analyser ?" },
+            { speaker: "User", message: "Je veux surveiller le secteur des énergies renouvelables." },
+            { speaker: "IA", message: "Parfait. Je vais collecter des informations sur les leaders du marché, les innovations récentes et les tendances de croissance. Préférez-vous un rapport quotidien ou hebdomadaire ?" },
+            { speaker: "User", message: "Un rapport hebdomadaire serait parfait." },
+            { speaker: "IA", message: "Très bien. J'ai identifié plusieurs entreprises clés comme Tesla et Vestas. Voulez-vous un focus particulier ?" },
+            { speaker: "User", message: "Oui, sur Tesla." },
+            { speaker: "IA", message: "D'accord. Je vais suivre leurs projets dans les énergies renouvelables et vous fournir des mises à jour. Voulez-vous des alertes pour chaque nouveauté ?" },
+            { speaker: "User", message: "Oui, merci." },
+          ],
+        },
+        {
+          title: "Agent de Collecte de Données",
+          description: "Un agent IA interactif pour extraire, organiser et analyser des données provenant de diverses sources en ligne.",
+          image: AgentDonnee,
+          progress: 50,
+          features: [
+            "Extraction automatisée des données",
+            "Organisation des informations",
+            "Analyse et visualisation",
+            "Exportation des fichiers",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Je suis ici pour vous aider à collecter des données. Quelle information recherchez-vous ?" },
+            { speaker: "User", message: "Je veux des données sur la consommation énergétique en Europe." },
+            { speaker: "IA", message: "D'accord. Je vais analyser les bases de données publiques et les rapports officiels. Souhaitez-vous des données pour une année spécifique ?" },
+            { speaker: "User", message: "Oui, pour 2022." },
+            { speaker: "IA", message: "Très bien. Voici un aperçu des données disponibles : consommation totale, répartition par pays, et sources d'énergie. Voulez-vous un graphique ou un tableau ?" },
+            { speaker: "User", message: "Un graphique serait bien." },
+            { speaker: "IA", message: "Voici un graphique montrant la consommation par pays. Souhaitez-vous l'exporter ?" },
+            { speaker: "User", message: "Oui, en format PDF." },
+          ],
+        },
+        {
+          title: "Agent Analyse des Médias",
+          description: "Un agent IA pour surveiller les actualités, les réseaux sociaux et les médias afin de fournir des résumés et des analyses approfondies.",
+          image: AgentMedia,
+          progress: 70,
+          features: [
+            "Surveillance des actualités",
+            "Analyse des tendances sur les réseaux sociaux",
+            "Résumés personnalisés",
+            "Alertes sur les sujets sensibles",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Quel sujet ou mot-clé voulez-vous que je surveille ?" },
+            { speaker: "User", message: "Je veux suivre les actualités sur l'intelligence artificielle." },
+            { speaker: "IA", message: "D'accord. Je vais surveiller les dernières actualités, les discussions sur les réseaux sociaux, et les publications scientifiques. Voulez-vous un résumé quotidien ?" },
+            { speaker: "User", message: "Oui, un résumé quotidien serait parfait." },
+            { speaker: "IA", message: "Super. Je vais également vous envoyer des alertes pour les sujets critiques, comme les nouvelles régulations ou innovations. Souhaitez-vous des rapports visuels ?" },
+            { speaker: "User", message: "Oui, avec des graphiques." },
+            { speaker: "IA", message: "Entendu. Vous recevrez des rapports détaillés avec graphiques interactifs chaque jour." },
+          ],
+        },
       ],
     }
+    
+    
     // Ajout d'autres catégories d'agent si nécessaire
   ];
   

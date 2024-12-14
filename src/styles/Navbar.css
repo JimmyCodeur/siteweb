@@ -228,7 +228,7 @@
 
 .nav-links .dropdown-menu li a {
   display: flex; 
-  align-items: center; 
+  align-items: c  denter; 
   justify-content: center; 
   gap: 0.5rem; 
   text-decoration: none;

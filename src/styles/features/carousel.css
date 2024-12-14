@@ -1,60 +1,121 @@
 /* Carrousel Horizontal */
 .sub-category {
-    display: flex;
-    flex-wrap: nowrap; /* Désactive le retour à la ligne */
-    overflow-x: auto; /* Ajoute le défilement horizontal */
-    gap: 20px;
-    padding: 10px 0;
-    scrollbar-width: thin;
-    scrollbar-width: none;  /* Barres de défilement fines */
-  }
-  
-  .sub-category::-webkit-scrollbar {
-    height: 8px;
-    display: none; /* Hauteur de la barre de défilement */
-  }
-  
-  .sub-category::-webkit-scrollbar-thumb {
-    background: rgba(0, 255, 255, 0.5); /* Couleur de la barre */
-    border-radius: 10px;
-  }
-  
-  .sub-category::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.2); /* Couleur de l'arrière-plan */
-  }
-  
-  /* Carte individuelle */
-  .card {
-    flex: 0 0 calc(50% - 20px); /* Deux cartes visibles par ligne */
-    max-width: calc(50% - 20px);
-    box-sizing: border-box; /* Inclut les marges et paddings */
-  }
-  
-  /* Contrôles du carrousel */
-  .carousel-controls {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  
-  .carousel-control {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .carousel-control:hover {
-    background-color: rgba(0, 255, 255, 0.5);
-    transform: scale(1.1);
-  }
-  
-  .carousel-control:active {
-    transform: scale(0.95);
-    user-select: none; 
-  }
+  display: flex;
+  flex-wrap: nowrap; /* Désactive le retour à la ligne */
+  overflow-x: auto; /* Ajoute le défilement horizontal */
+  gap: 15px; /* Réduit l'écart entre les cartes */
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-width: none; /* Barres de défilement fines */
+  scroll-behavior: smooth; /* Défilement fluide */
+  justify-content: center;
+}
+
+.sub-category::-webkit-scrollbar {
+  height: 6px;
+  display: none; /* Hauteur de la barre de défilement */
+}
+
+.sub-category::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.5); /* Couleur de la barre */
+  border-radius: 10px;
+}
+
+.sub-category::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* Couleur de l'arrière-plan */
+}
+
+/* Carte individuelle */
+.card {
+  flex: 0 0 calc(33% - 100px); /* Ajuste la largeur pour afficher plus de cartes */
+  max-width: calc(33% - 10px);
+  box-sizing: border-box; /* Inclut les marges et paddings */
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.6);
+}
+
+.card .card-image {
+  width: 100%;
+  height: 150px; /* Ajuste la taille des images */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .card-image img {
+  max-width: 80%;
+  max-height: 100%;
+  border-radius: 50%; /* Images rondes */
+  object-fit: cover;
+}
+
+.card h4 {
+  font-size: 1rem; /* Réduit la taille du texte */
+  color: #ffae18;
+  margin: 10px 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.card .card-description {
+  font-size: 0.85rem; /* Réduit la taille de la description */
+  color: #ccc;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.card .view-btn {
+  background-color: rgba(0, 255, 255, 0.2);
+  color: #00f6ff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px auto;
+  display: block;
+  width: fit-content;
+}
+
+.card .view-btn:hover {
+  background-color: rgba(0, 255, 255, 0.5);
+}
+
+/* Contrôles du carrousel */
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.carousel-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-control:hover {
+  background-color: rgba(0, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.carousel-control:active {
+  transform: scale(0.95);
+  user-select: none;
+}
