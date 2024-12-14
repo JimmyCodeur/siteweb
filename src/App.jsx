@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import Features from './components/Features';
 import Meeting from './components/Meeting';
+import CustomRAG from './components/CustomRAG';
+import WorflowAgents from './components/WorflowAgents';
 import ContactForm from './components/ContactForm';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
@@ -16,6 +18,8 @@ function App() {
       <Navbar />
       <HeroSection />
       <Features />
+      <CustomRAG />
+      <WorflowAgents />
       <Meeting />
       <ContactForm />
       <FAQSection />

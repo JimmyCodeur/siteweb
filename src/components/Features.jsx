@@ -58,7 +58,7 @@ const Features = () => {
         <div></div>
       </div>
 
-      <h2>Nos Solutions IA</h2>
+      <h2>Solution 1 : Création d'Agents </h2>
       <div className="why-agent">
         <h3>Pourquoi avoir un agent IA ?</h3>
         <p>

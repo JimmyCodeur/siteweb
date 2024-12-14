@@ -1,0 +1,117 @@
+/* CustomRAG Section Styles - Futuristic Theme */
+
+#custom-rag {
+  background: radial-gradient(circle, #0b0c10, #1f2833);
+  padding: 30px 20px;
+  color: #c5c6c7;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+#custom-rag .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#custom-rag h2 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#custom-rag p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 50px;
+  color: #c5c6c7;
+}
+
+/* Feature Cards */
+.rag-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.feature-card {
+  background: linear-gradient(145deg, #1f2833, #0b0c10);
+  border: 1px solid rgba(102, 252, 241, 0.4);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7), 0 0 20px rgba(102, 252, 241, 0.5);
+  padding: 25px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(102, 252, 241, 0.6), 0 0 25px rgba(102, 252, 241, 0.8);
+}
+
+.feature-card i {
+  font-size: 3.5rem;
+  color: #66fcf1;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px rgba(102, 252, 241, 0.7);
+}
+
+.feature-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #c5c6c7;
+  line-height: 1.6;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+  background: linear-gradient(145deg, #1f2833, #0b0c10);
+  color: #66fcf1;
+  padding: 50px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7), 0 0 25px rgba(102, 252, 241, 0.5);
+  text-align: center;
+}
+
+.cta-section h3 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(102, 252, 241, 0.8);
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  line-height: 1.8;
+  color: #c5c6c7;
+}
+
+.cta-button {
+  background: #66fcf1;
+  color: #1f2833;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #ff9900;
+  color: #000000;
+}

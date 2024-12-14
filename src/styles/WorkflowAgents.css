@@ -1,0 +1,143 @@
+/* Workflow d'Agents Section Styles */
+
+.custom-workflow {
+    background: linear-gradient(180deg, #0f0f13, #1a1a20);
+    padding: 100px 20px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.custom-workflow .workflow-header {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.custom-workflow h2 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 5px 20px rgba(102, 252, 241, 0.8);
+}
+
+.custom-workflow p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #c5c6c7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Workflow Content */
+.custom-workflow .workflow-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.workflow-image-container {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.workflow-image {
+    max-width: 70%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.workflow-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(102, 252, 241, 0.5);
+}
+
+.workflow-details {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.feature-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: linear-gradient(145deg, #23232b, #1a1a20);
+    border-radius: 15px;
+    padding: 20px 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-row:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(102, 252, 241, 0.6);
+}
+
+.feature-row i {
+    font-size: 3rem;
+    color: #66fcf1;
+    text-shadow: 0 5px 10px rgba(102, 252, 241, 0.7);
+}
+
+.feature-row h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.feature-row p {
+    font-size: 1.1rem;
+    color: #c5c6c7;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Call-to-Action Section */
+.workflow-cta {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background: linear-gradient(90deg, #1a1a20, #23232b);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.workflow-cta h3 {
+    font-size: 2.2rem;
+    color: #66fcf1;
+    text-shadow: 0 6px 15px rgba(102, 252, 241, 0.7);
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    background: #66fcf1;
+    color: #1a1a20;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(102, 252, 241, 0.6);
+}
+
+.cta-button:hover {
+    background: #ffffff;
+    color: #66fcf1;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(102, 252, 241, 0.9);
+}
