@@ -5,7 +5,7 @@ import Calendrier from '../assets/images/calendrier.webp';
 
 const Meeting = () => {
   return (
-    <section id="meeting" className="meeting-section">
+    <section id="rdv" className="meeting-section">
       <div className="meeting-container">
         <div className="meeting-visual">
           <div className="neon-circle"></div>

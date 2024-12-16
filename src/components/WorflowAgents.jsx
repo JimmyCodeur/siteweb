@@ -6,7 +6,7 @@ const CustomWorkflowAgents = () => {
   return (
     <section id="custom-workflow" className="custom-workflow">
       <div className="workflow-header">
-        <h2>Solution 3: Workflow d'Agents</h2>
+        <h2 className='section-title'>Solution 3: Workflow d'Agents</h2>
         <p>
           Combinez plusieurs agents IA dans un écosystème intégré pour automatiser, collaborer, et optimiser vos processus métiers.
         </p>

@@ -58,7 +58,7 @@ const Features = () => {
         <div></div>
       </div>
 
-      <h2>Solution 1 : Création d'Agents </h2>
+      <h2 className='section-title'>Solution 1 : Création d'Agents </h2>
       <div className="why-agent">
         <h3>Pourquoi avoir un agent IA ?</h3>
         <p>
@@ -132,6 +132,18 @@ const Features = () => {
           </div>
         </div>
       ))}
+      {/* Call to Action */}
+      <div className="cta-section-agent">
+        <h3 className="cta-title-agent">Alors, lequel de nos agents intelligents correspond à vos besoins ?</h3>
+        <p className="cta-description-agent">
+          Qu'il s'agisse de répondre à vos clients, d'automatiser des tâches complexes ou d'améliorer l'expérience utilisateur, nous sommes là pour vous accompagner. 
+        </p>
+        <p className="cta-description-agent">
+          Pas d'inquiétude, si vous ne trouvez pas l'agent parfait, nous pouvons le créer sur mesure pour vous.
+        </p>
+        <button className="cta-button-agent">Contactez Nous</button>
+      </div>  
+
 
       {selectedAgent && (
         <div className="modal-overlay" onClick={() => setSelectedAgent(null)}>

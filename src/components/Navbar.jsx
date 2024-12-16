@@ -40,6 +40,7 @@ const Navbar = () => {
             Home
           </a>
         </li>
+        {/* Dropdown for Agents */}
         <li
           className="dropdown"
           onMouseEnter={() => setDropdownOpen(true)}
@@ -49,12 +50,13 @@ const Navbar = () => {
             href="#Agents"
             onClick={(e) => {
               e.preventDefault();
-              toggleDropdown();
+              toggleMenu();
+              scrollToSection("agents");
             }}
           >
             Agents IA
           </a>
-          {dropdownOpen && (
+          {/* {dropdownOpen && (
             <ul className="dropdown-menu">
               <li>
                 <a
@@ -112,25 +114,14 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-          )}
-        </li>
-        <li>
-          <a
-            href="#Workflows"
-            onClick={() => {
-              toggleMenu();
-              scrollToSection("workflows");
-            }}
-          >
-            Workflows IA
-          </a>
+          )} */}
         </li>
         <li>
           <a
             href="#Rag"
             onClick={() => {
               toggleMenu();
-              scrollToSection("rag");
+              scrollToSection("custom-rag");
             }}
           >
             RAG
@@ -138,13 +129,46 @@ const Navbar = () => {
         </li>
         <li>
           <a
-            href="#Meeting"
+            href="#Workflows"
             onClick={() => {
               toggleMenu();
-              scrollToSection("meeting");
+              scrollToSection("custom-workflow");
             }}
           >
-            Prendre Rendez Vous
+            Workflows IA
+          </a>
+        </li>
+        <li>
+          <a
+            href="#Train"
+            onClick={() => {
+              toggleMenu();
+              scrollToSection("train-model");
+            }}
+          >
+            Entrainement
+          </a>
+        </li>
+        <li>
+          <a
+            href="#Presentation"
+            onClick={() => {
+              toggleMenu();
+              scrollToSection("presentation");
+            }}
+          >
+            Présentation
+          </a>
+        </li>
+        <li>
+          <a
+            href="#Contact-section"
+            onClick={() => {
+              toggleMenu();
+              scrollToSection("contact-section");
+            }}
+          >
+            Contactez Nous
           </a>
         </li>
         <li>
@@ -159,6 +183,17 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
+      {/* Button: Prendre Rendez-Vous */}
+      <div className="cta-button-navbar">
+        <a
+          href="https://calendly.com/votre-lien"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="navbar-rdv-button"
+        >
+          Prendre Rendez-Vous
+        </a>
+      </div>
     </nav>
   );
 };

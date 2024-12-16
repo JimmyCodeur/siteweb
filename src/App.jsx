@@ -6,6 +6,8 @@ import Features from './components/Features';
 import Meeting from './components/Meeting';
 import CustomRAG from './components/CustomRAG';
 import WorflowAgents from './components/WorflowAgents';
+import TrainModel from './components/TrainModel';
+import Presentation from './components/Presentation';
 import ContactForm from './components/ContactForm';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
@@ -20,7 +22,9 @@ function App() {
       <Features />
       <CustomRAG />
       <WorflowAgents />
-      <Meeting />
+      <TrainModel/>
+      <Presentation/>
+      {/* <Meeting /> */}
       <ContactForm />
       <FAQSection />
       <Footer />

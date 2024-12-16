@@ -250,3 +250,23 @@
   justify-content: center; 
   height: 100%; 
 }
+
+.navbar-rdv-button {
+  background: #66fcf1;
+  color: #1f2937;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none; /* Supprime le soulignement par défaut des liens */
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.navbar-rdv-button:hover {
+  background: #ff9900;
+  color: #ffffff;
+  transform: scale(1.1);
+}

@@ -1,7 +1,7 @@
 export const scrollToSection = (id) => {
   const section = document.getElementById(id);
   if (section) {
-    const offset = -190;
+    const offset = -10;
     const topPosition = section.getBoundingClientRect().top + window.scrollY + offset;
 
     window.scrollTo({

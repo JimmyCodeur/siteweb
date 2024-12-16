@@ -88,3 +88,38 @@
   border-radius: 5px;
   transform: translateY(3px); /* Aligne la ligne avec le texte */
 }
+
+/* Call to Action Section */
+.cta-section-agent {
+  border-radius: 20px;
+  text-align: center;
+}
+
+.cta-title-agent {
+  font-size: 1.8rem; /* Réduit légèrement la taille de la police */
+  color: #66fcf1;
+  margin-bottom: 10px; /* Réduit l'espacement sous le titre */
+  text-shadow: 0 0 10px rgba(102, 252, 241, 0.7);
+}
+
+.cta-description-agent {
+  font-size: 1.1rem; /* Réduit légèrement la taille de la description */
+  line-height: 1.6; /* Diminue légèrement l'espacement entre les lignes */
+  margin-bottom: 15px; /* Réduit l'espace sous la description */
+}
+
+.cta-button-agent {
+  background: #66fcf1;
+  color: #1f2833;
+  font-size: 1rem;
+  padding: 10px 25px; /* Diminue légèrement le padding du bouton */
+  border-radius: 25px; /* Ajuste la courbure pour un look plus compact */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button-agent:hover {
+  background: #ff9900;
+  color: #000000;
+}
