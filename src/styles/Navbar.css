@@ -28,7 +28,7 @@
   box-shadow: var(--navbar-shadow);
   position: fixed;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
 }
 
 .navbar:before {
@@ -56,7 +56,7 @@
   animation: diagonal-glow 5s infinite linear;
   filter: blur(80px);
   opacity: 0.5;
-  z-index: -3;
+  z-index: -12;
 }
 
 .navbar ul li a {
@@ -256,7 +256,7 @@
   color: #1f2937;
   font-size: 1rem;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 6px 20px;
   border: none;
   border-radius: 25px;
   cursor: pointer;

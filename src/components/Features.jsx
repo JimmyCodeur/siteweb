@@ -85,13 +85,13 @@ const Features = () => {
               className="carousel-control prev"
               onClick={() => scrollCarousel(catIndex, -1)}
             >
-              ❮
+              <i className="fas fa-chevron-left"></i> {/* Icône Font Awesome */}
             </button>
             <button
               className="carousel-control next"
               onClick={() => scrollCarousel(catIndex, 1)}
             >
-              ❯
+              <i className="fas fa-chevron-right"></i> {/* Icône Font Awesome */}
             </button>
           </div>
 

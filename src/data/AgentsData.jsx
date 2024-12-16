@@ -10,6 +10,13 @@ import AgentVeille from '../assets/images/ia_veille.webp';
 import AgentCollecte from '../assets/images/ia_collecte.webp';
 import AgentDonnee from '../assets/images/ia_donnee.webp';
 import AgentMedia from '../assets/images/ia_media.webp';
+import AgentHistoire from '../assets/images/ia_histoire.webp';
+import AgentSoftSkills from '../assets/images/ia_softskill.webp';
+import AgentExcel from '../assets/images/ia_excel.webp';
+import AgentGestionProjet from '../assets/images/ia_gestionprojets.webp';
+import AgentProspection from '../assets/images/ia_prospection.webp';
+import AgentGestionCrise from '../assets/images/ia_prospection.webp';
+
 
 export const agentModes = [
     {
@@ -180,7 +187,176 @@ export const agentModes = [
             { speaker: "IA", message: "Pour captiver ton audience, commence avec une introduction percutante, utilise des visuels clairs, et termine avec un appel à l’action. Je peux aussi analyser ton script si tu veux." },
             { speaker: "IA", message: "Pour résumer, ton planning est prêt et tes rappels sont programmés. Ensemble, nous allons t’aider à respecter toutes tes échéances et à devenir un expert en gestion du temps !" },
           ],
+        },
+        {
+          title: "Apprentissage de l’Histoire",
+          description: "Un agent IA interactif conçu pour enseigner et rendre l'apprentissage de l'histoire engageant, adapté aux étudiants, enseignants ou passionnés d'histoire.",
+          image: AgentHistoire,
+          progress: 20,
+          features: [
+            "Quiz interactifs sur différentes périodes historiques",
+            "Récits captivants sur des événements marquants",
+            "Analyse des causes et conséquences des événements",
+            "Création de frises chronologiques personnalisées",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Je suis ton guide dans le monde fascinant de l’histoire. Prêt à explorer les événements qui ont façonné notre monde ?" },
+            { speaker: "User", message: "Oui, je veux apprendre quelque chose de nouveau." },
+            { speaker: "IA", message: "Génial ! Préfères-tu commencer par une période spécifique comme l’Antiquité, le Moyen Âge, ou la Révolution industrielle ?" },
+            { speaker: "User", message: "La Révolution industrielle." },
+            { speaker: "IA", message: "Parfait ! La Révolution industrielle a marqué un tournant dans l’histoire humaine. Peux-tu deviner où elle a commencé ?" },
+            { speaker: "User", message: "En Angleterre ?" },
+            { speaker: "IA", message: "Exactement ! Elle a commencé en Angleterre au 18e siècle grâce à des innovations comme la machine à vapeur. Veux-tu savoir comment cela a changé la société ?" },
+            { speaker: "User", message: "Oui, je veux en savoir plus." },
+            { speaker: "IA", message: "Avec plaisir ! La machine à vapeur a révolutionné l’industrie textile, les transports, et la production en général. Cela a entraîné une urbanisation massive et de nombreux changements sociaux. Souhaites-tu explorer les avantages ou les inconvénients de cette période ?" },
+            { speaker: "User", message: "Les avantages." },
+            { speaker: "IA", message: "Les avantages incluent une production accrue, une baisse des coûts des biens, et des innovations technologiques qui ont transformé la vie quotidienne. À ton avis, quel a été le principal inconvénient ?" },
+            { speaker: "User", message: "Peut-être les mauvaises conditions de travail ?" },
+            { speaker: "IA", message: "Absolument. Les conditions de travail étaient terribles pour de nombreux ouvriers, avec des journées de travail longues et des salaires faibles. Souhaites-tu découvrir comment cela a conduit à des réformes sociales ?" },
+            { speaker: "User", message: "Oui, je veux savoir." },
+            { speaker: "IA", message: "Cela a conduit à des mouvements syndicaux et à des lois pour protéger les droits des travailleurs. Veux-tu faire un quiz rapide pour voir ce que tu as retenu ?" },
+            { speaker: "User", message: "Oui, pourquoi pas !" },
+            { speaker: "IA", message: "Super ! Première question : Quelle invention est considérée comme un symbole clé de la Révolution industrielle ?"},
+            { speaker: "User", message: "La machine à vapeur ?" },
+            { speaker: "IA", message: "Exact ! Bravo. Deuxième question : Dans quel secteur la Révolution industrielle a-t-elle eu le plus grand impact initial ?" },
+            { speaker: "User", message: "L’industrie textile ?" },
+            { speaker: "IA", message: "Bien joué ! Tu progresses rapidement. Si tu veux en savoir plus, je peux te guider à travers d'autres périodes historiques. Où veux-tu aller ensuite ?" },
+            { speaker: "User", message: "L'Antiquité." },
+            { speaker: "IA", message: "Excellent choix ! Nous allons explorer des civilisations fascinantes comme l’Égypte antique, la Grèce classique et Rome. Prêt pour une nouvelle aventure ?" },
+            { speaker: "IA", message: "Avec moi, tu découvriras des histoires passionnantes et des leçons du passé. Ensemble, nous allons rendre l’histoire vivante !" },
+          ],
+        },
+   
+        
+        
+        
+      ],
+    },
+    {
+      category: "Agents Formations",
+      agents: [
+        {
+          title: "Formation en Soft Skills",
+          description: "Un agent IA interactif conçu pour améliorer les compétences interpersonnelles comme la communication, le leadership et la gestion des conflits, adapté aux professionnels et étudiants.",
+          image: AgentSoftSkills,
+          category: "Agents Formation",
+          progress: 10,
+          features: [
+            "Simulations de situations professionnelles",
+            "Techniques pour améliorer la communication",
+            "Conseils personnalisés sur la gestion des conflits",
+            "Quiz pour évaluer et développer vos compétences",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Je suis ton coach en soft skills. Que veux-tu améliorer aujourd’hui : communication, leadership ou gestion des conflits ?" },
+            { speaker: "User", message: "Je voudrais améliorer ma communication." },
+            { speaker: "IA", message: "Excellente idée ! La communication est essentielle. Peux-tu me dire si tu veux travailler sur des situations spécifiques, comme des présentations, des réunions ou des conversations informelles ?" },
+            { speaker: "User", message: "Les présentations." },
+            { speaker: "IA", message: "Super ! Parlons de structure : une bonne présentation commence par une introduction captivante, suivie d’un message clair, et se termine par un appel à l’action. Veux-tu que je t’aide à préparer une présentation spécifique ?" },
+            { speaker: "User", message: "Oui, j’ai une présentation la semaine prochaine." },
+            { speaker: "IA", message: "Parfait ! Pour commencer, quel est le sujet de ta présentation ?" },
+            { speaker: "User", message: "L’impact du télétravail sur la productivité." },
+            { speaker: "IA", message: "Très intéressant ! Pour captiver ton audience, commence par une statistique ou une question intrigante. Par exemple : 'Savez-vous que 85 % des travailleurs trouvent qu’ils sont plus productifs en télétravail ?'. Que penses-tu de cette idée ?" },
+            { speaker: "User", message: "C’est une bonne idée." },
+            { speaker: "IA", message: "Génial ! Je peux aussi t’aider à structurer le reste de ta présentation, à créer des diapositives impactantes ou à pratiquer ton discours. Que veux-tu faire ensuite ?" },
+            { speaker: "User", message: "Créer les diapositives." },
+            { speaker: "IA", message: "Pour les diapositives, assure-toi qu’elles soient visuellement simples avec peu de texte et des images pertinentes. Je peux te proposer un modèle de structure. Tu veux essayer ?" },
+            { speaker: "User", message: "Oui, je veux bien." },
+            { speaker: "IA", message: "Super ! Continuons ensemble. Je suis là pour t’aider à impressionner ton audience et développer ta confiance en communication !" },
+          ],
+        },
+        {
+          title: "Formation Excel Avancée",
+          description: "Un agent IA interactif pour maîtriser les fonctionnalités avancées d'Excel, adapté aux professionnels et étudiants souhaitant améliorer leur efficacité et productivité.",
+          image: AgentExcel,
+          category: "Agents Formation",
+          progress: 0, 
+          features: [
+            "Création et personnalisation de tableaux croisés dynamiques",
+            "Utilisation des fonctions avancées",
+            "Introduction à l'automatisation avec les macros",
+            "Analyse de données avec des outils graphiques avancés",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Je suis ton assistant spécialisé en Excel avancé. Que veux-tu apprendre aujourd’hui : tableaux croisés dynamiques, fonctions complexes ou macros ?" },
+            { speaker: "User", message: "Les tableaux croisés dynamiques." },
+            { speaker: "IA", message: "Excellente idée ! Les tableaux croisés dynamiques sont parfaits pour analyser rapidement des données. Commençons par insérer un tableau croisé dynamique. As-tu déjà un tableau de données dans Excel ?" },
+            { speaker: "User", message: "Oui, j’ai un tableau de ventes." },
+            { speaker: "IA", message: "Super ! Sélectionne ton tableau, puis clique sur 'Insérer > Tableau Croisé Dynamique'. Choisis d’ajouter le tableau dans une nouvelle feuille. Dis-moi si tu vois l’interface des champs du tableau croisé." },
+            { speaker: "User", message: "Oui, je la vois." },
+            { speaker: "IA", message: "Parfait ! Fais glisser la colonne 'Produit' dans les lignes et 'Ventes' dans les valeurs. Cela résumera les ventes par produit. Que vois-tu ?" },
+            { speaker: "User", message: "Je vois une liste avec les totaux par produit." },
+            { speaker: "IA", message: "Génial ! Tu peux aussi ajouter un filtre, par exemple, par région. Veux-tu essayer ?" },
+            { speaker: "User", message: "Oui, je vais essayer." },
+            { speaker: "IA", message: "Super travail ! Une fois que tu es à l’aise, nous pourrons explorer comment créer des graphiques croisés dynamiques pour visualiser ces données. Es-tu prêt ?" },
+            { speaker: "User", message: "Oui, ça m’intéresse." },
+            { speaker: "IA", message: "C’est parti ! Clique sur 'Analyse > Graphique Croisé Dynamique'. Choisis un type de graphique qui te convient, comme un histogramme ou un camembert. Je suis là si tu rencontres des difficultés." },
+            { speaker: "IA", message: "Bravo, tu progresses rapidement ! Ensemble, nous allons explorer d'autres fonctionnalités avancées comme les macros pour automatiser tes tâches. Prêt pour la prochaine étape ?" },
+          ],
+        },
+        {
+          title: "Formation en Gestion de Projets",
+          description: "Un agent IA interactif conçu pour enseigner les meilleures pratiques en gestion de projets, y compris la planification, l'exécution et le suivi des tâches.",
+          image: AgentGestionProjet, // Remplacez par une image pertinente pour cet agent
+          category: "Agents Formation",
+          progress: 0, // Exemple de progression initiale
+          features: [
+            "Planification de projets avec des diagrammes de Gantt",
+            "Suivi des tâches et gestion des priorités",
+            "Introduction aux méthodologies Agile et Scrum",
+            "Analyse des risques et gestion des ressources",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Je suis ton coach en gestion de projets. Que veux-tu apprendre aujourd’hui : planification, méthodologies ou suivi ?" },
+            { speaker: "User", message: "Je veux apprendre à planifier un projet." },
+            { speaker: "IA", message: "Parfait ! Commençons par définir ton objectif principal. Quel est le projet que tu souhaites planifier ?" },
+            { speaker: "User", message: "Organiser un événement de lancement." },
+            { speaker: "IA", message: "Excellent ! Une bonne planification commence par identifier les grandes étapes. Par exemple : préparer le budget, choisir le lieu, inviter les participants. Veux-tu que je t’aide à créer un planning détaillé ?" },
+            { speaker: "User", message: "Oui, ça serait super." },
+            { speaker: "IA", message: "D’accord. Pour chaque étape, nous allons définir une échéance et les ressources nécessaires. Par exemple, pour 'choisir le lieu', combien de temps penses-tu que cela prendra ?" },
+            { speaker: "User", message: "Peut-être une semaine." },
+            { speaker: "IA", message: "Super ! Ajoutons cela à ton planning. Maintenant, passons à l'étape suivante : 'préparer le budget'. Quel est ton budget estimé ?" },
+            { speaker: "User", message: "Environ 5000€." },
+            { speaker: "IA", message: "Parfait. Je vais t’aider à répartir ce budget entre les différentes catégories comme le lieu, la restauration, et la communication. Veux-tu un exemple ?" },
+            { speaker: "User", message: "Oui, je veux bien." },
+            { speaker: "IA", message: "Pour un budget de 5000€, tu pourrais allouer 50 % au lieu, 30 % à la restauration, et 20 % à la communication. Cela te semble-t-il raisonnable ?" },
+            { speaker: "User", message: "Oui, c’est une bonne répartition." },
+            { speaker: "IA", message: "Génial ! Une fois le planning établi, nous pourrons ajouter des outils de suivi comme un diagramme de Gantt pour visualiser les étapes. Es-tu prêt à continuer ?" },
+            { speaker: "User", message: "Oui, allons-y." },
+            { speaker: "IA", message: "Excellent ! Ensemble, nous allons faire de ton projet un succès. Je suis là pour t’accompagner à chaque étape." },
+          ],
+        },
+        {
+          title: "Formation à la Prospection Commerciale",
+          description: "Un agent IA interactif conçu pour enseigner les meilleures pratiques de prospection commerciale, qu'il s'agisse d'appels à froid, d'e-mails de vente ou de gestion des prospects.",
+          image: AgentProspection, 
+          category: "Agents Formation",
+          progress: 0, 
+          features: [
+            "Rédaction d'e-mails de prospection efficaces",
+            "Techniques pour réussir vos appels à froid",
+            "Stratégies de qualification des prospects",
+            "Outils pour organiser et suivre vos leads",
+          ],
+          conversation: [
+            { speaker: "IA", message: "Bonjour ! Je suis ton coach en prospection commerciale. Que veux-tu améliorer aujourd’hui : les appels à froid, les e-mails, ou la gestion de prospects ?" },
+            { speaker: "User", message: "Je voudrais améliorer mes appels à froid." },
+            { speaker: "IA", message: "Excellente idée ! Pour réussir un appel à froid, il est essentiel de préparer un script. As-tu déjà une idée de ce que tu veux dire ?" },
+            { speaker: "User", message: "Pas vraiment, je ne sais pas par où commencer." },
+            { speaker: "IA", message: "Pas de souci ! Un bon script commence par une introduction courte et engageante. Par exemple : 'Bonjour, je m'appelle [Nom] de [Entreprise]. Ai-je bien atteint [Nom du Prospect] ?'. Souhaites-tu que je t'aide à rédiger un script personnalisé ?" },
+            { speaker: "User", message: "Oui, je veux bien." },
+            { speaker: "IA", message: "Super ! Quel est le produit ou service que tu proposes ? Nous allons créer une accroche percutante." },
+            { speaker: "User", message: "Je vends des logiciels de gestion de projet." },
+            { speaker: "IA", message: "Parfait ! Tu pourrais dire : 'Nos logiciels de gestion de projet aident les équipes à gagner du temps et à travailler plus efficacement. Cela pourrait-il vous intéresser ?'. Que penses-tu de cette accroche ?" },
+            { speaker: "User", message: "Ça me semble bien, merci." },
+            { speaker: "IA", message: "Génial ! N'oublie pas de poser des questions ouvertes pour engager la conversation. Par exemple : 'Quels sont vos principaux défis en gestion de projet actuellement ?'. Souhaites-tu que je te donne d'autres conseils pour répondre aux objections ?" },
+            { speaker: "User", message: "Oui, j'aimerais bien." },
+            { speaker: "IA", message: "Pour répondre aux objections, reste calme et montre de l'empathie. Par exemple, si on te dit : 'C’est trop cher', tu peux répondre : 'Je comprends tout à fait. Puis-je vous montrer comment cela pourrait vous faire économiser à long terme ?'. Prêt à essayer une simulation d'appel ?" },
+            { speaker: "User", message: "Oui, allons-y." },
+            { speaker: "IA", message: "Super ! Commençons. Je vais jouer le rôle du client et te poser des questions. Ensemble, nous allons perfectionner tes appels à froid." },
+          ],
         }
+        
         
         
       ],
@@ -291,7 +467,34 @@ export const agentModes = [
               { speaker: "User", message: "D'accord, merci pour le conseil." },
               { speaker: "IA", message: "Avec plaisir ! Continue de t'entraîner, et tu deviendras un excellent négociateur. Besoin d'autres scénarios ?" },
             ]
-          }           
+          },
+          {
+            title: "Simulateur de Gestion de Crise",
+            description: "Un agent IA interactif conçu pour entraîner les utilisateurs à gérer des crises organisationnelles ou professionnelles de manière efficace et stratégique.",
+            image: AgentGestionCrise, 
+            progress: 0, 
+            features: [
+              "Scénarios interactifs réalistes de gestion de crise",
+              "Analyse des décisions et feedback immédiat",
+              "Entraînement à la communication de crise",
+              "Outils pour identifier les risques et établir des plans d’action",
+            ],
+            conversation: [
+              { speaker: "IA", message: "Bonjour ! Je suis ton simulateur de gestion de crise. Prêt à tester tes compétences face à des situations critiques ?" },
+              { speaker: "User", message: "Oui, je veux m'entraîner." },
+              { speaker: "IA", message: "Super ! Commençons avec un scénario. Imagine que ton entreprise fait face à une fuite de données massive. Quels seraient tes premiers réflexes ?" },
+              { speaker: "User", message: "Je communiquerais avec l’équipe pour évaluer l’impact." },
+              { speaker: "IA", message: "Bonne idée ! Une communication interne rapide est essentielle. Qui dans l’équipe devrais-tu informer en priorité ?" },
+              { speaker: "User", message: "Le service IT et le responsable de la sécurité." },
+              { speaker: "IA", message: "Excellent choix. Une fois cela fait, il est important de notifier les clients impactés de manière transparente. Que dirais-tu dans ton communiqué ?" },
+              { speaker: "User", message: "Je dirais que nous travaillons à résoudre le problème et à protéger leurs données." },
+              { speaker: "IA", message: "Parfait ! Assure-toi également d’inclure des détails sur les mesures préventives prises. Es-tu prêt à aborder les questions des journalistes lors d’une conférence de presse ?" },
+              { speaker: "User", message: "Oui, allons-y." },
+              { speaker: "IA", message: "Simulons une question difficile : 'Comment cette fuite affectera-t-elle la confiance des clients envers votre entreprise ?'. Que répondrais-tu ?" },
+              { speaker: "User", message: "Nous nous excusons pour l’incident et travaillons à regagner leur confiance." },
+              { speaker: "IA", message: "Très bien ! Une réponse sincère est toujours appréciée. Avec un entraînement régulier, tu pourras gérer toute crise avec confiance." },
+            ],
+          }          
       ],
     },
     {

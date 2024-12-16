@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/HeroSections.css";
 import "../styles/HeroSectionsMobile.css";
 import BotImage from "../assets/images/bot_cute.webp"; 
@@ -17,9 +17,10 @@ const HeroSection = () => {
         </p>
         <ul className="hero-features">
           <li>🤖 Création d'agents IA personnalisés</li>
+          <li>🔍 Solutions RAG personnalisés</li>
           <li>⚙️ Conception de workflows IA sur mesure pour optimiser chaque processus</li>
-          <li>🔍 Solutions avancées RAG </li>
-          <li >🌐 Présentations de l'IA sur rendez-vous</li>
+          <li>📚 Entraînement des modèles IA pour répondre à vos besoins</li>
+          <li>🌐 Présentations dynamiques de l'IA en visio ou en présentiel</li>
         </ul>
       </div>
       <div className="hero-image-container">
