@@ -2,7 +2,7 @@
 
 .custom-workflow {
     background: linear-gradient(180deg, #0f0f13, #1a1a20);
-    padding: 100px 20px;
+    padding: 10px;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     position: relative;
@@ -18,7 +18,7 @@
 }
 
 .custom-workflow h2 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -92,7 +92,7 @@
 }
 
 .feature-row h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #ffffff;
     margin: 0;
     text-transform: uppercase;
@@ -135,9 +135,21 @@
     box-shadow: 0 10px 20px rgba(102, 252, 241, 0.6);
 }
 
-.cta-button:hover {
-    background: #ffffff;
-    color: #66fcf1;
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(102, 252, 241, 0.9);
+.cta-button-workflow:hover {
+    background: #ff9900;
+    color: #000000;
 }
+
+.cta-button-workflow {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: #66fcf1;
+    color: #1f2833;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }

@@ -7,7 +7,7 @@ const TrainModel = () => {
       <div className="container">
         {/* Section Title */}
         <header className="section-header">
-          <h2 className="section-title">Solution 4: Entraînement des Modèles</h2>
+          <h2 className="section-title">Solution 4: Entraînement des Modèles IA</h2>
           <p className="section-description">
             Exploitez notre expertise en entraînement des modèles d'IA pour concevoir des solutions sur mesure, performantes et parfaitement adaptées aux exigences de votre entreprise.
           </p>
@@ -58,7 +58,15 @@ const TrainModel = () => {
           <p className="cta-description-train">
             Contactez notre équipe pour découvrir comment nous pouvons vous accompagner dans l'entraînement de modèles d'IA puissants et sur mesure.
           </p>
-          <button className="cta-button-train">Contactez Nous</button>
+
+          <button
+          id="rdv"
+          className="cta-button-train"
+          onClick={() => document.getElementById("contact-section").scrollIntoView({ behavior: 'smooth' })}
+        >
+          Contactez Nous
+        </button>
+
         </div>
       </div>
     </section>

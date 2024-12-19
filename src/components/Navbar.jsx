@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <span className="logo-text">WriteBot</span>
+        <span className="logo-text">Fernandez Jimmy</span>
       </div>
       <div
         className={`menu-toggle ${menuOpen ? "open" : ""}`}
@@ -186,7 +186,7 @@ const Navbar = () => {
       {/* Button: Prendre Rendez-Vous */}
       <div className="cta-button-navbar">
         <a
-          href="https://calendly.com/votre-lien"
+          href="https://calendly.com/jimmy-fernandez-devia/30min"
           target="_blank"
           rel="noopener noreferrer"
           className="navbar-rdv-button"

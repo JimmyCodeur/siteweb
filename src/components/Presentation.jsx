@@ -9,8 +9,7 @@ const Presentation = () => {
         <header className="section-header">
           <h2 className="section-title">Solution 5: Présentations sur l'IA</h2>
           <p className="section-description">
-            Découvrez comment l'intelligence artificielle peut transformer votre entreprise. Nous proposons des présentations dynamiques pour expliquer ses avantages, ses cas d’utilisation, et répondre à toutes vos questions.
-          </p>
+          Découvrez comment l'intelligence artificielle peut révolutionner votre entreprise grâce à des présentations informatives et ateliers, mettant en lumière ses avantages, ses applications concrètes et répondant à toutes vos interrogations.          </p>
         </header>
 
         {/* Features Section */}
@@ -39,6 +38,14 @@ const Presentation = () => {
               Organisez des sessions en présentiel pour explorer les applications de l'IA adaptées à votre entreprise.
             </p>
           </div>
+          {/* Feature 4 - Atelier */}
+          <div className="feature-card">
+            <i className="fas fa-tools feature-icon"></i>
+            <h3 className="feature-title">Ateliers Pratiques</h3>
+            <p className="feature-description">
+              Participez à des ateliers pratiques pour expérimenter et créer des solutions d'IA adaptées à vos besoins réels.
+            </p>
+          </div>
         </div>
 
         {/* Call to Action */}
@@ -47,7 +54,13 @@ const Presentation = () => {
           <p className="cta-description-presentation">
             Contactez-nous pour organiser une présentation sur mesure, en visio ou en présentiel, pour votre équipe ou vos clients.
           </p>
-          <button className="cta-button-presentation">Planifiez une Présentation</button>
+          {/* Button 2: Planifier une Présentation */}
+          <button
+            className="cta-button-echanger"
+            onClick={() => document.getElementById("contact-section").scrollIntoView({ behavior: 'smooth' })}
+            >
+            Contactez Nous
+          </button>
         </div>
       </div>
     </section>

@@ -43,6 +43,13 @@ const CustomWorkflowAgents = () => {
           </div>
         </div>
       </div>
+      <button
+          id="rdv"
+          className="cta-button-workflow"
+          onClick={() => document.getElementById("contact-section").scrollIntoView({ behavior: 'smooth' })}
+        >
+          Contactez Nous
+        </button>
     </section>
   );
 };

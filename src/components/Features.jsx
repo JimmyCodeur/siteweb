@@ -141,7 +141,13 @@ const Features = () => {
         <p className="cta-description-agent">
           Pas d'inquiétude, si vous ne trouvez pas l'agent parfait, nous pouvons le créer sur mesure pour vous.
         </p>
-        <button className="cta-button-agent">Contactez Nous</button>
+        <button
+          id="rdv"
+          className="cta-button-agent"
+          onClick={() => document.getElementById("contact-section").scrollIntoView({ behavior: 'smooth' })}
+        >
+          Contactez Nous
+        </button>
       </div>  
 
 

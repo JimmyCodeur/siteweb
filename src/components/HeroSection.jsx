@@ -13,14 +13,14 @@ const HeroSection = () => {
           <span className="hero-highlight">votre futur</span>
         </h1>
         <p className="hero-description">
-          Découvrez des solutions d'intelligence artificielle conçues pour propulser votre entreprise vers de nouveaux sommets. Transformez vos idées en actions, boostez votre productivité et libérez la créativité au service de vos objectifs.
+          Découvrez des solutions d'intelligence artificielle conçues pour vous faire gagner du temps au quotidien. <br></br>L'IA vous accompagne dans vos tâches, simplifie vos processus et vous permet de vous concentrer sur ce qui compte vraiment.
         </p>
         <ul className="hero-features">
-          <li>🤖 Création d'agents IA personnalisés</li>
+          <li>🤖 Création d'agents IA & Chatbot personnalisés</li>
           <li>🔍 Solutions RAG personnalisés</li>
           <li>⚙️ Conception de workflows IA sur mesure pour optimiser chaque processus</li>
           <li>📚 Entraînement des modèles IA pour répondre à vos besoins</li>
-          <li>🌐 Présentations dynamiques de l'IA en visio ou en présentiel</li>
+          <li>🌐 Présentation Informative & Atelier sur l'IA </li>
         </ul>
       </div>
       <div className="hero-image-container">

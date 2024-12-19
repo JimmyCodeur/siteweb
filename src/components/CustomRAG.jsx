@@ -9,10 +9,9 @@ const CustomRAG = () => {
         <header className="section-header">
           <h2 className='section-title'>Solution 2: RAG Personnalisé</h2>
           <p className="section-description">
-            Le Retrieval-Augmented Generation (RAG) est une approche innovante qui combine la récupération de données pertinentes à partir 
-            de vos sources internes et externes avec des capacités avancées de génération d'informations. <br></br>En intégrant un RAG, les 
-            entreprises peuvent transformer leur manière de traiter les informations, en offrant :
+            Le **Retrieval-Augmented Generation (RAG)** est une méthode innovante qui combine la recherche d'informations pertinentes dans vos sources internes et externes avec la capacité de générer des réponses adaptées. <br></br> En intégrant un système RAG, les entreprises peuvent transformer leur gestion de l'information en offrant :
           </p>
+
         </header>
 
         {/* Features Section */}
@@ -57,7 +56,13 @@ const CustomRAG = () => {
           Avec un RAG, votre entreprise peut non seulement améliorer l'efficacité des recherches d'informations, mais également fournir des 
           réponses intelligentes et contextualisées, adaptées à vos objectifs.
         </p>
-        <button className="cta-button-rag">Contactez Nous</button>
+        <button
+          id="rdv"
+          className="cta-button-rag"
+          onClick={() => document.getElementById("contact-section").scrollIntoView({ behavior: 'smooth' })}
+        >
+          Contactez Nous
+        </button>
       </div>
     </section>
   );

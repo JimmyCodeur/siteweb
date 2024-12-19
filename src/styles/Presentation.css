@@ -70,42 +70,39 @@
     color: #cbd5e1;
   }
   
-  /* Call to Action Section */
-  .cta-section-presentation {
-    background: linear-gradient(145deg, #111827, #1f2937);
-    padding: 30px 20px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  }
-  
-  .cta-title-presentation {
-    font-size: 1.8rem;
-    color: #66fcf1;
-    margin-bottom: 15px;
-  }
-  
-  .cta-description-presentation {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #cbd5e1;
-    line-height: 1.8;
-  }
-  
-  .cta-button-presentation {
-    background: #66fcf1;
-    color: #111827;
-    padding: 12px 30px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-  }
-  
-  .cta-button-presentation:hover {
-    background: #ff9900;
-    color: #ffffff;
-    transform: scale(1.05);
-  }
-  
+/* Boutons CTA */
+.cta-button-presentation, 
+.cta-button-echanger {
+  margin-top: 50px;
+  background: #66fcf1;
+  color: #1a1a20;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.cta-button-presentation:hover, 
+.cta-button-echanger:hover {
+  background: #ffae18;
+  color: #000000;
+}
+
+
+/* Style spécifique pour chaque bouton (si besoin) */
+.cta-button-presentation {
+    margin-right: 10px;
+}
+
+.cta-button-echanger {
+    margin-left: 10px;
+}
+.cta-title-presentation {
+  font-size: 1.8rem; /* Réduit légèrement la taille de la police */
+  color: #66fcf1;
+  margin-bottom: 10px; /* Réduit l'espacement sous le titre */
+  text-shadow: 0 0 10px rgba(102, 252, 241, 0.7);
+}
