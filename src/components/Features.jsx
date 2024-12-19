@@ -148,7 +148,7 @@ const Features = () => {
         >
           Contactez Nous
         </button>
-      </div>  
+      </div>       
 
 
       {selectedAgent && (
@@ -203,8 +203,9 @@ const Features = () => {
             <div className="modal-footer"></div>
           </div>
         </div>
-      )}
+      )}  
     </section>
+    
   );
 };
 

@@ -5,7 +5,7 @@
   --box-shadow: 0 5px 20px rgb(167, 138, 187);
   --text-color: #fff;
   --max-width: 800px;
-  --margin: 4rem auto;
+  --margin: 6rem auto;
   --gap: 20px;
   --font-size-h2: 2.5rem;
   --text-shadow-h2: 0px 0px 10px rgba(0, 255, 255, 0.6);
@@ -37,6 +37,7 @@
   max-width: var(--max-width);
   margin: var(--margin);
 }
+
 
 .contact-container {
   display: flex;
@@ -108,4 +109,20 @@
 
 .contact-form button:active {
   transform: var(--button-transform-active);
+}
+
+.form-message.success {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #4caf50;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-message.error {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #f44336;
+  text-align: center;
+  font-weight: bold;
 }

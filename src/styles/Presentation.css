@@ -5,7 +5,26 @@
     font-family: 'Orbitron', sans-serif;
     padding: 50px 20px;
     text-align: center;
+    position: relative; 
+    overflow: visible;
   }
+
+  .presentation-section:after {
+    content: '';
+    position: absolute;
+    bottom: -40px; /* Place le flou à la fin de la section */
+    left: -10%; /* Décale le flou pour couvrir toute la largeur */
+    width: 120%; /* Étend la largeur pour englober tout l'écran */
+    height: 80px; /* Étend le flou sous la section */
+    background: linear-gradient(
+      to bottom,
+      rgb(25, 34, 53),
+      rgb(41, 26, 61)
+    ); /* Dégradé inversé pour se fondre vers le haut */
+    filter: blur(6px); /* Flou intense et élégant */
+    z-index: 1; /* Place le flou derrière le contenu */
+    pointer-events: none; /* Évite toute interaction avec le flou */
+  } 
   
   .presentation-section .container {
     max-width: 1200px;
@@ -73,7 +92,7 @@
 /* Boutons CTA */
 .cta-button-presentation, 
 .cta-button-echanger {
-  margin-top: 50px;
+  margin-bottom: 50px;
   background: #66fcf1;
   color: #1a1a20;
   font-size: 1rem;
@@ -92,14 +111,8 @@
 }
 
 
-/* Style spécifique pour chaque bouton (si besoin) */
-.cta-button-presentation {
-    margin-right: 10px;
-}
 
-.cta-button-echanger {
-    margin-left: 10px;
-}
+
 .cta-title-presentation {
   font-size: 1.8rem; /* Réduit légèrement la taille de la police */
   color: #66fcf1;

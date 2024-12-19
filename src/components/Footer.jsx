@@ -8,12 +8,10 @@ const Footer = () => {
     <footer className="footer-section">
       <div className="footer-container">
         <div className="footer-logo">
-          <h1>@IA</h1>
-          <p>Transformez vos idées en réalité grâce à l'Intelligence Artificielle</p>
         </div>
 
         <div className="footer-social">
-          <h3>Suivez-nous</h3>
+          <h3>Réseaux Sociaux</h3>
           <div className="social-icons">
             {/* <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
               <i className="fab fa-facebook-f"></i>
@@ -32,7 +30,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2024 Jimmy Fernandez. Tous droits réservés.</p>
+        <p>&copy;Jimmy Fernandez. Tous droits réservés.</p>
       </div>
     </footer>
   );

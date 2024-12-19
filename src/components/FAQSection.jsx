@@ -23,14 +23,15 @@ const FAQSection = () => {
       questions: [
         {
           question: "Comment nos solutions sont-elles réalisées ?",
-          answer: "Nous commençons par une prise de contact pour discuter de vos besoins spécifiques. Ensuite, nous établissons un devis détaillé."
+          answer: "Nous commençons par une prise de contact pour discuter de vos besoins spécifiques. Ensuite, nous établissons un devis détaillé. Il est conseillé de prendre rendez-vous pour un échange approfondi."
         },
         {
           question: "Quels secteurs bénéficient le plus des agents IA ?",
-          answer: "Nos solutions IA sont adaptées à divers secteurs, notamment la santé, l'éducation, la finance, et bien d'autres."
+          answer: "Nos solutions IA sont adaptées à divers secteurs, notamment la santé, l'éducation, la finance, et bien d'autres. Nous recommandons de planifier une rencontre pour déterminer l'impact dans votre domaine."
         }
       ]
     },
+    
     {
       category: "Technologie",
       questions: [

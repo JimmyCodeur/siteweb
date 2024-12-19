@@ -1,10 +1,47 @@
 #custom-rag {
   background: radial-gradient(circle, #0b0c10, #1f2833);
-  padding: 30px 20px;
+  padding: 80px 20px;
   color: #c5c6c7;
   font-family: 'Orbitron', sans-serif;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  position: relative; 
+  overflow: visible; 
 }
+
+#custom-rag:before {
+  content: '';
+  position: absolute;
+  top: -40px; /* Fait dépasser le flou au-dessus de la section */
+  left: -10%; /* Décale le flou pour couvrir toute la largeur */
+  width: 120%; /* Étend la largeur pour englober tout l'écran */
+  height: 80px; /* Étend le flou sur les deux sections */
+  background: linear-gradient(
+    to bottom,
+    rgb(29, 28, 28),
+    rgb(16, 17, 19)
+  ); /* Dégradé avec une transition douce */
+  filter: blur(6px); /* Flou intense et élégant */
+  z-index: 1; /* Place le flou derrière le contenu */
+  pointer-events: none; /* Évite toute interaction avec le flou */
+}
+
+#custom-rag:after {
+  content: '';
+  position: absolute;
+  bottom: -10px; /* Place le flou à la fin de la section */
+  left: -10%; /* Décale le flou pour couvrir toute la largeur */
+  width: 120%; /* Étend la largeur pour englober tout l'écran */
+  height: 40px; /* Étend le flou sous la section */
+  background: linear-gradient(
+    to top,
+    rgb(17, 17, 17),
+    rgb(16, 17, 19)
+  ); /* Dégradé inversé pour se fondre vers le haut */
+  filter: blur(6px); /* Flou intense et élégant */
+  z-index: 1; /* Place le flou derrière le contenu */
+  pointer-events: none; /* Évite toute interaction avec le flou */
+}
+
 
 #custom-rag .container {
   max-width: 1200px;
@@ -13,7 +50,8 @@
 }
 
 .section-header h2 {
-  font-size: 3rem; /* Large title */
+  font-size: 3rem;
+  margin-top: 50px;
   color: #ffffff;
   margin-bottom: 20px;
   font-weight: bold;

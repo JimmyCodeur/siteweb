@@ -1,6 +1,6 @@
 .features {
     width: 100%;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     background: linear-gradient(145deg, #0e0e0e, #1c1c1c);
     color: #fff;
     display: flex;
@@ -10,6 +10,7 @@
     position: relative;
     overflow: hidden;
   }
+
   
   h2 {
     text-align: center;
@@ -34,4 +35,7 @@
       text-shadow: 0 0 0px rgba(255, 255, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.5), 0 0 15px rgba(0, 255, 255, 0.3);
     }
   }
+  
+
+
   

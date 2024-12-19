@@ -15,7 +15,7 @@
 .footer-section {
     background: linear-gradient(145deg, var(--background-gradient-start), var(--background-gradient-end));
     color: var(--text-color);
-    padding: 4rem 2rem 2rem;
+    padding: 1rem 2rem 2rem;
     font-family: 'Arial', sans-serif;
     position: relative;
     overflow: hidden;
@@ -32,9 +32,10 @@
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    text-align: center; /* Aligne le texte au centre */
     max-width: 1200px;
     margin: 0 auto;
     gap: 2rem;
