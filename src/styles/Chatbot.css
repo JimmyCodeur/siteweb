@@ -1,4 +1,3 @@
-/* Image ronde de l'agent */
 .chatbot-toggle {
     position: fixed;
     bottom: 20px;
@@ -14,12 +13,13 @@
     cursor: pointer;
     z-index: 10000;
     animation: talking-bounce 3s infinite ease-in-out;
-  }
-  
-  .chatbot-toggle:hover {
+    border: 2px solid #28a745; /* Cercle vert */
+}
+
+.chatbot-toggle:hover {
     transform: scale(1.1); /* Grossit légèrement l'image sur survol */
-    box-shadow: 0 0px 20px rgb(255, 255, 255);
-  }
+    box-shadow: 0 0 20px rgba(40, 167, 69, 1), 0 0 30px rgba(40, 167, 69, 0.7); /* Lueur plus intense sur survol */
+}
   
   .agent-image {
     width: 100%;
@@ -31,14 +31,13 @@
   .chatbot-toggle:after {
     content: '';
     position: absolute;
-    bottom: 5px;
-    right: 5px;
-    width: 14px; 
-    height: 14px;
+    bottom: 3px;
+    right: 3px;
+    width: 10px; 
+    height: 10px;
     background-color: #28a745; /* Vert en ligne */
     border: 2px solid #fff; /* Bord blanc pour contraste */
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(40, 167, 69, 0.8), 0 0 20px rgba(40, 167, 69, 0.5); /* Lueur plus intense */
     animation: glow-pulse 1.5s infinite; /* Animation de pulsation */
   }
   
