@@ -1,8 +1,71 @@
-# React + Vite
+# 🌐 Jimmy Fernandez's Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Description
 
-Currently, two official plugins are available:
+A modern website built using React and Vite to showcase customized AI solutions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Technologies Used
+
+- React, React Router DOM, Vite
+- Bootstrap, FontAwesome
+- Axios, EmailJS
+
+## 📂 Project Structure
+
+```
+src/
+├── assets/           # Static assets
+│   └── images/       # Images
+├── components/       # Reusable components
+├── data/             # Data files
+├── styles/           # CSS files
+│   └── features/     # Feature-specific styles
+└── utils/            # Helper functions
+```
+
+## 📦 Available Scripts
+
+- **Start the project:** `npm run dev`
+- **Build for production:** `npm run build`
+- **Deploy to GitHub Pages:** `npm run deploy`
+
+## 🚀 Deploying to GitHub Pages
+
+1. **Clone the repository:**
+
+    ```sh
+    git clone https://github.com/JimmyCodeur/siteweb.git
+    ```
+
+2. **Install dependencies:**
+
+    ```sh
+    npm install
+    ```
+
+3. **Update `package.json`:**
+
+    Edit the `homepage` key based on your deployment URL:
+
+    - **GitHub Pages (project site):**
+
+        ```json
+        "homepage": "https://JimmyCodeur.github.io/siteweb"
+        ```
+
+    - **Custom domain (e.g., lokman.fr):**
+
+        ```json
+        "homepage": "https://lokman.fr"
+        ```
+
+4. **Build and deploy:**
+
+    ```sh
+    npm run deploy
+    ```
+
+5. **Access the deployed site:**
+
+    - **GitHub Pages:** [https://JimmyCodeur.github.io/siteweb](https://JimmyCodeur.github.io/siteweb)
+    - **Custom domain:** [https://lokman.fr](https://lokman.fr)
