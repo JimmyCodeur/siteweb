@@ -42,6 +42,7 @@
     .menu-toggle {
       width: var(--menu-toggle-width);
       height: var(--menu-toggle-height);
+      margin-left: auto;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -125,3 +126,23 @@
     }
   }
   
+
+  /* Default: Hide the mobile version and show the desktop version */
+.navbar-rdv-button {
+  display: inline-block; /* Show on desktop */
+}
+
+.navbar-rdv-button-mobile {
+  display: none; /* Hidden on desktop */
+}
+
+/* On Mobile: Hide the desktop version and show the mobile version */
+@media (max-width: 768px) {
+  .navbar-rdv-button {
+    display: none; /* Hide on mobile */
+  }
+
+  .navbar-rdv-button-mobile {
+    display: inline-block; /* Show on mobile */
+  }
+}

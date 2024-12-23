@@ -40,7 +40,6 @@ const Navbar = () => {
             Home
           </a>
         </li>
-        {/* Dropdown for Agents */}
         <li
           className="dropdown"
           onMouseEnter={() => setDropdownOpen(true)}
@@ -56,65 +55,6 @@ const Navbar = () => {
           >
             Agents IA
           </a>
-          {/* {dropdownOpen && (
-            <ul className="dropdown-menu">
-              <li>
-                <a
-                  href="#agent-education"
-                  onClick={() => {
-                    toggleMenu();
-                    scrollToSection("agent-education");
-                  }}
-                >
-                  📘 Agent Éducatif & Apprentissage
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#agent-assistance"
-                  onClick={() => {
-                    toggleMenu();
-                    scrollToSection("agent-assistance");
-                  }}
-                >
-                  🤝 Agent Assistance
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#agent-research"
-                  onClick={() => {
-                    toggleMenu();
-                    scrollToSection("agent-research");
-                  }}
-                >
-                  🔍 Agent Recherche & Collection
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#agent-creation"
-                  onClick={() => {
-                    toggleMenu();
-                    scrollToSection("agent-creation");
-                  }}
-                >
-                  ✍️ Agent Création & Génération
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#agent-recommendation"
-                  onClick={() => {
-                    toggleMenu();
-                    scrollToSection("agent-recommendation");
-                  }}
-                >
-                  💡 Agent Recommandation
-                </a>
-              </li>
-            </ul>
-          )} */}
         </li>
         <li>
           <a
@@ -182,8 +122,19 @@ const Navbar = () => {
             FAQ
           </a>
         </li>
+        {/* Mobile-only version of Prendre Rendez-Vous */}
+        <li className="mobile-only">
+          <a
+            href="https://calendly.com/jimmy-fernandez-devia/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar-rdv-button-mobile"
+          >
+            Prendre Rendez-Vous
+          </a>
+        </li>
       </ul>
-      {/* Button: Prendre Rendez-Vous */}
+      {/* Original Desktop Prendre Rendez-Vous Button */}
       <div className="cta-button-navbar">
         <a
           href="https://calendly.com/jimmy-fernandez-devia/30min"
