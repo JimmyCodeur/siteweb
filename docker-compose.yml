@@ -1,0 +1,38 @@
+version: '3.8'
+
+x-variables:
+  traefik_email: "your-email@example.com"
+  domain_name: "lokman.fr"
+  web_root: "./dist"
+  certs_dir: "./letsencrypt"
+
+services:
+  web:
+    image: nginx:alpine
+    volumes:
+      - ${web_root}:/usr/share/nginx/html
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.${domain_name}.rule=Host(`${domain_name}`, `www.${domain_name}`)"
+      - "traefik.http.routers.${domain_name}.entrypoints=websecure"
+      - "traefik.http.routers.${domain_name}.tls=true"
+      - "traefik.http.routers.${domain_name}.tls.certresolver=myresolver"
+    restart: always
+
+  traefik:
+    image: traefik:v2.10
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=${traefik_email}"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - ${certs_dir}:/letsencrypt
+    restart: always
