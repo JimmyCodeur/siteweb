@@ -50,20 +50,19 @@
   z-index: 21;
 }
 
-/* Style du titre principal avec ligne */
 .section-title {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   margin-bottom: 40px;
-  margin-top: 40px; /* Augmentez la valeur pour plus d'espace */
+  margin-top: 40px; 
 }
 
 .section-title h4 {
-  font-size: 2.5rem; /* Taille plus grande pour le titre */
+  font-size: 2.5rem; 
   font-weight: 700;
-  color: #ff7733; /* Couleur similaire à celle de l'image */
+  color: #ff7733; 
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
@@ -72,24 +71,23 @@
 .section-title:before {
   content: "";
   display: block;
-  width: 80px; /* Longueur de la ligne */
+  width: 80px; 
   height: 2px;
-  background: linear-gradient(to right, #ff7733, transparent); /* Ligne dégradée */
+  background: linear-gradient(to right, #ff7733, transparent); 
   border-radius: 5px;
-  transform: translateY(3px); /* Aligne la ligne avec le texte */
+  transform: translateY(3px); 
 }
 
 .section-title:after {
   content: "";
   display: block;
-  width: 80px; /* Longueur de la ligne */
+  width: 80px; 
   height: 2px;
-  background: linear-gradient(to right, #ff7733, transparent); /* Ligne dégradée */
+  background: linear-gradient(to right, #ff7733, transparent); 
   border-radius: 5px;
-  transform: translateY(3px); /* Aligne la ligne avec le texte */
+  transform: translateY(3px); 
 }
 
-/* Call to Action Section */
 .cta-section-agent {
   border-radius: 20px;
   text-align: center;
@@ -97,24 +95,24 @@
 }
 
 .cta-title-agent {
-  font-size: 1.8rem; /* Réduit légèrement la taille de la police */
+  font-size: 1.8rem;
   color: #66fcf1;
-  margin-bottom: 10px; /* Réduit l'espacement sous le titre */
+  margin-bottom: 10px;
   text-shadow: 0 0 10px rgba(102, 252, 241, 0.7);
 }
 
 .cta-description-agent {
-  font-size: 1.1rem; /* Réduit légèrement la taille de la description */
-  line-height: 1.6; /* Diminue légèrement l'espacement entre les lignes */
-  margin-bottom: 15px; /* Réduit l'espace sous la description */
+  font-size: 1.1rem; 
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .cta-button-agent {
   background: #66fcf1;
   color: #1f2833;
   font-size: 1rem;
-  padding: 10px 25px; /* Diminue légèrement le padding du bouton */
-  border-radius: 25px; /* Ajuste la courbure pour un look plus compact */
+  padding: 10px 25px;
+  border-radius: 25px; 
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
