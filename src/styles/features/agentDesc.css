@@ -51,12 +51,20 @@
   
   .mode-card {
     background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
-    padding: 2rem;
+    padding: 1.8rem;
     border-radius: 15px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 300px; 
+    max-height: 300px; 
+    min-width: 250px; 
+    max-width: 300px;
   }
   
   .mode-card:hover {
@@ -80,6 +88,8 @@
     font-size: 1rem;
     color: #ccc;
     line-height: 1.6;
+    flex-grow: 1; /* Maintient l'équilibre vertical */
+    overflow: hidden; /* Empêche le débordement */
   }
   
   

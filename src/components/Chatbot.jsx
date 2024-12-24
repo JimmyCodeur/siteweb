@@ -1,86 +1,82 @@
-import React, { useState, useRef, useEffect } from 'react';
-import axios from 'axios';
-import '../styles/Chatbot.css';
-import agentImage from '../assets/images/agent_dev.webp'; // Importez l'image de l'agent
+import React, { useState } from "react";
+import axios from "axios";
+import "../styles/Chatbot.css";
+import agentImage from "../assets/images/agent_dev.webp"; 
+import chatbotPrompt from "../prompt/chatbotPrompt";
 
 const Chatbot = () => {
-  const [isOpen, setIsOpen] = useState(false); // État pour gérer l'ouverture du chatbot
+  const openAiApiKey = import.meta.env.VITE_OPENAI_API_KEY;
+
+  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { sender: "bot", text: "Bonjour ! Je suis votre assistant IA. Posez-moi vos questions, et je vous expliquerai nos services." }
+    { sender: "bot", text: "Bienvenue ! Je suis votre assistant IA prêt à répondre à vos questions. Posez-en une, et commençons cette aventure ensemble (jusqu'à 5 questions). 🚀" }
   ]);
   const [input, setInput] = useState("");
-
-  const messagesEndRef = useRef(null); // Référence pour le défilement automatique
-
-  // Défile automatiquement vers le dernier message
-  useEffect(() => {
-    if (isOpen) {
-      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [messages, isOpen]);
-
-  const toggleChat = () => {
-    setIsOpen(!isOpen);
-  };
+  const [userQuestionsCount, setUserQuestionsCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const maxQuestions = 1;
 
   const sendMessage = async () => {
     if (!input.trim()) return;
 
-    setMessages([...messages, { sender: "user", text: input }]);
+    if (userQuestionsCount >= maxQuestions) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          sender: "bot",
+          text: "Vous avez atteint la limite de questions. Merci de nous contacter pour plus d'informations.",
+        },
+      ]);
+      setInput("");
+      return;
+    }
+
+    setMessages((prev) => [...prev, { sender: "user", text: input }]);
+    setIsLoading(true);
+    setInput("");
 
     try {
       const response = await axios.post(
         "https://api.openai.com/v1/chat/completions",
         {
-          model: "gpt-3.5-turbo",
+          model: "gpt-4",
           messages: [
-            {
-              role: "system",
-              content:
-                "Tu es un assistant pour un site d'entreprise qui propose des solutions IA personnalisées. Explique clairement et de manière concise ce que cette entreprise peut faire."
-            },
-            ...messages.map((msg) => ({
-              role: msg.sender === "bot" ? "assistant" : "user",
-              content: msg.text
-            })),
-            { role: "user", content: input }
+            { role: "system", content: chatbotPrompt },
+            { role: "user", content: input },
           ],
-          max_tokens: 100,
-          temperature: 0.7
+          max_tokens: 300,
+          temperature: 0.7,
         },
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`
-          }
+            Authorization: `Bearer ${openAiApiKey}`,
+          },
         }
       );
 
-      setMessages([
-        ...messages,
-        { sender: "user", text: input },
-        { sender: "bot", text: response.data.choices[0].message.content }
+      const botResponse = response.data.choices[0].message.content;
+
+      setMessages((prev) => [
+        ...prev,
+        { sender: "bot", text: botResponse },
       ]);
+
+      setUserQuestionsCount((prev) => prev + 1);
     } catch (error) {
-      setMessages([
-        ...messages,
-        { sender: "user", text: input },
-        { sender: "bot", text: "Je suis désolé, je ne peux pas répondre pour le moment. Réessayez plus tard." }
+      console.error("Erreur API :", error);
+      setMessages((prev) => [
+        ...prev,
+        { sender: "bot", text: "Erreur lors de l'appel à l'API OpenAI. Réessayez plus tard." },
       ]);
-    }
-
-    setInput("");
-  };
-
-  const handleKeyPress = (event) => {
-    if (event.key === "Enter") {
-      sendMessage();
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
     <div>
-      <div className="chatbot-toggle" onClick={toggleChat}>
+      <div className="chatbot-toggle" onClick={() => setIsOpen(!isOpen)}>
         <img src={agentImage} alt="Agent IA" className="agent-image" />
       </div>
       {isOpen && (
@@ -91,18 +87,24 @@ const Chatbot = () => {
                 {msg.text}
               </div>
             ))}
-            {/* Élément invisible pour le scroll automatique */}
-            <div ref={messagesEndRef} />
+            {isLoading && (
+              <div className="chat-message bot">
+                <em>Chargement...</em>
+              </div>
+            )}
           </div>
           <div className="chatbot-input">
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              onKeyPress={handleKeyPress}
+              onKeyPress={(e) => e.key === "Enter" && sendMessage()}
               placeholder="Posez votre question..."
+              disabled={isLoading} 
             />
-            <button onClick={sendMessage}>Envoyer</button>
+            <button onClick={sendMessage} disabled={isLoading}>
+              {isLoading ? "Chargement..." : "Envoyer"}
+            </button>
           </div>
         </div>
       )}
