@@ -11,7 +11,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState([
     { sender: "bot", text: "Bienvenue ! Je suis votre assistant IA prêt à répondre à vos questions. Posez-en une, et commençons cette aventure ensemble (jusqu'à 5 questions). 🚀" }
   ]);
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(""); //te
   const [userQuestionsCount, setUserQuestionsCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const maxQuestions = 1;
