@@ -39,7 +39,7 @@ const Features = () => {
 
   const scrollCarousel = (catIndex, direction) => {
     const carousel = document.getElementById(`carousel-${catIndex}`);
-    const scrollAmount = carousel.offsetWidth * 0.8; // Adjust scroll distance
+    const scrollAmount = carousel.offsetWidth * 1; // Adjust scroll distance
 
     // Ensure the carousel scrolls within bounds
     const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;

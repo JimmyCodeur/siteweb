@@ -59,15 +59,7 @@
   text-shadow: 0 0 15px rgba(102, 252, 241, 0.8); /* Glow effect for futuristic feel */
 }
 
-.section-title {
-  font-size: 2.5rem; /* Large title */
-  color: #ffffff;
-  font-weight: bold;
-  text-transform: uppercase; /* All caps for impact */
-  text-shadow: 0 0 15px rgba(102, 252, 241, 0.8); /* Glow effect for futuristic feel */
-}
 
-/* Description Paragraph */
 .section-header .section-description {
   font-size: 1.2rem;
   line-height: 1.8; /* Comfortable line spacing */

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/CustomRAG.css';
+import '../styles/CustomRAGMobile.css';
 
 const CustomRAG = () => {
   return (

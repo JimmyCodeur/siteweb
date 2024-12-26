@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../styles/Chatbot.css";
+import "../styles/ChatbotMobile.css";
 import agentImage from "../assets/images/agent_dev.webp"; 
 import chatbotPrompt from "../prompt/chatbotPrompt";
 
