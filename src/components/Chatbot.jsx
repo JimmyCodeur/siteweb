@@ -9,7 +9,7 @@ const Chatbot = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { sender: "bot", text: "Bienvenue ! Je suis votre assistant IA prêt à répondre à vos questions. Posez-en une, et commençons cette aventure ensemble (jusqu'à 5 questions). 🚀" }
+    { sender: "bot", text: "Bienvenue! Je suis votre assistant IA prêt à répondre à vos questions. Posez-en une, et commençons cette aventure ensemble (jusqu'à 5 questions). 🚀" }
   ]);
   const [input, setInput] = useState("");
   const [userQuestionsCount, setUserQuestionsCount] = useState(0);
