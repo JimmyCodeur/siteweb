@@ -195,7 +195,7 @@
   .chatbot-input input {
     flex: 1;
     padding: 12px;
-    border: none;
+   border: none;
     border-radius: 5px;
     outline: none;
     background: #1f2833;

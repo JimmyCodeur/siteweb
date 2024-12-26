@@ -35,7 +35,7 @@ export const agentModes = [
       icon: "fas fa-microphone-alt",
       title: "Mode Vocal en Temps Réel",
       description:
-        "Discutez directement avec votre agent IA grâce à la reconnaissance vocale et une réponse instantanée. Parfait pour les expériences immersives.",
+        "Discutez directement avec votre agent IA grâce à la reconnaissance vocale et une réponse instantanée.",
     },
     {
       icon: "fas fa-robot",
@@ -77,7 +77,7 @@ export const agentModes = [
       icon: "fas fa-user-secret",
       title: "Confidentialité des Données",
       description:
-        "Garantissez la sécurité et la confidentialité de vos informations grâce à des protocoles de protection rigoureux et conformes aux normes.",
+        "Garantissez la sécurité et la confidentialité de vos informations grâce à des protocoles de protection rigoureux.",
     },
     {
       icon: "fas fa-expand-arrows-alt",
