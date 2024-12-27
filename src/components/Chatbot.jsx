@@ -17,7 +17,7 @@ const Chatbot = () => {
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const maxQuestions = 6;
+  const maxQuestions = 5;
 
   useEffect(() => {
     initializeDailyQuestions();
@@ -82,7 +82,7 @@ const Chatbot = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+            Authorization: `Bearer ${openAiApiKey}`,
           },
         }
       );
@@ -99,7 +99,7 @@ const Chatbot = () => {
       console.error("Erreur API :", error);
       setMessages((prev) => [
         ...prev,
-        { sender: "bot", text: "Erre. Réessayez plus tard." },
+        { sender: "bot", text: "Erreur Réessayez plus tard." },
       ]);
     } finally {
       setIsLoading(false);
