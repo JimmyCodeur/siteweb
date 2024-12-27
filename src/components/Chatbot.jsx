@@ -82,7 +82,7 @@ const Chatbot = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${openAiApiKey}`,
+            Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
           },
         }
       );
