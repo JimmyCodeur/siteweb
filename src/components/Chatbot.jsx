@@ -17,7 +17,7 @@ const Chatbot = () => {
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const maxQuestions = 5;
+  const maxQuestions = 6;
 
   useEffect(() => {
     initializeDailyQuestions();
@@ -99,7 +99,7 @@ const Chatbot = () => {
       console.error("Erreur API :", error);
       setMessages((prev) => [
         ...prev,
-        { sender: "bot", text: "Erreur lors de l'appel à l'API OpenAI. Réessayez plus tard." },
+        { sender: "bot", text: "Erre. Réessayez plus tard." },
       ]);
     } finally {
       setIsLoading(false);
