@@ -82,13 +82,10 @@ const Chatbot = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.VITE_OPENAI_API_KEY}`,
+            Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
           },
         }
       );
-    } catch (error) {
-      console.error("Erreur API :", error);
-    }
 
       const botResponse = response.data.choices[0].message.content;
 
