@@ -11,7 +11,7 @@ import Presentation from './components/Presentation';
 import ContactForm from './components/ContactForm';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
-import Chatbot from './components/Chatbot';
+// import Chatbot from './components/Chatbot';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Chatbot />
+      {/* <Chatbot /> */}
       <HeroSection />
       <Features />
       <CustomRAG />
