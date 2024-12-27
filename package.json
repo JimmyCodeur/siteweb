@@ -3,14 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://JimmyCodeur.github.io/siteweb",
+  "homepage": "https://fernandezjimmy.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npx gh-pages -d dist"
+
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.1",
