@@ -24,7 +24,7 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    # Étape 4 : Injecter les secrets dans un fichier .env
+    # Étape 4 : Injecter les secrets dans un fichier .envz
     - name: Create .env file
       run: |
         echo "VITE_OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env
