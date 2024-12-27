@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Presentation.css';
-import '../styles/presentationMobile.css';
+import '../styles/PresentationMobile.css';
 
 const Presentation = () => {
   return (

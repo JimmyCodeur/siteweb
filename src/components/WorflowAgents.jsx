@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/WorkflowAgents.css';
+import '../styles/WorkflowAgentsMobile.css';
 import WorkflowAgents from '../assets/images/workflow_agents.webp';
 
 const CustomWorkflowAgents = () => {

@@ -1,0 +1,61 @@
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .custom-workflow {
+        padding: 20px;
+    }
+
+    .custom-workflow h2 {
+        font-size: 2rem;
+    }
+
+    .custom-workflow p {
+        font-size: 1.1rem;
+    }
+
+    .custom-workflow .workflow-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .workflow-image-container {
+        flex: 1 1 100%;
+    }
+
+    .workflow-image {
+        max-width: 90%;
+    }
+
+    .workflow-details {
+        flex: 1 1 100%;
+        gap: 20px;
+    }
+
+    .feature-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .feature-row i {
+        font-size: 2.5rem;
+    }
+
+    .feature-row h3 {
+        font-size: 1.3rem;
+    }
+
+    .feature-row p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .workflow-cta h3 {
+        font-size: 1.8rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+}

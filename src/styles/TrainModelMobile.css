@@ -1,0 +1,73 @@
+/* Mobile Specific CSS for Train Modal */
+
+@media (max-width: 768px) {
+    .train-model {
+        padding: 30px 10px;
+    }
+
+    .train-model:after {
+        bottom: -40px;
+        height: 60px;
+    }
+
+    .section-header .section-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .section-header .section-description {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .model-types-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .model-card {
+        width: 100%;
+        padding: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6), 0 0 5px rgba(102, 252, 241, 0.4);
+    }
+
+    .model-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(102, 252, 241, 0.5), 0 0 10px rgba(102, 252, 241, 0.7);
+    }
+
+    .model-icon {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .model-title {
+        font-size: 1.2rem;
+    }
+
+    .model-description {
+        font-size: 0.9rem;
+    }
+
+    .cta-section-train {
+        padding: 20px 10px;
+        margin-top: 15px;
+    }
+
+    .cta-title-train {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .cta-description-train {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    .cta-button-train {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+        border-radius: 20px;
+    }
+}

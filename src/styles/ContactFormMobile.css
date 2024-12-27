@@ -1,71 +1,62 @@
-:root {
-  --padding-large: 2rem 1rem;
-  --padding-small: 1rem 0.5rem;
-  --font-size-large: 2rem;
-  --font-size-medium: 1.5rem;
-  --font-size-small: 1rem;
-  --font-size-xsmall: 0.9rem;
-  --font-size-xxsmall: 0.8rem;
-  --input-padding-large: 10px 15px;
-  --input-padding-small: 8px 10px;
-  --button-padding-large: 10px;
-  --button-padding-small: 8px;
-  --margin-bottom-small: 1rem;
-  --margin-auto: 1rem auto;
-}
+/* Mobile Specific CSS for Contact Form */
 
 @media (max-width: 768px) {
+  :root {
+    --padding: 2rem 1rem;
+    --font-size-h2: 2rem;
+    --font-size-p: 1rem;
+    --line-height-p: 1.4;
+    --gap: 15px;
+    --input-padding: 10px 15px;
+    --button-padding: 12px;
+    --button-font-size: 1rem;
+    --max-width: 100%;
+    --margin: 2rem auto;
+  }
+
   .contact-section {
-    padding: var(--padding-large);
+    padding: var(--padding);
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgb(167, 138, 187);
+    max-width: var(--max-width);
+    margin: var(--margin);
   }
 
   .contact-section h2 {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-h2);
+    margin-bottom: 0.8rem;
   }
 
   .contact-section p {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-p);
+    line-height: var(--line-height-p);
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-container {
+    gap: var(--gap);
   }
 
   .contact-form {
-    max-width: 100%;
+    gap: var(--gap);
   }
 
   .contact-form input,
   .contact-form textarea {
-    padding: var(--input-padding-large);
-    font-size: var(--font-size-xsmall);
+    padding: var(--input-padding);
+    font-size: 0.9rem;
+    border-radius: 8px;
   }
 
   .contact-form button {
-    font-size: var(--font-size-small);
-    padding: var(--button-padding-large);
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-section {
-    padding: var(--padding-small);
-    margin: var(--margin-auto);
+    padding: var(--button-padding);
+    font-size: var(--button-font-size);
+    border-radius: 8px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
   }
 
-  .contact-section h2 {
-    font-size: var(--font-size-medium);
-  }
-
-  .contact-section p {
-    font-size: var(--font-size-xsmall);
-    margin-bottom: var(--margin-bottom-small);
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    padding: var(--input-padding-small);
-    font-size: var(--font-size-xxsmall);
-  }
-
-  .contact-form button {
-    font-size: var(--font-size-xsmall);
-    padding: var(--button-padding-small);
+  .form-message.success,
+  .form-message.error {
+    font-size: 0.9rem;
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/TrainModel.css';
+import '../styles/TrainModelMobile.css';
 
 const TrainModel = () => {
   return (
