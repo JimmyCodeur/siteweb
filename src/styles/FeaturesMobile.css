@@ -101,31 +101,6 @@
          font-size: var(--font-size-xxsmall);
     }
 
-    .features-overview {
-         gap: var(--gap-small);
-    }
-
-    .features-overview h4 {
-         font-size: var(--font-size-small);
-    }
-
-    .features-overview li {
-         font-size: var(--font-size-xxsmall);
-         padding: 8px 15px;
-    }
-
-    .modal {
-         padding: var(--padding-medium);
-    }
-
-    .modal-header h3 {
-         font-size: var(--font-size-medium);
-    }
-
-    .conversation-box {
-         max-height: var(--height-medium);
-    }
-
     .message-content strong {
          font-size: var(--font-size-xxsmall);
     }

@@ -46,12 +46,23 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     position: relative;
     overflow: hidden;
+    z-index: 10000;
+  }
+  
+  body.no-scroll .navbar {
+    display: none;
   }
   
   .modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
   }
   
   .modal-header h3 {

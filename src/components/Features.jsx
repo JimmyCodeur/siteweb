@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Features.css';
 import '../styles/FeaturesMobile.css';
+import '../styles/ModalMobile.css';
 import { agentModes, agentCategories } from '../data/AgentsData';
 
 const Features = () => {
@@ -8,12 +9,17 @@ const Features = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     if (selectedAgent) {
+      setScrollPosition(window.scrollY);
+      document.body.style.top = `-${window.scrollY}px`;
       document.body.classList.add('no-scroll');
     } else {
       document.body.classList.remove('no-scroll');
+      document.body.style.top = '';
+      window.scrollTo(0, scrollPosition);
     }
   }, [selectedAgent]);
 
