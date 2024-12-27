@@ -24,16 +24,23 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    # Étape 4 : Injecter les secrets dans un fichier .env
-    - name: Create .env file
+    # Étape 4 : Injecter les secrets dans le processus de build
+    - name: Inject secrets as environment variables
+      env:
+        VITE_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+        VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
+        VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+        VITE_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: |
-        echo "VITE_EMAILJS_SERVICE_ID=${{ secrets.EMAILJS_SERVICE_ID }}" >> .env
-        echo "VITE_EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}" >> .env
-        echo "VITE_EMAILJS_PUBLIC_KEY=${{ secrets.EMAILJS_PUBLIC_KEY }}" >> .env
-        echo "VITE_OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env
+        echo "Les variables d'environnement sont prêtes pour le build."
 
     # Étape 5 : Build le projet
     - name: Build project
+      env:
+        VITE_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+        VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
+        VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+        VITE_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: npm run build
 
     # Étape 6 : Déployer sur GitHub Pages
