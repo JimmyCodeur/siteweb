@@ -99,7 +99,7 @@ const Chatbot = () => {
       console.error("Erreur API :", error);
       setMessages((prev) => [
         ...prev,
-        { sender: "bot", text: "Erreur Réessayez plus tard." },
+        { sender: "bot", text: "Erreur. Réessayez plus tard." },
       ]);
     } finally {
       setIsLoading(false);
