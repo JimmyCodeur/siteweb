@@ -49,4 +49,8 @@ Jimmy Fernandez : Responsable des solutions IA et des présentations
 
 ## **Contact**
 Pour toute question ou demande, veuillez remplir le formulaire de contact.
+<<<<<<< HEAD
 Suivez-nous sur les réseaux sociaux pour rester informé des dernières innovations.
+=======
+Suivez-nous sur les réseaux sociaux pour rester informé des dernières innovations.
+>>>>>>> 055d07ea221a8b3f42bfec8a8268f2d90c356c55
