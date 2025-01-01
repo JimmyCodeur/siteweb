@@ -1,66 +1,52 @@
-# 🌐 Jimmy Fernandez's Website
+# Jimmy Fernandez - Site Web Officiel
 
-## 🚀 Description
+Bienvenue sur le site officiel de Jimmy Fernandez, dédié aux solutions d'intelligence artificielle pour améliorer votre quotidien et transformer vos projets professionnels.
 
-A modern website built using React and Vite to showcase customized AI solutions.
+---
 
-## 🛠️ Technologies Used
+## 🌟 **Aperçu du Site Web**
 
-- React, React Router DOM, Vite
-- Bootstrap, FontAwesome
-- Axios, EmailJS
+Ce site propose une gamme complète de services et solutions IA pour simplifier les processus, automatiser les tâches et offrir des outils sur mesure adaptés à vos besoins.
 
-## 📂 Project Structure
+### **Sections Principales**
+- **Accueil** : Entrez dans l'ère de l'IA.
+- **Agents IA** : Créez des agents personnalisés (conversation, écrit, vocal, interactif, visuel).
+- **RAG** : Exploitez le Retrieval-Augmented Generation pour des recherches intelligentes.
+- **Workflows IA** : Automatisation et collaboration entre agents IA.
+- **Entraînement IA** : Modèles personnalisés adaptés à vos besoins spécifiques.
+- **Présentation** : Ateliers et sessions informatives sur l'IA.
+- **Contactez Nous** : Posez vos questions ou demandez une assistance.
+- **FAQ** : Réponses aux questions fréquentes.
+- **Prendre Rendez-Vous** : Planifiez une rencontre pour discuter de vos projets IA.
 
-```
-src/
-├── assets/           # Static assets
-│   └── images/       # Images
-├── components/       # Reusable components
-├── data/             # Data files
-├── styles/           # CSS files
-│   └── features/     # Feature-specific styles
-└── utils/            # Helper functions
-```
+---
 
-## 📦 Available Scripts
+## 🔑 **Fonctionnalités Clés**
 
-- **Start the project:** `npm run dev`
-- **Build for production:** `npm run build`
-- **Deploy to GitHub Pages:** `npm run deploy`
+### **L'IA au Service de Votre Futur**
+- **Création d'Agents IA** : Des solutions adaptées à vos besoins (conversation, écrit, vocal, interactif, visuel, sur mesure).
+- **RAG Personnalisé** : Réponses intelligentes et contextualisées en combinant recherche et génération.
+- **Workflows IA** : Collaboration entre agents IA pour une optimisation continue.
+- **Entraînement de Modèles IA** : Classification, prédictions, vision assistée, compréhension du langage.
+- **Présentations & Ateliers** : Découverte des avantages et applications concrètes de l'IA.
 
-## 🚀 Deploying to GitHub Pages
+### **Engagements**
+- **Déploiement Flexible** : Plateformes web, mobiles ou systèmes internes.
+- **Confidentialité** : Protocole avancé pour protéger vos données.
+- **Assistance Continue** : Agents disponibles 24/7.
+- **Évolutivité** : Solutions adaptables à vos besoins croissants.
 
-1. **Clone the repository:**
+---
 
-    ```sh
-    git clone https://github.com/JimmyCodeur/siteweb.git
-    ```
+## ⚙️ **Technologies Utilisées**
+- **Frontend** : React.js avec un design responsive.
+- **Styles** : CSS avec intégration de FontAwesome pour les icônes modernes.
 
-2. **Install dependencies:**
+---
 
-    ```sh
-    npm install
-    ```
+## 🤝 **Contributeurs**
+Jimmy Fernandez : Responsable des solutions IA et des présentations
 
-3. **Update `package.json`:**
-
-    Edit the `homepage` key based on your deployment URL:
-
-    - **GitHub Pages (project site):**
-
-        ```json
-        "homepage": "https://JimmyCodeur.github.io/siteweb"
-        ```
-
-4. **Build and deploy:**
-
-    ```sh
-    npm run deploy
-    ```
-
-5. **Access the deployed site:**
-
-    - **GitHub Pages:** [https://JimmyCodeur.github.io/siteweb](https://JimmyCodeur.github.io/siteweb)
-
-
+## **Contact**
+Pour toute question ou demande, veuillez remplir le formulaire de contact.
+Suivez-nous sur les réseaux sociaux pour rester informé des dernières innovations.

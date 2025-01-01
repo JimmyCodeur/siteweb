@@ -25,6 +25,10 @@ const Footer = () => {
             <a href="https://www.linkedin.com/in/jimmy-fernandez-fr/" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
               <i className="fab fa-linkedin-in"></i>
             </a>
+            <a href="https://www.malt.fr/profile/fernandezjimmy" target="_blank" rel="noopener noreferrer" className="social-icon malt">
+              <i className="fab fa-malt"></i>
+              <span>Malt</span>
+            </a>
           </div>
         </div>
       </div>
