@@ -685,6 +685,5 @@ export const agentModes = [
     }
     
     
-    // Ajout d'autres catégories d'agent si nécessaire
   ];
   

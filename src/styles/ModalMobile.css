@@ -142,7 +142,6 @@
       width: 100%;
     }
 
-    /* Hide navbar when modal is open */
     body.no-scroll .navbar {
       display: none;
     }

@@ -1,34 +1,32 @@
-/* Carrousel Horizontal */
 .sub-category {
   display: flex;
-  flex-wrap: nowrap; /* Désactive le retour à la ligne */
-  overflow-x: auto; /* Ajoute le défilement horizontal */
-  gap: 15px; /* Réduit l'écart entre les cartes */
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 15px;
   padding: 10px 0;
   scrollbar-width: thin;
-  scrollbar-width: none; /* Barres de défilement fines */
-  scroll-behavior: smooth; /* Défilement fluide */
+  scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .sub-category::-webkit-scrollbar {
   height: 6px;
-  display: none; /* Hauteur de la barre de défilement */
+  display: none;
 }
 
 .sub-category::-webkit-scrollbar-thumb {
-  background: rgba(0, 255, 255, 0.5); /* Couleur de la barre */
+  background: rgba(0, 255, 255, 0.5);
   border-radius: 10px;
 }
 
 .sub-category::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2); /* Couleur de l'arrière-plan */
+  background: rgba(0, 0, 0, 0.2);
 }
 
-/* Carte individuelle */
 .card {
-  flex: 0 0 calc(33% - 100px); /* Ajuste la largeur pour afficher plus de cartes */
+  flex: 0 0 calc(33% - 100px);
   max-width: calc(33% - 10px);
-  box-sizing: border-box; /* Inclut les marges et paddings */
+  box-sizing: border-box; 
   background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -43,7 +41,7 @@
 
 .card .card-image {
   width: 100%;
-  height: 150px; /* Ajuste la taille des images */
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,12 +50,12 @@
 .card .card-image img {
   max-width: 80%;
   max-height: 100%;
-  border-radius: 50%; /* Images rondes */
+  border-radius: 50%;
   object-fit: cover;
 }
 
 .card h4 {
-  font-size: 1rem; /* Réduit la taille du texte */
+  font-size: 1rem; 
   color: #ffae18;
   margin: 10px 0;
   text-align: center;
@@ -65,7 +63,7 @@
 }
 
 .card .card-description {
-  font-size: 0.85rem; /* Réduit la taille de la description */
+  font-size: 0.85rem;
   color: #ccc;
   padding: 0 10px;
   text-align: center;
@@ -88,17 +86,16 @@
   background-color: rgba(0, 255, 255, 0.5);
 }
 
-/* Contrôles du carrousel */
 .carousel-controls {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  position: relative; /* Pour un positionnement personnalisé */
+  position: relative;
 }
 
 .carousel-control {
-  background: rgba(0, 0, 0, 0.7); /* Couleur de fond */
-  color: #fff; /* Couleur du texte ou de l'icône */
+  background: rgba(0, 0, 0, 0.7); 
+  color: #fff;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -107,30 +104,30 @@
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombre légère */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
 }
 
 .carousel-control.prev {
   position: absolute;
-  left: -20px; /* Ajuste la position du bouton à gauche */
+  left: -20px;
   top: 50%;
   transform: translateY(-10%);
 }
 
 .carousel-control.next {
   position: absolute;
-  right: -20px; /* Ajuste la position du bouton à droite */
+  right: -20px; 
   top: 50%;
   transform: translateY(-10%);
 }
 
 .carousel-control:hover {
-  background: #ffae18; /* Couleur différente au survol */
-  transform: scale(1.2); /* Légère animation d'agrandissement */
+  background: #ffae18;
+  transform: scale(1.2); 
 }
 
 .carousel-control i {
-  pointer-events: none; /* Empêche les clics directement sur l'icône */
+  pointer-events: none; 
 }
 
 

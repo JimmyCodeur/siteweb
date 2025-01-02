@@ -260,7 +260,7 @@
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  text-decoration: none; /* Supprime le soulignement par défaut des liens */
+  text-decoration: none; 
   display: inline-block;
   transition: all 0.3s ease;
 }

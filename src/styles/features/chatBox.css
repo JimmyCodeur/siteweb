@@ -1,6 +1,6 @@
 .conversation-box {
     padding: 10px;
-    max-height: 400px; /* Ajustez la hauteur selon vos besoins */
+    max-height: 400px;
     overflow-y: auto;
     background-color: #222;
     border-radius: 10px;
@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 10px;
-    scroll-behavior: smooth; /* Ajout de défilement doux */
+    scroll-behavior: smooth;
     animation: scroll-down 0.5s ease-in-out forwards;
   }
   
@@ -26,10 +26,8 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
     animation: message-appear 0.6s ease-out forwards;
-    transform: translateY(10px); /* Ajout de la translation pour l'animation */
+    transform: translateY(10px);
   }
-  
-  
   
   @keyframes message-appear {
     0% {
@@ -125,8 +123,8 @@
   .progress {
     height: 100%;
     background: linear-gradient(145deg, #00f6ff, #1c6c8b);
-    width: 0%; /* Défaut à 0%, sera modifié dynamiquement */
-    transition: width 0.5s ease-in-out; /* Animation fluide */
+    width: 0%;
+    transition: width 0.5s ease-in-out;
   }
   
   .progress-text {
@@ -134,15 +132,13 @@
     font-size: 1rem;
     color: #ccc;
   }
-  
-  
-  
+    
   .features-overview {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Espace entre les éléments */
+    gap: 20px; 
     text-align: center;
   }
   
@@ -152,8 +148,8 @@
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Espace entre les éléments de la liste */
-    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 15px; 
+    justify-content: center; 
   }
   
   .features-overview h4 {
@@ -185,7 +181,6 @@
     gap: 10px;
     margin-top: 20px;
   }
-  
   
   .conversation-title {
     font-size: 1.2rem;

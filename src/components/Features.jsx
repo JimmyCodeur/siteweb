@@ -45,9 +45,8 @@ const Features = () => {
 
   const scrollCarousel = (catIndex, direction) => {
     const carousel = document.getElementById(`carousel-${catIndex}`);
-    const scrollAmount = carousel.offsetWidth * 1; // Adjust scroll distance
+    const scrollAmount = carousel.offsetWidth * 1;
 
-    // Ensure the carousel scrolls within bounds
     const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
     const newScrollLeft = Math.min(
       Math.max(carousel.scrollLeft + direction * scrollAmount, 0),
@@ -91,13 +90,13 @@ const Features = () => {
               className="carousel-control prev"
               onClick={() => scrollCarousel(catIndex, -1)}
             >
-              <i className="fas fa-chevron-left"></i> {/* Icône Font Awesome */}
+              <i className="fas fa-chevron-left"></i> 
             </button>
             <button
               className="carousel-control next"
               onClick={() => scrollCarousel(catIndex, 1)}
             >
-              <i className="fas fa-chevron-right"></i> {/* Icône Font Awesome */}
+              <i className="fas fa-chevron-right"></i> 
             </button>
           </div>
 
@@ -108,7 +107,7 @@ const Features = () => {
             onMouseMove={(e) => handleMouseMove(e, catIndex)}
             onMouseUp={handleMouseUpOrLeave}
             onMouseLeave={handleMouseUpOrLeave}
-            style={{ userSelect: 'none' }} // Prevent text selection
+            style={{ userSelect: 'none' }} 
           >
             {category.agents.map((agent, index) => (
               <div
@@ -138,7 +137,6 @@ const Features = () => {
           </div>
         </div>
       ))}
-      {/* Call to Action */}
       <div className="cta-section-agent">
         <h3 className="cta-title-agent">Alors, lequel de nos agents intelligents correspond à vos besoins ?</h3>
         <p className="cta-description-agent">

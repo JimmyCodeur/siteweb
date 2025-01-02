@@ -44,10 +44,10 @@
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    position: absolute; /* Position absolue pour permettre un placement précis */
-    top: 15px; /* Espace depuis le haut */
-    right: 20px; /* Espace depuis la droite */
-    z-index: 1100; /* Assurez-vous que le bouton est au-dessus */
+    position: absolute; 
+    top: 15px; 
+    right: 20px; 
+    z-index: 1100; 
   }
 
   .menu-toggle div {
@@ -59,13 +59,12 @@
     transform-origin: center;
   }
 
-  /* Transform the bars into an "X" */
   .menu-toggle.open div:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
 
   .menu-toggle.open div:nth-child(2) {
-    opacity: 0; /* Hide the middle bar */
+    opacity: 0; 
   }
 
   .menu-toggle.open div:nth-child(3) {
@@ -128,22 +127,20 @@
   }
 }
 
-/* Default: Hide the mobile version and show the desktop version */
 .navbar-rdv-button {
-  display: inline-block; /* Show on desktop */
+  display: inline-block; 
 }
 
 .navbar-rdv-button-mobile {
-  display: none; /* Hidden on desktop */
+  display: none; 
 }
 
-/* On Mobile: Hide the desktop version and show the mobile version */
 @media (max-width: 768px) {
   .navbar-rdv-button {
-    display: none; /* Hide on mobile */
+    display: none; 
   }
 
   .navbar-rdv-button-mobile {
-    display: inline-block; /* Show on mobile */
+    display: inline-block; 
   }
 }

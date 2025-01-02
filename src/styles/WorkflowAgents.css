@@ -10,18 +10,18 @@
 .custom-workflow:after {
     content: '';
     position: absolute;
-    bottom: -40px; /* Place le flou à la fin de la section */
-    left: -10%; /* Décale le flou pour couvrir toute la largeur */
-    width: 120%; /* Étend la largeur pour englober tout l'écran */
-    height: 80px; /* Étend le flou sous la section */
+    bottom: -40px; 
+    left: -10%; 
+    width: 120%; 
+    height: 80px; 
     background: linear-gradient(
       to bottom,
       rgb(26, 25, 25),
       rgb(17, 18, 20)
-    ); /* Dégradé inversé pour se fondre vers le haut */
-    filter: blur(6px); /* Flou intense et élégant */
-    z-index: 1; /* Place le flou derrière le contenu */
-    pointer-events: none; /* Évite toute interaction avec le flou */
+    ); 
+    filter: blur(6px); 
+    z-index: 1; 
+    pointer-events: none; 
   }
 
 .custom-workflow .workflow-header {
@@ -46,7 +46,6 @@
     margin: 0 auto;
 }
 
-/* Workflow Content */
 .custom-workflow .workflow-content {
     display: flex;
     flex-wrap: wrap;
@@ -118,7 +117,6 @@
     margin: 0;
 }
 
-/* Call-to-Action Section */
 .workflow-cta {
     text-align: center;
     margin-top: 60px;

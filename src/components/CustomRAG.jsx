@@ -6,7 +6,6 @@ const CustomRAG = () => {
   return (
     <section id="custom-rag" className="custom-rag">
       <div className="container">
-        {/* Section Title */}
         <header className="section-header">
           <h2 className='section-title'>Solution 2: RAG Personnalisé</h2>
           <p className="section-description">
@@ -15,9 +14,7 @@ const CustomRAG = () => {
 
         </header>
 
-        {/* Features Section */}
         <div className="rag-features">
-          {/* Feature 1 */}
           <div className="feature-card">
             <i className="fas fa-database feature-icon"></i>
             <h3 className="feature-title">Intégration de Vos Données</h3>
@@ -26,7 +23,6 @@ const CustomRAG = () => {
               pertinente des informations.
             </p>
           </div>
-          {/* Feature 2 */}
           <div className="feature-card">
             <i className="fas fa-brain feature-icon"></i>
             <h3 className="feature-title">Génération Intelligente</h3>
@@ -34,7 +30,6 @@ const CustomRAG = () => {
               Combinez recherche et génération pour produire des réponses précises et adaptées à vos besoins spécifiques.
             </p>
           </div>
-          {/* Feature 3 */}
           <div className="feature-card">
             <i className="fas fa-cogs feature-icon"></i>
             <h3 className="feature-title">Personnalisation Avancée</h3>
@@ -42,7 +37,6 @@ const CustomRAG = () => {
               Adaptez le système à votre domaine d'activité grâce à une configuration flexible et évolutive.
             </p>
           </div>
-          {/* Feature 4 */}
           <div className="feature-card">
             <i className="fas fa-shield-alt feature-icon"></i>
             <h3 className="feature-title">Sécurité des Données</h3>
@@ -52,7 +46,6 @@ const CustomRAG = () => {
           </div>
         </div>
         
-        {/* Closing Paragraph */}
         <p className="closing-paragraph">
           Avec un RAG, votre entreprise peut non seulement améliorer l'efficacité des recherches d'informations, mais également fournir des 
           réponses intelligentes et contextualisées, adaptées à vos objectifs.

@@ -122,7 +122,6 @@ const Navbar = () => {
             FAQ
           </a>
         </li>
-        {/* Mobile-only version of Prendre Rendez-Vous */}
         <li className="mobile-only">
           <a
             href="https://calendly.com/jimmy-fernandez-devia/30min"
@@ -134,7 +133,6 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
-      {/* Original Desktop Prendre Rendez-Vous Button */}
       <div className="cta-button-navbar">
         <a
           href="https://calendly.com/jimmy-fernandez-devia/30min"

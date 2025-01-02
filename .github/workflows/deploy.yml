@@ -10,21 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Étape 1 : Cloner le dépôt
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    # Étape 2 : Configurer Node.js
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: 18
 
-    # Étape 3 : Installer les dépendances
     - name: Install dependencies
       run: npm install
 
-    # Étape 4 : Injecter les secrets dans un fichier .env
     - name: Create .env file
       run: |
         echo "VITE_OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env
@@ -32,11 +28,9 @@ jobs:
         echo "VITE_EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}" >> .env
         echo "VITE_EMAILJS_PUBLIC_KEY=${{ secrets.EMAILJS_PUBLIC_KEY }}" >> .env
 
-    # Étape 5 : Debug les secrets injectés
     - name: Debug .env file
       run: cat .env
 
-    # Étape 6 : Build le projet
     - name: Build project
       env:
         VITE_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -45,11 +39,9 @@ jobs:
         VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
       run: npm run build
 
-    # Étape 7 : Debug le dossier dist après le build
     - name: Debug dist directory
       run: ls -la ./dist
 
-    # Étape 8 : Déployer sur GitHub Pages
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:

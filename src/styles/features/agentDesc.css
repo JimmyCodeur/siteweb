@@ -20,11 +20,7 @@
     color: #ccc;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
     margin: 0 auto;
-  }
-  
-  
-  
-  
+  } 
   
   .modes-container {
     margin: 3rem auto;
@@ -88,11 +84,9 @@
     font-size: 1rem;
     color: #ccc;
     line-height: 1.6;
-    flex-grow: 1; /* Maintient l'équilibre vertical */
-    overflow: hidden; /* Empêche le débordement */
-  }
-  
-  
+    flex-grow: 1;
+    overflow: hidden; 
+  } 
   
   .carousel {
     display: flex;

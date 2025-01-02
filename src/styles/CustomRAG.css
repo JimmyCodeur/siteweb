@@ -11,35 +11,35 @@
 #custom-rag:before {
   content: '';
   position: absolute;
-  top: -40px; /* Fait dépasser le flou au-dessus de la section */
-  left: -10%; /* Décale le flou pour couvrir toute la largeur */
-  width: 120%; /* Étend la largeur pour englober tout l'écran */
-  height: 80px; /* Étend le flou sur les deux sections */
+  top: -40px; 
+  left: -10%; 
+  width: 120%; 
+  height: 80px; 
   background: linear-gradient(
     to bottom,
     rgb(29, 28, 28),
     rgb(16, 17, 19)
-  ); /* Dégradé avec une transition douce */
-  filter: blur(6px); /* Flou intense et élégant */
-  z-index: 1; /* Place le flou derrière le contenu */
-  pointer-events: none; /* Évite toute interaction avec le flou */
+  ); 
+  filter: blur(6px); 
+  z-index: 1; 
+  pointer-events: none; 
 }
 
 #custom-rag:after {
   content: '';
   position: absolute;
-  bottom: -10px; /* Place le flou à la fin de la section */
-  left: -10%; /* Décale le flou pour couvrir toute la largeur */
-  width: 120%; /* Étend la largeur pour englober tout l'écran */
-  height: 40px; /* Étend le flou sous la section */
+  bottom: -10px; 
+  left: -10%; 
+  width: 120%; 
+  height: 40px; 
   background: linear-gradient(
     to top,
     rgb(17, 17, 17),
     rgb(16, 17, 19)
-  ); /* Dégradé inversé pour se fondre vers le haut */
-  filter: blur(6px); /* Flou intense et élégant */
-  z-index: 1; /* Place le flou derrière le contenu */
-  pointer-events: none; /* Évite toute interaction avec le flou */
+  ); 
+  filter: blur(6px); 
+  z-index: 1; 
+  pointer-events: none; 
 }
 
 
@@ -55,17 +55,16 @@
   color: #ffffff;
   margin-bottom: 20px;
   font-weight: bold;
-  text-transform: uppercase; /* All caps for impact */
-  text-shadow: 0 0 15px rgba(102, 252, 241, 0.8); /* Glow effect for futuristic feel */
+  text-transform: uppercase; 
+  text-shadow: 0 0 15px rgba(102, 252, 241, 0.8); 
 }
-
 
 .section-header .section-description {
   font-size: 1.2rem;
-  line-height: 1.8; /* Comfortable line spacing */
+  line-height: 1.8; 
   margin-bottom: 30px;
   color: #c5c6c7;
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.4); /* Subtle glow */
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.4); 
 }
 
 #custom-rag p {
@@ -75,11 +74,10 @@
   color: #c5c6c7;
 }
 
-/* Highlighted Paragraph */
 .closing-paragraph:last-of-type {
-  background: rgba(102, 252, 241, 0.1); /* Light highlight background */
+  background: rgba(102, 252, 241, 0.1); 
   padding: 15px 20px;
-  border-left: 5px solid #66fcf1; /* Add a colored border to emphasize */
+  border-left: 5px solid #66fcf1; 
   font-size: 1.3rem;
   line-height: 1.8;
   color: #c5c6c7;
@@ -89,7 +87,6 @@
   text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
 }
 
-/* Feature Cards */
 .rag-features {
   display: flex;
   flex-wrap: wrap;
@@ -134,7 +131,6 @@
   line-height: 1.6;
 }
 
-/* Call-to-Action Section */
 .cta-section {
   background: linear-gradient(145deg, #1f2833, #0b0c10);
   color: #66fcf1;

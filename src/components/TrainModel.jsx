@@ -6,7 +6,6 @@ const TrainModel = () => {
   return (
     <section id="train-model" className="train-model">
       <div className="container">
-        {/* Section Title */}
         <header className="section-header">
           <h2 className="section-title">Solution 4: Entraînement des Modèles IA</h2>
           <p className="section-description">
@@ -14,7 +13,6 @@ const TrainModel = () => {
           </p>
         </header>
 
-        {/* Model Types as Cards */}
         <div className="model-types-cards">
           <div className="model-card">
             <i className="fas fa-tags model-icon"></i>
@@ -53,7 +51,6 @@ const TrainModel = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
         <div className="cta-section-train">
           <h3 className="cta-title-train">Vous souhaitez entraîner vos propres modèles ?</h3>
           <p className="cta-description-train">

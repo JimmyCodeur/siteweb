@@ -32,10 +32,10 @@
 
 .footer-container {
     display: flex;
-    flex-direction: column; /* Aligne les éléments verticalement */
-    justify-content: center; /* Centre les éléments verticalement */
-    align-items: center; /* Centre les éléments horizontalement */
-    text-align: center; /* Aligne le texte au centre */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
     max-width: 1200px;
     margin: 0 auto;
     gap: 2rem;

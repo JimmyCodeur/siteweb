@@ -11,20 +11,19 @@
 .train-model:after {
   content: '';
   position: absolute;
-  bottom: -60px; /* Place le flou à la fin de la section */
-  left: -10%; /* Décale le flou pour couvrir toute la largeur */
-  width: 120%; /* Étend la largeur pour englober tout l'écran */
-  height: 80px; /* Étend le flou sous la section */
+  bottom: -60px; 
+  left: -10%; 
+  width: 120%; 
+  height: 80px; 
   background: linear-gradient(
     to bottom,
     rgb(23, 30, 46),
     rgb(18, 29, 43)
-  ); /* Dégradé inversé pour se fondre vers le haut */
-  filter: blur(6px); /* Flou intense et élégant */
-  z-index: 1; /* Place le flou derrière le contenu */
-  pointer-events: none; /* Évite toute interaction avec le flou */
+  ); 
+  filter: blur(6px); 
+  z-index: 1; 
+  pointer-events: none; 
 }  
-  /* Section Header */
 .section-header .section-title {
   font-size: 2.8rem;
   color: #ffffff;
@@ -39,7 +38,6 @@
   margin-bottom: 40px;
 }
   
-  /* Model Types as Cards */
 .model-types-cards {
   display: flex;
   flex-wrap: wrap;
@@ -83,33 +81,32 @@
     line-height: 1.6;
   }
   
-/* Call to Action Section */
 .cta-section-train {
-    padding: 30px 15px; /* Réduit l'espace interne */
+    padding: 30px 15px; 
     border-radius: 20px;
-    margin-top: 20px; /* Réduit l'espace externe au-dessus */
+    margin-top: 20px; 
     text-align: center;
   }
   
   .cta-title-train {
-    font-size: 1.8rem; /* Réduit légèrement la taille de la police */
+    font-size: 1.8rem; 
     color: #66fcf1;
-    margin-bottom: 10px; /* Réduit l'espacement sous le titre */
+    margin-bottom: 10px; 
     text-shadow: 0 0 10px rgba(102, 252, 241, 0.7);
   }
   
   .cta-description-train {
-    font-size: 1.1rem; /* Réduit légèrement la taille de la description */
-    line-height: 1.6; /* Diminue légèrement l'espacement entre les lignes */
-    margin-bottom: 15px; /* Réduit l'espace sous la description */
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+    margin-bottom: 15px; 
   }
   
   .cta-button-train {
     background: #66fcf1;
     color: #1f2833;
     font-size: 1rem;
-    padding: 10px 25px; /* Diminue légèrement le padding du bouton */
-    border-radius: 25px; /* Ajuste la courbure pour un look plus compact */
+    padding: 10px 25px; 
+    border-radius: 25px; 
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;

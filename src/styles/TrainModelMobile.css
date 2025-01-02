@@ -1,5 +1,3 @@
-/* Mobile Specific CSS for Train Modal */
-
 @media (max-width: 768px) {
     .train-model {
         padding: 30px 10px;

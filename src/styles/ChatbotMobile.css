@@ -5,63 +5,60 @@
       bottom: 15px;
       right: 15px;
       box-shadow: 0 0 15px rgba(40, 167, 69, 0.8), 0 0 25px rgba(40, 167, 69, 0.6);
-      border: 2px solid #28a745; /* Réduit la bordure */
+      border: 2px solid #28a745;
       z-index: 100;
       -webkit-tap-highlight-color: transparent;
     }
   
     .chatbot-toggle:hover {
-      transform: scale(1.05); /* Réduit l'agrandissement au survol */
+      transform: scale(1.05); 
     }
   
     .agent-image {
-      width: 90%; /* Ajuste l'image à la taille réduite */
+      width: 90%; 
       height: 90%;
     }
   
-    /* Cache le bouton lorsque le menu navbar est actif */
     .nav-links.active ~ .chatbot-toggle {
       display: none;
     }
   
-    /* Ajuste la fenêtre du chatbot */
     .chatbot {
       bottom: 90px;
-      right: 10px; /* Réduit la marge à droite */
-      width: 90%; /* Prend presque toute la largeur de l'écran */
-      max-width: 320px; /* Limite la largeur maximale */
-      border-radius: 10px; /* Réduit le rayon des coins */
+      right: 10px; 
+      width: 90%; 
+      max-width: 320px; 
+      border-radius: 10px; 
     }
   
     .chatbot-window {
-      max-height: 300px; /* Réduit la hauteur de la fenêtre */
+      max-height: 300px; 
       padding: 10px;
     }
   
     .chatbot-input {
-      padding: 8px; /* Réduit l'espace dans la zone de saisie */
+      padding: 8px; 
     }
   
     .chatbot-input input {
-      padding: 10px; /* Réduit la taille de la zone de texte */
-      font-size: 0.9rem; /* Réduit la taille du texte */
+      padding: 10px; 
+      font-size: 0.9rem; 
     }
   
     .chatbot-input button {
-      padding: 10px 15px; /* Réduit la taille du bouton */
+      padding: 10px 15px; 
       margin-left: 8px;
-      font-size: 0.9rem; /* Réduit la taille du texte */
+      font-size: 0.9rem; 
     }
   
-    /* Messages du chatbot */
     .chat-message {
-      padding: 10px 12px; /* Réduit le padding des messages */
-      font-size: 0.9rem; /* Réduit la taille du texte */
+      padding: 10px 12px; 
+      font-size: 0.9rem; 
     }
   
     .chat-message.bot,
     .chat-message.user {
-      max-width: 90%; /* Réduit la largeur des messages */
+      max-width: 90%; 
     }
   }
   
